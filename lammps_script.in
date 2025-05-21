@@ -1,0 +1,48 @@
+
+##### ANCHOR: ATOMS & FORCE-FIELD
+  units         metal
+  atom_style    atomic
+  dimension     3
+  boundary      p p p
+
+  read_data     conf.lmpdata
+  pair_style    e3gnn
+  pair_coeff    * * deployed_serial.pt Mo S
+
+##### ANCHOR: COMMON SETUP
+  variable      PXX     equal   pxx
+  variable 	    PYY     equal 	pyy
+  variable 	    PZZ     equal 	pzz
+  variable 	    PYZ     equal 	pyz
+  variable 	    PXZ     equal 	pxz
+  variable 	    PXY     equal 	pxy
+  variable 	    LX      equal 	lx
+  variable 	    LY      equal 	ly
+  variable 	    LZ      equal 	lz
+  variable 	    TEMP    equal 	temp
+  variable 	    PE      equal 	pe
+  variable 	    KE      equal 	ke
+
+  balance       1.0 shift xyz 20 1.0
+  fix     fbala all balance 20000 1.0 shift xyz 20 1.0
+
+##### ANCHOR: DYMAMIC SETUP
+  thermo_style  custom step temp pe lx ly lz pxx pyy pzz
+  thermo        5000
+
+  timestep      0.001
+  variable      dt equal 0.001
+  velocity      all create 10 56618 mom yes rot yes dist gaussian
+
+##### ANCHOR: EQUIBIRUM NPT
+  fix     f_C968  all npt temp 10 10 $(100*dt) x 0.0 0.0 $(1000*v_dt) y 0.0 0.0 $(1000*v_dt) couple none
+  ### Output
+  fix     fprt_C968 all ave/time 1 1 2 v_PXX v_PYY v_PZZ v_PYZ v_PXZ v_PXY v_LX v_LY v_LZ v_TEMP v_PE v_KE &
+          title1 'time pxx pyy pzz pyz pxz pxy lx ly lz temp pe ke' title2 '#' file traj_md_label_stress_value.txt
+  dump    d_C968 all custom 2 traj_md_label.lmpdump id type mass xu yu zu fx fy fz
+  dump_modify d_C968 sort id
+
+  run     50000
+  unfix   f_C968
+  unfix   fprt_C968
+  undump  d_C968
