@@ -35,7 +35,7 @@
   velocity      all create 10 56618 mom yes rot yes dist gaussian
 
 ##### ANCHOR: EQUIBIRUM NPT
-  fix     f_C968  all npt temp 10 10 $(100*dt) x 0.0 0.0 $(1000*v_dt) y 0.0 0.0 $(1000*v_dt) couple none
+  fix     f_C968  all npt temp 10 10 $(100*v_dt) x 0.0 0.0 $(1000*v_dt) y 0.0 0.0 $(1000*v_dt) couple none
   ### Output
   fix     fprt_C968 all ave/time 1 1 2 v_PXX v_PYY v_PZZ v_PYZ v_PXZ v_PXY v_LX v_LY v_LZ v_TEMP v_PE v_KE &
           title1 'time pxx pyy pzz pyz pxz pxy lx ly lz temp pe ke' title2 '#' file traj_md_label_stress_value.txt
