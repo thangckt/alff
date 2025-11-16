@@ -1679,9 +1679,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.al.active_learning._get_engines" class="md-nav__link">
+  <a href="#alff.al.active_learning._get_mlp_model" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_engines
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_mlp_model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.active_learning._get_md_calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_md_calculator
     </span>
   </a>
   
@@ -7523,9 +7532,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.key.DIR_COPYDATA" class="md-nav__link">
+  <a href="#alff.util.key.DIR_TRAINDATA" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;DIR_COPYDATA
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;DIR_TRAINDATA
     </span>
   </a>
   
@@ -9919,9 +9928,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.al.active_learning._get_engines" class="md-nav__link">
+  <a href="#alff.al.active_learning._get_mlp_model" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_engines
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_mlp_model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.active_learning._get_md_calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;_get_md_calculator
     </span>
   </a>
   
@@ -15763,9 +15781,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.util.key.DIR_COPYDATA" class="md-nav__link">
+  <a href="#alff.util.key.DIR_TRAINDATA" class="md-nav__link">
     <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;DIR_COPYDATA
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;DIR_TRAINDATA
     </span>
   </a>
   
@@ -17846,7 +17864,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'gaf8686254'
+          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'gb588861d6'
 
   
       module-attribute
@@ -17862,7 +17880,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'gaf8686254'
+          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'gb588861d6'
 
   
       module-attribute
@@ -18054,7 +18072,7 @@
 
 
 <h4 id="alff._version.commit_id" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gaf8686254&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gb588861d6&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -18074,7 +18092,7 @@
 
 
 <h4 id="alff._version.__commit_id__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gaf8686254&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gb588861d6&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -18825,10 +18843,26 @@ Note: Need to redefine <code>.run()</code> method, since the Active Learning wor
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.al.active_learning._get_engines" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_engines</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<h5 id="alff.al.active_learning._get_mlp_model" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_mlp_model</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
 
-<a href="#alff.al.active_learning._get_engines" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.al.active_learning._get_mlp_model" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.al.active_learning._get_md_calculator" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">_get_md_calculator</span><span class="p">(</span><span class="n">pdict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
+
+<a href="#alff.al.active_learning._get_md_calculator" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -39025,11 +39059,11 @@ This helps to chunk the tasks with similar supercell size together (similar supe
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            DIR_COPYDATA = 'copy_data'
+          <b><code><a class="autorefs autorefs-internal" title="            DIR_TRAINDATA = 'train_data'
 
   
       module-attribute
-   (alff.util.key.DIR_COPYDATA)" href="#alff.util.key.DIR_COPYDATA">DIR_COPYDATA</a></code></b>
+   (alff.util.key.DIR_TRAINDATA)" href="#alff.util.key.DIR_TRAINDATA">DIR_TRAINDATA</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -39102,7 +39136,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            FILE_ITER_DATA = 'data_label.extxyz'
+          <b><code><a class="autorefs autorefs-internal" title="            FILE_ITER_DATA = 'label_data.extxyz'
 
   
       module-attribute
@@ -39113,7 +39147,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            FILE_COLLECT_DATA = 'collect_data_label.extxyz'
+          <b><code><a class="autorefs autorefs-internal" title="            FILE_COLLECT_DATA = 'collect_label_data.extxyz'
 
   
       module-attribute
@@ -39660,14 +39694,14 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 
-<h5 id="alff.util.key.DIR_COPYDATA" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_COPYDATA</span> <span class="o">=</span> <span class="s1">&#39;copy_data&#39;</span></code>
+<h5 id="alff.util.key.DIR_TRAINDATA" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_TRAINDATA</span> <span class="o">=</span> <span class="s1">&#39;train_data&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.key.DIR_COPYDATA" class="headerlink" title="Permanent link">&para;</a></h5>
+<a href="#alff.util.key.DIR_TRAINDATA" class="headerlink" title="Permanent link">&para;</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -39801,7 +39835,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.util.key.FILE_ITER_DATA" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_ITER_DATA</span> <span class="o">=</span> <span class="s1">&#39;data_label.extxyz&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_ITER_DATA</span> <span class="o">=</span> <span class="s1">&#39;label_data.extxyz&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -39821,7 +39855,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
 
 <h5 id="alff.util.key.FILE_COLLECT_DATA" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_COLLECT_DATA</span> <span class="o">=</span> <span class="s1">&#39;collect_data_label.extxyz&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_COLLECT_DATA</span> <span class="o">=</span> <span class="s1">&#39;collect_label_data.extxyz&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
