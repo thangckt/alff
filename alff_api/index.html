@@ -17864,7 +17864,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'g94bfb64c3'
+          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'g75a05ccaf'
 
   
       module-attribute
@@ -17880,7 +17880,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'g94bfb64c3'
+          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'g75a05ccaf'
 
   
       module-attribute
@@ -18072,7 +18072,7 @@
 
 
 <h4 id="alff._version.commit_id" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g94bfb64c3&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g75a05ccaf&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -18092,7 +18092,7 @@
 
 
 <h4 id="alff._version.__commit_id__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g94bfb64c3&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g75a05ccaf&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -22990,7 +22990,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
         <p>Base class for operations on remote machines.</p>
-<p>Each <code>operation</code> includes atleast 3 methods:
+<p>Each <code>operation</code> includes atl east 3 methods:
     - prepare
     - run
     - postprocess</p>
@@ -23012,7 +23012,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 <li>All paths (<code>work_dir</code>, <code>task_dirs</code>,...) are in POSIX format, and relative to <code>run_dir</code> (not <code>work_dir</code>).</li>
 <li>All <code>@abtractmethod</code> must be reimplemented in subclasses.</li>
 <li>Do not change the <code>.run()</code> method unless you know what you are doing.</li>
-<li><code>dir_filter</code> to filter task directories (filter already labelled structures).
+<li><code>task_filter</code> to filter task directories (filter already labelled structures).
     <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">task_filter</span> <span class="o">=</span> <span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s2">&quot;has_files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;file1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;file2.txt&quot;</span><span class="p">],</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="s2">&quot;no_files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;file3.txt&quot;</span><span class="p">]</span>
