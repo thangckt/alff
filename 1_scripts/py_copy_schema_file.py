@@ -1,16 +1,6 @@
 from thkit import THKIT_ROOT
 
-from alff.util.key import (
-    SCHEMA_ACTIVE_LEARN,
-    SCHEMA_ASE_BUILD,
-    SCHEMA_ASE_RUN,
-    SCHEMA_ELASTIC,
-    SCHEMA_FINETUNE,
-    SCHEMA_GENDATA,
-    SCHEMA_LAMMPS,
-    SCHEMA_PES_SCAN,
-    SCHEMA_PHONON,
-)
+from alff.base import KEY as K
 
 EXAMPLE_PATH = "example"  # relative path to project_dir
 
@@ -44,39 +34,39 @@ def main():
     ###ANCHOR: Append schema to the .md files
     append_schema_text(
         md_file="./_docs/schema/manual_schema_gendata.md",
-        yaml_schema_file=SCHEMA_GENDATA,
+        yaml_schema_file=K.SCHEMA_GENDATA,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_active_learning.md",
-        yaml_schema_file=SCHEMA_ACTIVE_LEARN,
+        yaml_schema_file=K.SCHEMA_ACTIVE_LEARN,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_finetune.md",
-        yaml_schema_file=SCHEMA_FINETUNE,
+        yaml_schema_file=K.SCHEMA_FINETUNE,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_phonon.md",
-        yaml_schema_file=SCHEMA_PHONON,
+        yaml_schema_file=K.SCHEMA_PHONON,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_elastic.md",
-        yaml_schema_file=SCHEMA_ELASTIC,
+        yaml_schema_file=K.SCHEMA_ELASTIC,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_pes_scan.md",
-        yaml_schema_file=SCHEMA_PES_SCAN,
+        yaml_schema_file=K.SCHEMA_PES_SCAN,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_ase_build.md",
-        yaml_schema_file=SCHEMA_ASE_BUILD,
+        yaml_schema_file=K.SCHEMA_ASE_BUILD,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_ase_run.md",
-        yaml_schema_file=SCHEMA_ASE_RUN,
+        yaml_schema_file=K.SCHEMA_ASE_RUN,
     )
     append_schema_text(
         md_file="./_docs/schema/manual_schema_lammps.md",
-        yaml_schema_file=SCHEMA_LAMMPS,
+        yaml_schema_file=K.SCHEMA_LAMMPS,
     )
 
     ###ANCHOR: Append example configuration to the .md files
