@@ -2613,15 +2613,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;committee_error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error_file" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;committee_error_file
@@ -2720,6 +2711,15 @@
   <a href="#alff.al.utilal_uncertainty.simple_lmpdump2extxyz" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;simple_lmpdump2extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.utilal_uncertainty.chunk_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;chunk_list
     </span>
   </a>
   
@@ -10958,15 +10958,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error" class="md-nav__link">
-    <span class="md-ellipsis">
-      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;committee_error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error_file" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;committee_error_file
@@ -11065,6 +11056,15 @@
   <a href="#alff.al.utilal_uncertainty.simple_lmpdump2extxyz" class="md-nav__link">
     <span class="md-ellipsis">
       <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;simple_lmpdump2extxyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.al.utilal_uncertainty.chunk_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;chunk_list
     </span>
   </a>
   
@@ -18056,7 +18056,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'g500c8e8bf'
+          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'g5e172d8ae'
 
   
       module-attribute
@@ -18072,7 +18072,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'g500c8e8bf'
+          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'g5e172d8ae'
 
   
       module-attribute
@@ -18264,7 +18264,7 @@
 
 
 <h4 id="alff._version.commit_id" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g500c8e8bf&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g5e172d8ae&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -18284,7 +18284,7 @@
 
 
 <h4 id="alff._version.__commit_id__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g500c8e8bf&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g5e172d8ae&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -21910,6 +21910,13 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
               <p>Convert LAMMPS dump file to extended xyz file. This is very simple version, only convert atomic positions, but not stress tensor.</p>
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            chunk_list(input_list: list, chunk_size: int) -> Generator (alff.al.utilal_uncertainty.chunk_list)" href="#alff.al.utilal_uncertainty.chunk_list">chunk_list</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Yield successive n-sized chunks from <code>input_list</code>.</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -22016,6 +22023,13 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li>Consider use <code>@staticmethod</code> for some functions to avoid recursive messing.</li>
+</ul>
+</details>
+
 
 
 
@@ -22029,7 +22043,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 <p><span class="doc-section-title">Methods:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            compute_committee_error_blockwise(struct_list: list[Atoms], outfile: str = 'committee_error.txt') (alff.al.utilal_uncertainty.ModelCommittee.compute_committee_error_blockwise)" href="#alff.al.utilal_uncertainty.ModelCommittee.compute_committee_error_blockwise">compute_committee_error_blockwise</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            compute_committee_error_blockwise(struct_list: list[Atoms]) (alff.al.utilal_uncertainty.ModelCommittee.compute_committee_error_blockwise)" href="#alff.al.utilal_uncertainty.ModelCommittee.compute_committee_error_blockwise">compute_committee_error_blockwise</a></code></b>
             –
             <div class="doc-md-description">
               <p>Compute committee error for energy, forces, and stress for a multiple configurations in a block-wise manner.</p>
@@ -22152,36 +22166,24 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            committee_error: np.ndarray | None = None
-
-  
-      instance-attribute
-   (alff.al.utilal_uncertainty.ModelCommittee.committee_error)" href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error">committee_error</a></code></b>
-              (<code><span title="numpy.ndarray">ndarray</span> | None</code>)
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            committee_error_file: str | None = None
+          <b><code><a class="autorefs autorefs-internal" title="            committee_error_file: str = 'committee_error.txt'
 
   
       instance-attribute
    (alff.al.utilal_uncertainty.ModelCommittee.committee_error_file)" href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error_file">committee_error_file</a></code></b>
-              (<code><span title="str">str</span> | None</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            committee_judge_file: str | None = None
+          <b><code><a class="autorefs autorefs-internal" title="            committee_judge_file: str = 'committee_judge_summary.txt'
 
   
       instance-attribute
    (alff.al.utilal_uncertainty.ModelCommittee.committee_judge_file)" href="#alff.al.utilal_uncertainty.ModelCommittee.committee_judge_file">committee_judge_file</a></code></b>
-              (<code><span title="str">str</span> | None</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             
@@ -22364,28 +22366,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 
 
-<h6 id="alff.al.utilal_uncertainty.ModelCommittee.committee_error" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">committee_error</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
-  </span>
-
-<a href="#alff.al.utilal_uncertainty.ModelCommittee.committee_error" class="headerlink" title="Permanent link">&para;</a></h6>
-
-
-    <div class="doc doc-contents ">
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
 <h6 id="alff.al.utilal_uncertainty.ModelCommittee.committee_error_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">committee_error_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">committee_error_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;committee_error.txt&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -22405,7 +22387,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 
 <h6 id="alff.al.utilal_uncertainty.ModelCommittee.committee_judge_file" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">committee_judge_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">committee_judge_file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;committee_judge_summary.txt&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -22540,8 +22522,13 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
   <summary>Notes</summary>
   <ul>
 <li>This function computes for multiple configurations, but it is not a true batching inference as in some MLP models like DeepMD-kit. It is just to avoid repeatedly assigning calculators and calling numpy functions multiple times (more vectorized). Therefore, it maybe 5-10% faster the old naive implementation, but not significantly faster as true batching inference.</li>
-<li>Define this function as staticmethod, may avoid recursive messing when compute stresses</li>
 <li>Note that, batching inference requires all configurations have the same number of atoms. Similarly, - this <code>blockwise</code> functions requires all configurations in block have the same number of atoms. So if the input extxyz file contains configurations with different number of atoms, must use block_size=1 when initializing <code>ModelCommittee</code> class.</li>
+<li>Define this function as <code>staticmethod</code> to avoid recursive messing when compute stresses in next functions.</li>
+<li>Work with stuctures with pre-existing calculators and results:<ul>
+<li>Should make <code>struct_copy = struct.copy()</code> before calling <code>struct.get_*()</code> to avoid the result from <code>get_*()</code> being affected by previous calculators's results.</li>
+<li>Should call <code>struct_copy.calc = None</code> to clean up previous calculator (e.g., SinglePointCalculator) before assigning new calculator. This is important when the input <code>structs</code> already had <code>results</code> stored in <code>struct.calc.results</code>, new results may try to be stored in the existing <code>results</code> dict, causing shape messing or unexpected values.</li>
+</ul>
+</li>
 </ul>
 </details>
 
@@ -22592,6 +22579,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
   <summary>Notes</summary>
   <ul>
 <li><code>mag_s[:, None]</code> is used to keep the 2D shape (column vector) when normalizing stress std.</li>
+<li>Define this function as <code>staticmethod</code> to avoid recursive messing when compute stresses in next functions.</li>
 </ul>
 </details>
 
@@ -22603,7 +22591,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 
 <h6 id="alff.al.utilal_uncertainty.ModelCommittee.compute_committee_error_blockwise" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">compute_committee_error_blockwise</span><span class="p">(</span><span class="n">struct_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">],</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;committee_error.txt&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">compute_committee_error_blockwise</span><span class="p">(</span><span class="n">struct_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">])</span></code>
 
 <a href="#alff.al.utilal_uncertainty.ModelCommittee.compute_committee_error_blockwise" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -22625,9 +22613,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
         </li>
         <li class="doc-section-item field-body">
             <b><code>outfile</code></b>
-              (<code><span title="str">str</span></code>, default:
-                  <code>&#39;committee_error.txt&#39;</code>
-)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Output file. Defaults to "committee_error.txt".</p>
@@ -22832,6 +22818,27 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     <div class="doc doc-contents ">
 
         <p>Convert LAMMPS dump file to extended xyz file. This is very simple version, only convert atomic positions, but not stress tensor.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.al.utilal_uncertainty.chunk_list" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">chunk_list</span><span class="p">(</span><span class="n">input_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span></code>
+
+<a href="#alff.al.utilal_uncertainty.chunk_list" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Yield successive n-sized chunks from <code>input_list</code>.
+Args:
+    input_list (list): Input list to be chunked.
+    chunk_size (int): Chunk size (number of elements per chunk).</p>
 
 
     </div>
