@@ -18164,7 +18164,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'gb755ed25d'
+          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'g40172d7aa'
 
   
       module-attribute
@@ -18180,7 +18180,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'gb755ed25d'
+          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'g40172d7aa'
 
   
       module-attribute
@@ -18372,7 +18372,7 @@
 
 
 <h4 id="alff._version.commit_id" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gb755ed25d&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g40172d7aa&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -18392,7 +18392,7 @@
 
 
 <h4 id="alff._version.__commit_id__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gb755ed25d&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g40172d7aa&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -21998,7 +21998,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 <p><span class="doc-section-title">Classes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="              ModelCommittee(mlp_model: str, model_files: list[str], calc_kwargs: dict | None = None, compute_stress: bool = False, rel_force: float | None = None, rel_stress: float | None = None, e_std_lo: float = 0.0, e_std_hi: float = 0.1, f_std_lo: float = 0.0, f_std_hi: float = 0.1, s_std_lo: float = 0.0, s_std_hi: float = 0.1, block_size: int = 1000) (alff.al.utilal_uncertainty.ModelCommittee)" href="#alff.al.utilal_uncertainty.ModelCommittee">ModelCommittee</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="              ModelCommittee(mlp_model: str, model_files: list[str], calc_kwargs: dict | None = None, compute_stress: bool = False, rel_force: float | None = None, rel_stress: float | None = None, e_std_lo: float = 0.05, e_std_hi: float = 0.1, f_std_lo: float = 0.05, f_std_hi: float = 0.1, s_std_lo: float = 0.05, s_std_hi: float = 0.1, block_size: int = 1000) (alff.al.utilal_uncertainty.ModelCommittee)" href="#alff.al.utilal_uncertainty.ModelCommittee">ModelCommittee</a></code></b>
           –
           <div class="doc-md-description">
             <p>A class to manage a committee of models for uncertainty estimation.</p>
@@ -22019,7 +22019,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            chunk_list(input_list: list, chunk_size: int) -> Generator (alff.al.utilal_uncertainty.chunk_list)" href="#alff.al.utilal_uncertainty.chunk_list">chunk_list</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            chunk_list(input_list: list, chunk_size: int) -> Generator[list, None, None] (alff.al.utilal_uncertainty.chunk_list)" href="#alff.al.utilal_uncertainty.chunk_list">chunk_list</a></code></b>
             –
             <div class="doc-md-description">
               <p>Yield successive n-sized chunks from <code>input_list</code>.</p>
@@ -22046,7 +22046,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 
 <h5 id="alff.al.utilal_uncertainty.ModelCommittee" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">ModelCommittee</span><span class="p">(</span><span class="n">mlp_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">calc_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">compute_stress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">rel_force</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rel_stress</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">e_std_lo</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">e_std_hi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">f_std_lo</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">f_std_hi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">s_std_lo</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">s_std_hi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">block_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">ModelCommittee</span><span class="p">(</span><span class="n">mlp_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">calc_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">compute_stress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">rel_force</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">rel_stress</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">e_std_lo</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">e_std_hi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">f_std_lo</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">f_std_hi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">s_std_lo</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">s_std_hi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">block_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span></code>
 
 <a href="#alff.al.utilal_uncertainty.ModelCommittee" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -22121,7 +22121,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
         <li class="doc-section-item field-body">
             <b><code>e_std_lo</code></b>
               (<code><span title="float">float</span></code>, default:
-                  <code>0.0</code>
+                  <code>0.05</code>
 )
           –
           <div class="doc-md-description">
@@ -22141,7 +22141,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
         <li class="doc-section-item field-body">
             <b><code>f_std_lo</code></b>
               (<code><span title="float">float</span></code>, default:
-                  <code>0.0</code>
+                  <code>0.05</code>
 )
           –
           <div class="doc-md-description">
@@ -22161,7 +22161,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
         <li class="doc-section-item field-body">
             <b><code>s_std_lo</code></b>
               (<code><span title="float">float</span></code>, default:
-                  <code>0.0</code>
+                  <code>0.05</code>
 )
           –
           <div class="doc-md-description">
@@ -22194,7 +22194,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 <details class="notes" open>
   <summary>Notes</summary>
   <ul>
-<li>Consider use <code>@staticmethod</code> for some functions to avoid recursive messing.</li>
+<li>Consider using <code>@staticmethod</code> for some functions to avoid recursive messing.</li>
 </ul>
 </details>
 
@@ -22221,7 +22221,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
             <b><code><a class="autorefs autorefs-internal" title="            committee_judge() -> tuple[np.ndarray, np.ndarray, np.ndarray] (alff.al.utilal_uncertainty.ModelCommittee.committee_judge)" href="#alff.al.utilal_uncertainty.ModelCommittee.committee_judge">committee_judge</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Decide whether an configuration is candidate, accurate, or inaccurate based on committee error</p>
+              <p>Decide whether a configuration is candidate, accurate, or inaccurate based on committee error</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -22878,7 +22878,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 <li>This function computes for multiple configurations, but it is not a true batching inference as in some MLP models like DeepMD-kit. It is just to avoid repeatedly assigning calculators and calling numpy functions multiple times (more vectorized). Therefore, it maybe 5-10% faster the old naive implementation, but not significantly faster as true batching inference.</li>
 <li>Note that, batching inference requires all configurations have the same number of atoms. Similarly, - this <code>blockwise</code> functions requires all configurations in block have the same number of atoms. So if the input extxyz file contains configurations with different number of atoms, must use block_size=1 when initializing <code>ModelCommittee</code> class.</li>
 <li>Define this function as <code>staticmethod</code> to avoid recursive messing when compute stresses in next functions.</li>
-<li>Work with stuctures with pre-existing calculators and results:<ul>
+<li>Work with structures with pre-existing calculators and results:<ul>
 <li>Should make <code>struct_copy = struct.copy()</code> before calling <code>struct.get_*()</code> to avoid the result from <code>get_*()</code> being affected by previous calculators's results.</li>
 <li>Should call <code>struct_copy.calc = None</code> to clean up previous calculator (e.g., SinglePointCalculator) before assigning new calculator. This is important when the input <code>structs</code> already had <code>results</code> stored in <code>struct.calc.results</code>, new results may try to be stored in the existing <code>results</code> dict, causing shape messing or unexpected values.</li>
 </ul>
@@ -22965,16 +22965,13 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
             <p>List of Atoms objects.</p>
           </div>
         </li>
-        <li class="doc-section-item field-body">
-            <b><code>outfile</code></b>
-              (<code><span title="str">str</span></code>)
-          –
-          <div class="doc-md-description">
-            <p>Output file. Defaults to "committee_error.txt".</p>
-          </div>
-        </li>
     </ul>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>The output file is controlled by the class attribute <code>self.committee_error_file</code>.</p>
+</details>
 
     </div>
 
@@ -22991,7 +22988,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
     <div class="doc doc-contents ">
 
-        <p>Decide whether an configuration is candidate, accurate, or inaccurate based on committee error</p>
+        <p>Decide whether a configuration is candidate, accurate, or inaccurate based on committee error</p>
 
 
 <p><span class="doc-section-title">Returns:</span></p>
@@ -23117,7 +23114,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 
 <h5 id="alff.al.utilal_uncertainty.chunk_list" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">chunk_list</span><span class="p">(</span><span class="n">input_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">chunk_list</span><span class="p">(</span><span class="n">input_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span></code>
 
 <a href="#alff.al.utilal_uncertainty.chunk_list" class="headerlink" title="Permanent link">&para;</a></h5>
 
