@@ -18164,7 +18164,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'gefa328b52'
+          <b><code><a class="autorefs autorefs-internal" title="            commit_id: COMMIT_ID = 'g501bdeccd'
 
   
       module-attribute
@@ -18180,7 +18180,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'gefa328b52'
+          <b><code><a class="autorefs autorefs-internal" title="            __commit_id__: COMMIT_ID = 'g501bdeccd'
 
   
       module-attribute
@@ -18372,7 +18372,7 @@
 
 
 <h4 id="alff._version.commit_id" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gefa328b52&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">commit_id</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g501bdeccd&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -18392,7 +18392,7 @@
 
 
 <h4 id="alff._version.__commit_id__" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;gefa328b52&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">__commit_id__</span><span class="p">:</span> <span class="n">COMMIT_ID</span> <span class="o">=</span> <span class="s1">&#39;g501bdeccd&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -23784,7 +23784,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            postprocess()
+            <b><code><a class="autorefs autorefs-internal" title="            postprocess() -> None | list
 
   
       abstractmethod
@@ -24203,7 +24203,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.base.RemoteOperation.postprocess" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">list</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -32080,7 +32080,7 @@ Note:
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            split_extxyz_dataset(extxyz_files: list[str], train_ratio: float = 0.9, valid_ratio: float = 0.1, seed: int = None, outfile_prefix: str = 'dataset') (alff.gdata.util_dataset.split_extxyz_dataset)" href="#alff.gdata.util_dataset.split_extxyz_dataset">split_extxyz_dataset</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            split_extxyz_dataset(extxyz_files: list[str], train_ratio: float = 0.9, valid_ratio: float = 0.1, seed: int | None = None, outfile_prefix: str = 'dataset') (alff.gdata.util_dataset.split_extxyz_dataset)" href="#alff.gdata.util_dataset.split_extxyz_dataset">split_extxyz_dataset</a></code></b>
             –
             <div class="doc-md-description">
               <p>Split a dataset into training, validation, and test sets.</p>
@@ -32115,7 +32115,7 @@ Note:
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            select_structs_from_extxyz(extxyz_file: str, has_symbols: list = None, only_symbols: list = None, exact_symbols: list = None, has_properties: list = None, only_properties: list = None, has_columns: list = None, only_columns: list = None, natoms: int = None, tol: float = 1e-06) -> list[Atoms] (alff.gdata.util_dataset.select_structs_from_extxyz)" href="#alff.gdata.util_dataset.select_structs_from_extxyz">select_structs_from_extxyz</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            select_structs_from_extxyz(extxyz_file: str, has_symbols: list | None = None, only_symbols: list | None = None, exact_symbols: list | None = None, has_properties: list | None = None, only_properties: list | None = None, has_columns: list | None = None, only_columns: list | None = None, natoms: int | None = None, tol: float = 1e-06) (alff.gdata.util_dataset.select_structs_from_extxyz)" href="#alff.gdata.util_dataset.select_structs_from_extxyz">select_structs_from_extxyz</a></code></b>
             –
             <div class="doc-md-description">
               <p>Choose frames from a extxyz trajectory file, based on some criteria.</p>
@@ -32202,7 +32202,7 @@ Note:
 
 
 <h5 id="alff.gdata.util_dataset.split_extxyz_dataset" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_extxyz_dataset</span><span class="p">(</span><span class="n">extxyz_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">outfile_prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">split_extxyz_dataset</span><span class="p">(</span><span class="n">extxyz_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">train_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">valid_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">outfile_prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;dataset&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.gdata.util_dataset.split_extxyz_dataset" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -32452,7 +32452,7 @@ Note:
 
 
 <h5 id="alff.gdata.util_dataset.select_structs_from_extxyz" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">select_structs_from_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">has_symbols</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">only_symbols</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">exact_symbols</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">has_properties</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">only_properties</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">has_columns</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">only_columns</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">natoms</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-06</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Atoms</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">select_structs_from_extxyz</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">has_symbols</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">only_symbols</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">exact_symbols</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">has_properties</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">only_properties</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">has_columns</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">only_columns</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">natoms</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-06</span><span class="p">)</span></code>
 
 <a href="#alff.gdata.util_dataset.select_structs_from_extxyz" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -37836,7 +37836,7 @@ Note:
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            postprocess() (alff.phonon.libpho_gpaw.OperPhononGpawSinglepoint.postprocess)" href="#alff.phonon.libpho_gpaw.OperPhononGpawSinglepoint.postprocess">postprocess</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            postprocess() -> list[list] (alff.phonon.libpho_gpaw.OperPhononGpawSinglepoint.postprocess)" href="#alff.phonon.libpho_gpaw.OperPhononGpawSinglepoint.postprocess">postprocess</a></code></b>
             –
             <div class="doc-md-description">
               <p>This function does:</p>
@@ -38269,7 +38269,7 @@ Note:
 
 
 <h6 id="alff.phonon.libpho_gpaw.OperPhononGpawSinglepoint.postprocess" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span></code>
 
 <a href="#alff.phonon.libpho_gpaw.OperPhononGpawSinglepoint.postprocess" class="headerlink" title="Permanent link">&para;</a></h6>
 
@@ -39622,7 +39622,7 @@ Notes: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            postprocess() (alff.phonon.libpho_lammps.OperPhononLammpsSinglepoint.postprocess)" href="#alff.phonon.libpho_lammps.OperPhononLammpsSinglepoint.postprocess">postprocess</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            postprocess() -> list[list] (alff.phonon.libpho_lammps.OperPhononLammpsSinglepoint.postprocess)" href="#alff.phonon.libpho_lammps.OperPhononLammpsSinglepoint.postprocess">postprocess</a></code></b>
             –
             <div class="doc-md-description">
               <p>This function does:</p>
@@ -40034,7 +40034,7 @@ Notes: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.
 
 
 <h6 id="alff.phonon.libpho_lammps.OperPhononLammpsSinglepoint.postprocess" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span></code>
 
 <a href="#alff.phonon.libpho_lammps.OperPhononLammpsSinglepoint.postprocess" class="headerlink" title="Permanent link">&para;</a></h6>
 
