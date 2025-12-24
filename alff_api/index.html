@@ -27658,8 +27658,7 @@ Steps to compute the elastic tensor:
     - Compute stress for each deformed structure by DFT/MD.
     - Input the deformed structures with stress tensors to the method <code>fit_elastic_tensor</code></p>
 
-        <div class="codehilite"><pre><span></span><code>symprec (float): symmetry precision to check the symmetry of the crystal
-</code></pre></div>
+        <p>symprec (float): symmetry precision to check the symmetry of the crystal</p>
 
           
 
@@ -28228,7 +28227,7 @@ The bulk modulus is the <code>B_0</code> coefficient of the B-M EOS.
 The units of the result are defined by ASE. To get the result in
 any particular units (e.g. GPa) you need to divide it by
 ase.units.<unit name>::</p>
-<div class="codehilite"><pre><span></span><code>get_bulk_modulus(cryst)/ase.units.GPa
+<div class="codehilite"><pre><span></span><code>get_bulk_modulus(cryst) / ase.units.GPa
 </code></pre></div>
 
 
@@ -28361,9 +28360,8 @@ ase.units.<unit name>::</p>
 
         <p>Class to manage elastic constants and compute elastic properties.</p>
 
-        <div class="codehilite"><pre><span></span><code><span class="n">bravais_lattice</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">Bravais</span><span class="w"> </span><span class="n">lattice</span><span class="w"> </span><span class="k">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">crystal</span><span class="p">.</span>
-<span class="o">**</span><span class="n">kwargs</span><span class="o">:</span><span class="w"> </span><span class="n">dictionary</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">elastic</span><span class="w"> </span><span class="n">constants</span><span class="w"> </span><span class="n n-Quoted">`Cij`</span><span class="p">.</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="n">C11</span><span class="p">,</span><span class="w"> </span><span class="n">C12</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">C66</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">float</span><span class="p">,</span>
-</code></pre></div>
+        <p>bravais_lattice (str): Bravais lattice name of the crystal.
+**kwargs: dictionary of elastic constants <code>Cij</code>. Where C11, C12, ... C66 : float,</p>
 
           
 
