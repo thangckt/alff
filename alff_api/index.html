@@ -32374,7 +32374,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            remove_duplicate_structs_hash(extxyz_file: str, tol=1e-06, backup=True) -> None (alff.gdata.util_dataset.remove_duplicate_structs_hash)" href="#alff.gdata.util_dataset.remove_duplicate_structs_hash">remove_duplicate_structs_hash</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            remove_duplicate_structs_hash(extxyz_file: str, seen_extxyz: str | None = None, tol: float = 1e-06, backup: bool = True) -> None (alff.gdata.util_dataset.remove_duplicate_structs_hash)" href="#alff.gdata.util_dataset.remove_duplicate_structs_hash">remove_duplicate_structs_hash</a></code></b>
             –
             <div class="doc-md-description">
               <p>Remove duplicate structures using hashing (very fast).</p>
@@ -33026,7 +33026,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.gdata.util_dataset.remove_duplicate_structs_hash" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">remove_duplicate_structs_hash</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">remove_duplicate_structs_hash</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">seen_extxyz</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tol</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-06</span><span class="p">,</span> <span class="n">backup</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
 
 <a href="#alff.gdata.util_dataset.remove_duplicate_structs_hash" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -33034,15 +33034,54 @@ for more complex workflow (e.g. with iteration like active learning), need to re
     <div class="doc doc-contents ">
 
         <p>Remove duplicate structures using hashing (very fast).</p>
-
-
-<details class="notes" open>
-  <summary>Notes</summary>
-  <ul>
+<ul>
 <li>Much less memory overhead compared to pairwise <code>are_structs_identical</code> calls.</li>
 <li>This reduces duplicate checking to O(N) instead of O(N²). No parallelism needed — it's already O(N)</li>
 </ul>
-</details>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>extxyz_file</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Path to the extxyz file.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>seen_extxyz</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a> | None</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Optional path to an extxyz file to be included into the set of seen structures. Defaults to None.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>tol</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>, default:
+                  <code>1e-06</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Tolerance for comparing atomic positions. Defaults to 1e-6.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>backup</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>, default:
+                  <code>True</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Whether to create a backup of the original file. Defaults to True.</p>
+          </div>
+        </li>
+    </ul>
+
           
 
     </div>
