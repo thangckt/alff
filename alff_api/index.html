@@ -22396,8 +22396,8 @@ This class to 'return' standard D3 parameter names for different packages used f
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <p>Single mode: will generate file as "outfile.pt"
 Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile/deployed_parallel_1.pt", ...</p>
 </details>
@@ -22720,8 +22720,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>Consider using <code>@staticmethod</code> for some functions to avoid recursive messing.</li>
 </ul>
@@ -23332,8 +23332,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <p>The output file is controlled by the class attribute <code>self.committee_error_file</code>.</p>
 </details>
           
@@ -23439,8 +23439,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li><code>blockwise</code> functions requires all configurations in block have the same number of atoms. So if the input extxyz file contains configurations with different number of atoms, must use block_size=1 when initializing <code>ModelCommittee</code> class.</li>
 </ul>
@@ -23699,8 +23699,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 </span></code></pre></div></p>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li><code>multi_mdicts</code> in this class is a dictionary containing multiple remote machines, and will be used <code>RemoteOperation</code> class.</li>
 <li>All <code>@abtractmethod</code> must be reimplemented in subclasses.</li>
@@ -24179,8 +24179,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 </ul>
 </details>
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>Before using this class, must prepare a file <code>work_dir/task_dirs.yml</code></li>
 <li>All paths (<code>work_dir</code>, <code>task_dirs</code>,...) are in POSIX format, and relative to <code>run_dir</code> (not <code>work_dir</code>).</li>
@@ -32884,8 +32884,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>It is not clear what is "equivalent"?</li>
 </ul>
@@ -33009,8 +33009,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>This approach is the O(N²) pairwise checks, so it scales badly as the number of structures grows.</li>
 <li>This parallel version has not helped much in practice. Use the hashing approach instead.</li>
@@ -33083,8 +33083,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>Use <code>reversed()</code> does not modify the original list, and it is memory-efficient (no copy)</li>
 </ul>
@@ -36268,8 +36268,8 @@ Using <code>conditional optimization</code>: fix atoms and optimize the rest.</p
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>This function assumes the structure is 2D, and the cell is orthogonal in z direction.</li>
 <li>After displacement, if any atom move outside the current boundaries, it will be wrapped to the cell.</li>
@@ -39290,7 +39290,7 @@ is needed update the cell correctly.</li>
 
 
         <p>Class to run LAMMPS singlepoint calculation, used for phonon calculation.
-Notes: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.</p>
+Note: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.</p>
 
           
 
@@ -40390,8 +40390,8 @@ The function does the following:
         <p>Utility functions for phonon calculations.</p>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>Phonon calculations rely on a structure that is tightly converged. It is recommended to run a pre-relaxation with <code>opt_params: {"fmax": 1e-3}</code> or tighter before running phonon calculations.</li>
 <li>[Notice about displacement distance: "A too small displacement distance can lead to numerical noise, while a too large displacement distance can lead to anharmonic effects. A typical value is 0.01-0.05 Angstrom.", But, <a href="https://www.diracs-student.blog/2023/11/unoffical-way-to-use-phonopy-with-ase.html">some notes</a> say 0.05-0.08 Angstroms are need to converge!</li>
@@ -40906,8 +40906,8 @@ The function does the following:
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li><code>build.graphene()</code> does not set the cell c vector along z axis, so we need to modify it manually.</li>
 </ul>
@@ -40970,14 +40970,14 @@ This helps to chunk the tasks with similar supercell size together (similar supe
           <b><code><a class="autorefs autorefs-internal" title="            cli_ase_md (alff.util.script_ase.cli_ase_md)" href="#alff.util.script_ase.cli_ase_md">cli_ase_md</a></code></b>
           –
           <div class="doc-md-description">
-            <p>Some notes:</p>
+            <p>Some Note:</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="            cli_gpaw_aimd (alff.util.script_ase.cli_gpaw_aimd)" href="#alff.util.script_ase.cli_gpaw_aimd">cli_gpaw_aimd</a></code></b>
           –
           <div class="doc-md-description">
-            <p>Some notes:</p>
+            <p>Some Note:</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -41030,7 +41030,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
     <div class="doc doc-contents ">
 
-        <p>Some notes:
+        <p>Some Note:
 - Run MD in ase following this tutorial: <a href="https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html">https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html</a>
 - For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
@@ -42228,7 +42228,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
     <div class="doc doc-contents ">
 
-        <p>Some notes:
+        <p>Some Note:
 - Run MD in ase following this tutorial: <a href="https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html">https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html</a>
 - For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
@@ -45828,8 +45828,8 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
     </ul>
 
 
-<details class="notes" open>
-  <summary>Notes</summary>
+<details class="note" open>
+  <summary>Note</summary>
   <ul>
 <li>The <code>fix balance</code> requires setting <code>pair_coeff</code> before it.</li>
 </ul>
