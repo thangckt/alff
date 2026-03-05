@@ -4768,6 +4768,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.gdata.gendata.strain_dim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;strain_dim
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.gdata.gendata.strain_x_dim" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5633,17 +5644,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remove_duplicate_structs_serial
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.gdata.util_dataset.remove_duplicate_structs_parallel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remove_duplicate_structs_parallel
       
     </span>
   </a>
@@ -13340,6 +13340,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.gdata.gendata.strain_dim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;strain_dim
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.gdata.gendata.strain_x_dim" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -14205,17 +14216,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remove_duplicate_structs_serial
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.gdata.util_dataset.remove_duplicate_structs_parallel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;remove_duplicate_structs_parallel
       
     </span>
   </a>
@@ -29236,21 +29236,28 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            strain_x_dim(struct_files: list[str], strain_x_list: list[float]) (alff.gdata.gendata.strain_x_dim)" href="#alff.gdata.gendata.strain_x_dim">strain_x_dim</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            strain_dim(struct_files: list[str], strain_list: list[float], dim: int) -> list[str] (alff.gdata.gendata.strain_dim)" href="#alff.gdata.gendata.strain_dim">strain_dim</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Scale 'a single spatial dimension' of the structures.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            strain_x_dim(struct_files: list[str], strain_x_list: list[float]) -> list[str] (alff.gdata.gendata.strain_x_dim)" href="#alff.gdata.gendata.strain_x_dim">strain_x_dim</a></code></b>
             –
             <div class="doc-md-description">
               <p>Scale the x dimension of the structures.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            strain_y_dim(struct_files: list[str], strain_y_list: list[float]) (alff.gdata.gendata.strain_y_dim)" href="#alff.gdata.gendata.strain_y_dim">strain_y_dim</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            strain_y_dim(struct_files: list[str], strain_y_list: list[float]) -> list[str] (alff.gdata.gendata.strain_y_dim)" href="#alff.gdata.gendata.strain_y_dim">strain_y_dim</a></code></b>
             –
             <div class="doc-md-description">
               <p>Scale the y dimension of the structures.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            strain_z_dim(struct_files: list[str], strain_z_list: list[float]) (alff.gdata.gendata.strain_z_dim)" href="#alff.gdata.gendata.strain_z_dim">strain_z_dim</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            strain_z_dim(struct_files: list[str], strain_z_list: list[float]) -> list[str] (alff.gdata.gendata.strain_z_dim)" href="#alff.gdata.gendata.strain_z_dim">strain_z_dim</a></code></b>
             –
             <div class="doc-md-description">
               <p>Scale the z dimension of the structures.</p>
@@ -29750,8 +29757,56 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 <div class="doc doc-object doc-function">
 
 
+<h5 id="alff.gdata.gendata.strain_dim" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+<a href="#alff.gdata.gendata.strain_dim" class="headerlink" title="Permanent link">&para;</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Scale 'a single spatial dimension' of the structures.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>struct_files</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of structure file paths.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>strain_list</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>Strain values to apply.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>dim</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Dimension index to strain (0=x, 1=y, 2=z).</p>
+          </div>
+        </li>
+    </ul>
+
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h5 id="alff.gdata.gendata.strain_x_dim" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_x_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_x_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_x_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_x_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.gdata.gendata.strain_x_dim" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -29770,7 +29825,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.gdata.gendata.strain_y_dim" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_y_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_y_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_y_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_y_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.gdata.gendata.strain_y_dim" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -29789,7 +29844,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.gdata.gendata.strain_z_dim" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_z_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_z_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">strain_z_dim</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">strain_z_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.gdata.gendata.strain_z_dim" class="headerlink" title="Permanent link">&para;</a></h5>
 
@@ -32097,13 +32152,6 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            remove_duplicate_structs_parallel(extxyz_file: str, tol=1e-06, n_jobs=None) -> None (alff.gdata.util_dataset.remove_duplicate_structs_parallel)" href="#alff.gdata.util_dataset.remove_duplicate_structs_parallel">remove_duplicate_structs_parallel</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Remove duplicate structures from an extxyz file using built-in parallelism.</p>
-            </div>
-          </li>
-          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="            remove_duplicate_structs_hash(extxyz_file: str, seen_extxyz: str | None = None, tol: float = 1e-06, backup: bool = True) -> None (alff.gdata.util_dataset.remove_duplicate_structs_hash)" href="#alff.gdata.util_dataset.remove_duplicate_structs_hash">remove_duplicate_structs_hash</a></code></b>
             –
             <div class="doc-md-description">
@@ -32289,6 +32337,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
   <ul>
 <li><code>np.lexsort</code> is used to sort by multiple criteria. <code>np.argsort</code> is used to sort by a single criterion.</li>
 <li><code>np.lexsort</code> does not support descending order, so we reverse the sorted indices using <code>idx[::-1]</code>.</li>
+<li>If multiple sorting criteria are provided, they will be applied in the order of 'last_key' to 'first_key' (i.e., the last key in the list is the primary sort key). Example: <code>np.lexsort((key1, key2))</code> sorts by <code>key2</code> first, then by `key1.</li>
 </ul>
 </details>
           
@@ -32674,78 +32723,6 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         </li>
     </ul>
 
-          
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.gdata.util_dataset.remove_duplicate_structs_parallel" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">remove_duplicate_structs_parallel</span><span class="p">(</span><span class="n">extxyz_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-<a href="#alff.gdata.util_dataset.remove_duplicate_structs_parallel" class="headerlink" title="Permanent link">&para;</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Remove duplicate structures from an extxyz file using built-in parallelism.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-            <b><code>extxyz_file</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>)
-          –
-          <div class="doc-md-description">
-            <p>Path to the extxyz file.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>tol</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>, default:
-                  <code>1e-06</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>Tolerance for comparing atomic positions. Defaults to 1e-6.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-            <b><code>n_jobs</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>, default:
-                  <code>None</code>
-)
-          –
-          <div class="doc-md-description">
-            <p>Number of worker processes. Defaults to None (use all cores).</p>
-          </div>
-        </li>
-    </ul>
-
-
-<p><span class="doc-section-title">Returns:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-              <code>None</code>
-          –
-          <div class="doc-md-description">
-            <p>None. Writes a new file with unique structures.</p>
-          </div>
-        </li>
-    </ul>
-
-
-<details class="note" open>
-  <summary>Note</summary>
-  <ul>
-<li>This approach is the O(N²) pairwise checks, so it scales badly as the number of structures grows.</li>
-<li>This parallel version has not helped much in practice. Use the hashing approach instead.</li>
-</ul>
-</details>
           
 
     </div>
