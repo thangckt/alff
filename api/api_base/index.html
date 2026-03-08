@@ -3782,20 +3782,17 @@
 
         <p>Base class for workflows.</p>
 <p><code>Workflow</code> class is the central part of ALFF. Each workflow contains list of stages to be executed.</p>
+<p>Subclass MUST reimplement:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nx">__init__</span><span class="p">()</span><span class="err">`</span><span class="p">:</span><span class="w"> </span><span class="nx">initialize</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">workflow</span><span class="p">,</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="nx">these</span><span class="w"> </span><span class="nx">attributes</span><span class="p">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">stage_map</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">wf_name</span>
+<span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="nx">run</span><span class="p">()</span><span class="err">`</span><span class="p">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">main</span><span class="w"> </span><span class="nx">function</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">workflow</span><span class="p">.</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">implementation</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">loop</span><span class="w"> </span><span class="nx">over</span><span class="w"> </span><span class="nx">stages</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="err">`</span><span class="kp">self</span><span class="p">.</span><span class="nx">stage_map</span><span class="err">`</span><span class="p">,</span><span class="w"> </span><span class="nx">just</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">simple</span><span class="w"> </span><span class="nx">workflow</span><span class="p">.</span><span class="w"> </span><span class="nx">For</span><span class="w"> </span><span class="nx">complex</span><span class="w"> </span><span class="nx">workflow</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">iteration</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="nx">active</span><span class="w"> </span><span class="nx">learning</span><span class="p">),</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">reimplement</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="err">`</span><span class="p">.</span><span class="nx">run</span><span class="p">()</span><span class="err">`</span><span class="w"> </span><span class="nx">function</span><span class="p">.</span>
+</code></pre></div>
 
 
-<details class="subclass-must-reimplement" open>
-  <summary>Subclass MUST reimplement</summary>
-  <ul>
-<li><code>__init__()</code>: initialize the workflow, need to override these attributes:<ul>
-<li>self.stage_map</li>
-<li>self.wf_name</li>
-</ul>
-</li>
-<li><code>run()</code>: the main function to run the workflow. The default implementation is a loop over stages in <code>self.stage_map</code>, just for simple workflow. For complex workflow (e.g. with iteration like active learning), need to reimplement the <code>.run()</code> function.</li>
-</ul>
-</details>        <p>Example:
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">WorkflowExample</span><span class="p">(</span><span class="n">Workflow</span><span class="p">):</span>
+<details class="example" open>
+  <summary>Example</summary>
+  <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">WorkflowExample</span><span class="p">(</span><span class="n">Workflow</span><span class="p">):</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">machines_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">params_file</span><span class="p">,</span> <span class="n">machines_file</span><span class="p">,</span> <span class="n">SCHEMA_EXAMPLE</span><span class="p">)</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">stage_map</span> <span class="o">=</span> <span class="p">{</span>
@@ -3805,8 +3802,8 @@
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">}</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">wf_name</span> <span class="o">=</span> <span class="s2">&quot;Name of the workflow&quot;</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">return</span>
-</span></code></pre></div></p>
-
+</span></code></pre></div>
+</details>
 
 <details class="note" open>
   <summary>Note</summary>
