@@ -4369,20 +4369,18 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
         <p>Base class for operations on remote machines.</p>
-<p>Each <code>operation</code> includes atl east 3 methods:
-    - prepare
-    - run
-    - postprocess</p>
+<p>Each <code>operation</code> includes atl east 3 methods:</p>
+<div class="codehilite"><pre><span></span><code>- prepare
+- run
+- postprocess
+</code></pre></div>
 
+<p>Subclass must reimplement these methods:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">-</span> <span class="sb">`__init__()`</span>: initialize the operation, need to override these attributes:
+<span class="k">-</span> <span class="sb">`prepare()`</span>: prepare all things needed for the run() method.
+<span class="k">-</span> <span class="sb">`postprocess()`</span>: postprocess after the run() method.
+</code></pre></div>
 
-<details class="subclass-must-reimplement-these-methods" open>
-  <summary>Subclass must reimplement these methods</summary>
-  <ul>
-<li><code>__init__()</code>: initialize the operation, need to override these attributes:</li>
-<li><code>prepare()</code>: prepare all things needed for the run() method.</li>
-<li><code>postprocess()</code>: postprocess after the run() method.</li>
-</ul>
-</details>
 
 <details class="note" open>
   <summary>Note</summary>
