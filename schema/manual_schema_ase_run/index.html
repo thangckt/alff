@@ -1876,7 +1876,7 @@
 
 
 
-<h1 id="schema-for-ase-input">Schema for ASE input<a class="headerlink" href="#schema-for-ase-input" title="Permanent link">&para;</a></h1>
+<h1 id="schema-for-ase-input">Schema for ASE input<a class="headerlink" href="#schema-for-ase-input" title="Permanent link">¤</a></h1>
 <p>The schema to configure the ASE input file to perform atomistic simulations.</p>
 <p>The sections of the schema are:</p>
 <ol>
@@ -1902,7 +1902,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="schema">Schema:<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
+<h2 id="schema">Schema:<a class="headerlink" href="#schema" title="Permanent link">¤</a></h2>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### Schema for ASE input file</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">structure</span><span class="p">:</span><span class="w">                </span><span class="c1">### ANCHOR: Define atomic structure</span>
@@ -2044,7 +2044,7 @@
 </span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a><span class="w">    </span><span class="nt">mask</span><span class="p">:</span><span class="w">                 </span><span class="c1"># dimensions to relax computational box. Set to (1,1,1) to allow fully flexible box. Set to (1,1,0) to disallow elongations along the z-axis, etc. If not set, then only relax the periodic dimensions. Only available for &#39;parrinello_rahman&#39; barostat.</span>
 </span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">list</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">boolean</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># None or 3-tuple</span>
 </span></code></pre></div>
-<h2 id="example-config-1">Example config 1:<a class="headerlink" href="#example-config-1" title="Permanent link">&para;</a></h2>
+<h2 id="example-config-1">Example config 1:<a class="headerlink" href="#example-config-1" title="Permanent link">¤</a></h2>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">structure</span><span class="p">:</span><span class="w">  </span><span class="c1"># atomic structure information</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">from_extxyz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MoS2_triangular.extxyz</span><span class="w">   </span><span class="c1"># The EXTXYZ file for input structure</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">pbc</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">]</span><span class="w">                          </span><span class="c1"># set this will overwrite the PBC in the EXTXYZ file. eg. [1, 1, 1]</span>
