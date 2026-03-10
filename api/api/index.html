@@ -5866,7 +5866,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="              D3ParamDFT(d3package: str = 'sevenn') (alff.al.utilal.D3ParamDFT)" href="#alff.al.utilal.D3ParamDFT">D3ParamDFT</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="              D3ParamDFT(d3package: str = 'simple_dftd3') (alff.al.utilal.D3ParamDFT)" href="#alff.al.utilal.D3ParamDFT">D3ParamDFT</a></code></b>
           –
           <div class="doc-md-description">
             <p>Different packages use different names for D3 parameters.</p>
@@ -5912,8 +5912,16 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
         <p>Different packages use different names for D3 parameters.
-This class to 'return' standard D3 parameter names for different packages used for MD.</p>
+This class to 'return' conventional names for D3 parameters for different packages used for MD.</p>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li>The default cutoff values are based on the <a href="https://dftd3.readthedocs.io/en/latest/api/ase.html"><code>simple-dftd3</code> package</a></li>
+<li>Some dftd3 parameters for DFT calculations support triple-body interactions, but most <a href="https://docs.lammps.org/pair_dispersion_d3.html">MD packages</a> only support pairwise interactions. So the triple-body cutoff parameter is not included in this class.</li>
+</ul>
+</details>
           
 
 
@@ -6019,11 +6027,11 @@ This class to 'return' standard D3 parameter names for different packages used f
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_cutoff: float = 50.2022
+          <b><code><a class="autorefs autorefs-internal" title="            default_pair_cutoff: float = 60.0
 
   
       instance-attribute
-   (alff.al.utilal.D3ParamMD.default_cutoff)" href="#alff.al.utilal.D3ParamMD.default_cutoff">default_cutoff</a></code></b>
+   (alff.al.utilal.D3ParamMD.default_pair_cutoff)" href="#alff.al.utilal.D3ParamMD.default_pair_cutoff">default_pair_cutoff</a></code></b>
               (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>)
           –
           <div class="doc-md-description">
@@ -6031,7 +6039,7 @@ This class to 'return' standard D3 parameter names for different packages used f
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 21.1671
+          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 40.0
 
   
       instance-attribute
@@ -6102,14 +6110,14 @@ This class to 'return' standard D3 parameter names for different packages used f
 
 
 
-<h6 id="alff.al.utilal.D3ParamMD.default_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">50.2022</span></code>
+<h6 id="alff.al.utilal.D3ParamMD.default_pair_cutoff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_pair_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">60.0</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-<a href="#alff.al.utilal.D3ParamMD.default_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
+<a href="#alff.al.utilal.D3ParamMD.default_pair_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
 
 
     <div class="doc doc-contents ">
@@ -6124,7 +6132,7 @@ This class to 'return' standard D3 parameter names for different packages used f
 
 
 <h6 id="alff.al.utilal.D3ParamMD.default_cn_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">21.1671</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">40.0</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -6282,7 +6290,7 @@ This class to 'return' standard D3 parameter names for different packages used f
 
 
 <h5 id="alff.al.utilal.D3ParamDFT" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">D3ParamDFT</span><span class="p">(</span><span class="n">d3package</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;sevenn&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">D3ParamDFT</span><span class="p">(</span><span class="n">d3package</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;simple_dftd3&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.al.utilal.D3ParamDFT" class="headerlink" title="Permanent link">¤</a></h5>
 
@@ -6294,7 +6302,7 @@ This class to 'return' standard D3 parameter names for different packages used f
 
 
         <p>Different packages use different names for D3 parameters.
-This class to 'return' standard D3 parameter names for different packages used for DFT.</p>
+This class to 'return' conventional names for D3 parameters for different packages used for DFT calculations.</p>
 
           
 
@@ -6366,11 +6374,11 @@ This class to 'return' standard D3 parameter names for different packages used f
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_cutoff: float = 50.2022
+          <b><code><a class="autorefs autorefs-internal" title="            default_pair_cutoff: float = 60.0
 
   
       instance-attribute
-   (alff.al.utilal.D3ParamDFT.default_cutoff)" href="#alff.al.utilal.D3ParamDFT.default_cutoff">default_cutoff</a></code></b>
+   (alff.al.utilal.D3ParamDFT.default_pair_cutoff)" href="#alff.al.utilal.D3ParamDFT.default_pair_cutoff">default_pair_cutoff</a></code></b>
               (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>)
           –
           <div class="doc-md-description">
@@ -6378,7 +6386,7 @@ This class to 'return' standard D3 parameter names for different packages used f
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 21.1671
+          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 40.0
 
   
       instance-attribute
@@ -6449,14 +6457,14 @@ This class to 'return' standard D3 parameter names for different packages used f
 
 
 
-<h6 id="alff.al.utilal.D3ParamDFT.default_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">50.2022</span></code>
+<h6 id="alff.al.utilal.D3ParamDFT.default_pair_cutoff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_pair_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">60.0</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-<a href="#alff.al.utilal.D3ParamDFT.default_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
+<a href="#alff.al.utilal.D3ParamDFT.default_pair_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
 
 
     <div class="doc doc-contents ">
@@ -6471,7 +6479,7 @@ This class to 'return' standard D3 parameter names for different packages used f
 
 
 <h6 id="alff.al.utilal.D3ParamDFT.default_cn_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">21.1671</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">40.0</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
