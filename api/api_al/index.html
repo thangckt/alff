@@ -5154,7 +5154,7 @@ This class to 'return' conventional names for D3 parameters for different packag
 <details class="note" open>
   <summary>Note</summary>
   <ul>
-<li>The default cutoff values are based on the <a href="https://dftd3.readthedocs.io/en/latest/api/ase.html"><code>simple-dftd3</code> package</a></li>
+<li>The default cutoff values are <code>95 Bohr (50.27 Angstrom)</code> for pairwise interactions and <code>40 Bohr (21.17 Angstrom)</code> for coordination number cutoff.</li>
 <li>Some dftd3 parameters for DFT calculations support triple-body interactions, but most <a href="https://docs.lammps.org/pair_dispersion_d3.html">MD packages</a> only support pairwise interactions. So the triple-body cutoff parameter is not included in this class.</li>
 </ul>
 </details>
@@ -5222,25 +5222,36 @@ This class to 'return' conventional names for D3 parameters for different packag
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            angstrom_to_bohr(value_in_angstrom: float) -> float
+            <b><code><a class="autorefs autorefs-internal" title="            angstrom2bohr(angstrom_value: float) -> float
 
   
       staticmethod
-   (alff.al.utilal.D3ParamMD.angstrom_to_bohr)" href="../api/#alff.al.utilal.D3ParamMD.angstrom_to_bohr">angstrom_to_bohr</a></code></b>
+   (alff.al.utilal.D3ParamMD.angstrom2bohr)" href="../api/#alff.al.utilal.D3ParamMD.angstrom2bohr">angstrom2bohr</a></code></b>
             –
             <div class="doc-md-description">
               <p>Convert Angstrom to Bohr.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            angstrom_to_bohr2(value_in_angstrom: float) -> float
+            <b><code><a class="autorefs autorefs-internal" title="            angstrom2bohr2(angstrom_value: float) -> float
 
   
       staticmethod
-   (alff.al.utilal.D3ParamMD.angstrom_to_bohr2)" href="../api/#alff.al.utilal.D3ParamMD.angstrom_to_bohr2">angstrom_to_bohr2</a></code></b>
+   (alff.al.utilal.D3ParamMD.angstrom2bohr2)" href="../api/#alff.al.utilal.D3ParamMD.angstrom2bohr2">angstrom2bohr2</a></code></b>
             –
             <div class="doc-md-description">
               <p>Convert Angstrom to Bohr^2. To used in sevenn package.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            bohr2angstrom(bohr_value: float) -> float
+
+  
+      staticmethod
+   (alff.al.utilal.D3ParamMD.bohr2angstrom)" href="../api/#alff.al.utilal.D3ParamMD.bohr2angstrom">bohr2angstrom</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Convert Bohr to Angstrom.</p>
             </div>
           </li>
     </ul>
@@ -5263,7 +5274,7 @@ This class to 'return' conventional names for D3 parameters for different packag
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_pair_cutoff: float = 60.0
+          <b><code><a class="autorefs autorefs-internal" title="            default_pair_cutoff: float = 50.2718
 
   
       instance-attribute
@@ -5275,7 +5286,7 @@ This class to 'return' conventional names for D3 parameters for different packag
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 40.0
+          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 21.1671
 
   
       instance-attribute
@@ -5347,7 +5358,7 @@ This class to 'return' conventional names for D3 parameters for different packag
 
 
 <h5 id="alff.al.utilal.D3ParamMD.default_pair_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_pair_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">60.0</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_pair_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">50.2718</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -5368,7 +5379,7 @@ This class to 'return' conventional names for D3 parameters for different packag
 
 
 <h5 id="alff.al.utilal.D3ParamMD.default_cn_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">40.0</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">21.1671</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -5470,19 +5481,20 @@ This class to 'return' conventional names for D3 parameters for different packag
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.al.utilal.D3ParamMD.angstrom_to_bohr" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom_to_bohr</span><span class="p">(</span><span class="n">value_in_angstrom</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+<h5 id="alff.al.utilal.D3ParamMD.angstrom2bohr" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom2bohr</span><span class="p">(</span><span class="n">angstrom_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
 
-<a href="#alff.al.utilal.D3ParamMD.angstrom_to_bohr" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.al.utilal.D3ParamMD.angstrom2bohr" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
 
-        <p>Convert Angstrom to Bohr.</p>
+        <p>Convert Angstrom to Bohr.
+Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Angstrom.</p>
 
           
 
@@ -5493,19 +5505,42 @@ This class to 'return' conventional names for D3 parameters for different packag
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.al.utilal.D3ParamMD.angstrom_to_bohr2" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom_to_bohr2</span><span class="p">(</span><span class="n">value_in_angstrom</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+<h5 id="alff.al.utilal.D3ParamMD.angstrom2bohr2" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom2bohr2</span><span class="p">(</span><span class="n">angstrom_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
 
-<a href="#alff.al.utilal.D3ParamMD.angstrom_to_bohr2" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.al.utilal.D3ParamMD.angstrom2bohr2" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
 
         <p>Convert Angstrom to Bohr^2. To used in sevenn package.</p>
+
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.al.utilal.D3ParamMD.bohr2angstrom" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">bohr2angstrom</span><span class="p">(</span><span class="n">bohr_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#alff.al.utilal.D3ParamMD.bohr2angstrom" class="headerlink" title="Permanent link">¤</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert Bohr to Angstrom.</p>
 
           
 
@@ -5569,25 +5604,36 @@ This class to 'return' conventional names for D3 parameters for different packag
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            angstrom_to_bohr(value_in_angstrom: float) -> float
+            <b><code><a class="autorefs autorefs-internal" title="            angstrom2bohr(angstrom_value: float) -> float
 
   
       staticmethod
-   (alff.al.utilal.D3ParamDFT.angstrom_to_bohr)" href="../api/#alff.al.utilal.D3ParamDFT.angstrom_to_bohr">angstrom_to_bohr</a></code></b>
+   (alff.al.utilal.D3ParamDFT.angstrom2bohr)" href="../api/#alff.al.utilal.D3ParamDFT.angstrom2bohr">angstrom2bohr</a></code></b>
             –
             <div class="doc-md-description">
               <p>Convert Angstrom to Bohr.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            angstrom_to_bohr2(value_in_angstrom: float) -> float
+            <b><code><a class="autorefs autorefs-internal" title="            angstrom2bohr2(angstrom_value: float) -> float
 
   
       staticmethod
-   (alff.al.utilal.D3ParamDFT.angstrom_to_bohr2)" href="../api/#alff.al.utilal.D3ParamDFT.angstrom_to_bohr2">angstrom_to_bohr2</a></code></b>
+   (alff.al.utilal.D3ParamDFT.angstrom2bohr2)" href="../api/#alff.al.utilal.D3ParamDFT.angstrom2bohr2">angstrom2bohr2</a></code></b>
             –
             <div class="doc-md-description">
               <p>Convert Angstrom to Bohr^2. To used in sevenn package.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            bohr2angstrom(bohr_value: float) -> float
+
+  
+      staticmethod
+   (alff.al.utilal.D3ParamDFT.bohr2angstrom)" href="../api/#alff.al.utilal.D3ParamDFT.bohr2angstrom">bohr2angstrom</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Convert Bohr to Angstrom.</p>
             </div>
           </li>
     </ul>
@@ -5610,7 +5656,7 @@ This class to 'return' conventional names for D3 parameters for different packag
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_pair_cutoff: float = 60.0
+          <b><code><a class="autorefs autorefs-internal" title="            default_pair_cutoff: float = 50.2718
 
   
       instance-attribute
@@ -5622,7 +5668,7 @@ This class to 'return' conventional names for D3 parameters for different packag
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 40.0
+          <b><code><a class="autorefs autorefs-internal" title="            default_cn_cutoff: float = 21.1671
 
   
       instance-attribute
@@ -5694,7 +5740,7 @@ This class to 'return' conventional names for D3 parameters for different packag
 
 
 <h5 id="alff.al.utilal.D3ParamDFT.default_pair_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_pair_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">60.0</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_pair_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">50.2718</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -5715,7 +5761,7 @@ This class to 'return' conventional names for D3 parameters for different packag
 
 
 <h5 id="alff.al.utilal.D3ParamDFT.default_cn_cutoff" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">40.0</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">default_cn_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">21.1671</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -5817,19 +5863,20 @@ This class to 'return' conventional names for D3 parameters for different packag
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.al.utilal.D3ParamDFT.angstrom_to_bohr" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom_to_bohr</span><span class="p">(</span><span class="n">value_in_angstrom</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+<h5 id="alff.al.utilal.D3ParamDFT.angstrom2bohr" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom2bohr</span><span class="p">(</span><span class="n">angstrom_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
 
-<a href="#alff.al.utilal.D3ParamDFT.angstrom_to_bohr" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.al.utilal.D3ParamDFT.angstrom2bohr" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
 
-        <p>Convert Angstrom to Bohr.</p>
+        <p>Convert Angstrom to Bohr.
+Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Angstrom.</p>
 
           
 
@@ -5840,19 +5887,42 @@ This class to 'return' conventional names for D3 parameters for different packag
 <div class="doc doc-object doc-function">
 
 
-<h5 id="alff.al.utilal.D3ParamDFT.angstrom_to_bohr2" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom_to_bohr2</span><span class="p">(</span><span class="n">value_in_angstrom</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+<h5 id="alff.al.utilal.D3ParamDFT.angstrom2bohr2" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">angstrom2bohr2</span><span class="p">(</span><span class="n">angstrom_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
 
-<a href="#alff.al.utilal.D3ParamDFT.angstrom_to_bohr2" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.al.utilal.D3ParamDFT.angstrom2bohr2" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
 
         <p>Convert Angstrom to Bohr^2. To used in sevenn package.</p>
+
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.al.utilal.D3ParamDFT.bohr2angstrom" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">bohr2angstrom</span><span class="p">(</span><span class="n">bohr_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#alff.al.utilal.D3ParamDFT.bohr2angstrom" class="headerlink" title="Permanent link">¤</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert Bohr to Angstrom.</p>
 
           
 
