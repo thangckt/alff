@@ -1,13 +1,12 @@
-from thkit import THKIT_ROOT
-
 from alff.base import KEY as K
+from thkit import THKIT_ROOT
 
 EXAMPLE_PATH = "example"  # relative path to project_dir
 
 
 def append_schema_text(md_file: str, yaml_schema_file: str):
     """Append yaml text to .md file."""
-    with open(yaml_schema_file, "r") as f:
+    with open(yaml_schema_file) as f:
         text = f.read()
     schema_text = "\n```yaml\n" + text + "\n```\n"
     schema_text = "\n## Schema:\n" + schema_text
@@ -20,7 +19,7 @@ def append_schema_text(md_file: str, yaml_schema_file: str):
 def append_example_config(md_file: str, config_files: list[str]):
     """Append yaml text to .md file."""
     for i, yaml_file in enumerate(config_files):
-        with open(yaml_file, "r") as f:
+        with open(yaml_file) as f:
             text = f.read()
         schema_text = "\n```yaml\n" + text + "\n```\n"
         schema_text = f"\n## Example config {i + 1}:\n" + schema_text
@@ -31,7 +30,7 @@ def append_example_config(md_file: str, config_files: list[str]):
 
 
 def main():
-    ###ANCHOR: Append schema to the .md files
+    ###ANCHOR Append schema to the .md files
     append_schema_text(
         md_file="./_docs/schema/manual_schema_gendata.md",
         yaml_schema_file=K.SCHEMA_GENDATA,
@@ -69,7 +68,7 @@ def main():
         yaml_schema_file=K.SCHEMA_LAMMPS,
     )
 
-    ###ANCHOR: Append example configuration to the .md files
+    ###ANCHOR Append example configuration to the .md files
     append_example_config(
         md_file="./_docs/schema/manual_schema_gendata.md",
         config_files=[f"{EXAMPLE_PATH}/gdata/sampleConfig_gendata.yml"],
@@ -112,7 +111,7 @@ def main():
         config_files=[f"{EXAMPLE_PATH}/script/sampleConfig_lammps.yml"],
     )
 
-    ###ANCHOR: Schema from thkit package
+    ###ANCHOR Schema from thkit package
     append_schema_text(
         md_file="./_docs/schema/manual_schema_machine.md",
         yaml_schema_file=f"{THKIT_ROOT}/jobman/schema/schema_machine.yml",
