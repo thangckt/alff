@@ -25490,14 +25490,14 @@ This helps to chunk the tasks with similar supercell size together (similar supe
           <b><code><a class="autorefs autorefs-internal" title="            cli_ase_md (alff.util.script_ase.cli_ase_md)" href="#alff.util.script_ase.cli_ase_md">cli_ase_md</a></code></b>
           –
           <div class="doc-md-description">
-            <p>Some Note:</p>
+            <p>Some notes</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="            cli_gpaw_aimd (alff.util.script_ase.cli_gpaw_aimd)" href="#alff.util.script_ase.cli_gpaw_aimd">cli_gpaw_aimd</a></code></b>
           –
           <div class="doc-md-description">
-            <p>Some Note:</p>
+            <p>Some notes</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -25550,7 +25550,7 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
     <div class="doc doc-contents ">
 
-        <p>Some Note:
+        <p>Some notes
 - Run MD in ase following this tutorial: <a href="https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html">https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html</a>
 - For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
@@ -26748,13 +26748,14 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
     <div class="doc doc-contents ">
 
-        <p>Some Note:
+        <p>Some notes
 - Run MD in ase following this tutorial: <a href="https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html">https://wiki.fysik.dtu.dk/ase/tutorials/md/md.html</a>
 - For MD run, control symmetry to avoid error: <code>broken symmetry</code>.
 - Must set txt='calc.txt' in GPAW calculator for backward files.
 - param_yaml must contain
     - a dict <code>gpaw_calc</code> with GPAW parameters.
-    - a dict <code>md</code> with ASE MD parameters.</p>
+    - a dict <code>md</code> with ASE MD parameters.
+- simple-dftd3 in ASE: <a href="https://github.com/dftd3/simple-dftd3/blob/main/python/dftd3/ase.py">https://github.com/dftd3/simple-dftd3/blob/main/python/dftd3/ase.py</a></p>
 
           
 
@@ -26876,7 +26877,40 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, **dftd3_args)
+          <b><code><a class="autorefs autorefs-internal" title="            damping = dftd3_args.get('damping', 'd3zero')
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_aimd.damping)" href="#alff.util.script_ase.cli_gpaw_aimd.damping">damping</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            realspace_cutoff = dftd3_args.get('realspace_cutoff', {})
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_aimd.realspace_cutoff)" href="#alff.util.script_ase.cli_gpaw_aimd.realspace_cutoff">realspace_cutoff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            params_tweaks = dftd3_args.get('params_tweaks', {})
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_aimd.params_tweaks)" href="#alff.util.script_ase.cli_gpaw_aimd.params_tweaks">params_tweaks</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, damping=damping, realspace_cutoff=realspace_cutoff, params_tweaks=params_tweaks)
 
   
       module-attribute
@@ -27346,8 +27380,71 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
+<h6 id="alff.util.script_ase.cli_gpaw_aimd.damping" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">damping</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;damping&#39;</span><span class="p">,</span> <span class="s1">&#39;d3zero&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_aimd.damping" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_aimd.realspace_cutoff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">realspace_cutoff</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;realspace_cutoff&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_aimd.realspace_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_aimd.params_tweaks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params_tweaks</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params_tweaks&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_aimd.params_tweaks" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="alff.util.script_ase.cli_gpaw_aimd.calc_d3" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="n">realspace_cutoff</span><span class="o">=</span><span class="n">realspace_cutoff</span><span class="p">,</span> <span class="n">params_tweaks</span><span class="o">=</span><span class="n">params_tweaks</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -28110,7 +28207,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            xc = gpaw_params['xc'].lower()
+          <b><code><a class="autorefs autorefs-internal" title="            xc = dftd3_args.get('xc', 'pbe').lower()
 
   
       module-attribute
@@ -28121,7 +28218,40 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, **dftd3_args)
+          <b><code><a class="autorefs autorefs-internal" title="            damping = dftd3_args.get('damping', 'd3zero')
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_optimize.damping)" href="#alff.util.script_ase.cli_gpaw_optimize.damping">damping</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            realspace_cutoff = dftd3_args.get('realspace_cutoff', {})
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_optimize.realspace_cutoff)" href="#alff.util.script_ase.cli_gpaw_optimize.realspace_cutoff">realspace_cutoff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            params_tweaks = dftd3_args.get('params_tweaks', {})
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_optimize.params_tweaks)" href="#alff.util.script_ase.cli_gpaw_optimize.params_tweaks">params_tweaks</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, damping=damping, realspace_cutoff=realspace_cutoff, params_tweaks=params_tweaks)
 
   
       module-attribute
@@ -28494,7 +28624,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h6 id="alff.util.script_ase.cli_gpaw_optimize.xc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">gpaw_params</span><span class="p">[</span><span class="s1">&#39;xc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;xc&#39;</span><span class="p">,</span> <span class="s1">&#39;pbe&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -28514,8 +28644,71 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
+<h6 id="alff.util.script_ase.cli_gpaw_optimize.damping" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">damping</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;damping&#39;</span><span class="p">,</span> <span class="s1">&#39;d3zero&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_optimize.damping" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_optimize.realspace_cutoff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">realspace_cutoff</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;realspace_cutoff&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_optimize.realspace_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_optimize.params_tweaks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params_tweaks</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params_tweaks&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_optimize.params_tweaks" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="alff.util.script_ase.cli_gpaw_optimize.calc_d3" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="n">realspace_cutoff</span><span class="o">=</span><span class="n">realspace_cutoff</span><span class="p">,</span> <span class="n">params_tweaks</span><span class="o">=</span><span class="n">params_tweaks</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -29093,7 +29286,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            xc = gpaw_params['xc'].lower()
+          <b><code><a class="autorefs autorefs-internal" title="            xc = dftd3_args.get('xc', 'pbe').lower()
 
   
       module-attribute
@@ -29104,7 +29297,40 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, **dftd3_args)
+          <b><code><a class="autorefs autorefs-internal" title="            damping = dftd3_args.get('damping', 'd3zero')
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_singlepoint.damping)" href="#alff.util.script_ase.cli_gpaw_singlepoint.damping">damping</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            realspace_cutoff = dftd3_args.get('realspace_cutoff', {})
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_singlepoint.realspace_cutoff)" href="#alff.util.script_ase.cli_gpaw_singlepoint.realspace_cutoff">realspace_cutoff</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            params_tweaks = dftd3_args.get('params_tweaks', {})
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_singlepoint.params_tweaks)" href="#alff.util.script_ase.cli_gpaw_singlepoint.params_tweaks">params_tweaks</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            calc_d3 = DFTD3(method=xc, damping=damping, realspace_cutoff=realspace_cutoff, params_tweaks=params_tweaks)
 
   
       module-attribute
@@ -29356,7 +29582,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 <h6 id="alff.util.script_ase.cli_gpaw_singlepoint.xc" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">gpaw_params</span><span class="p">[</span><span class="s1">&#39;xc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">xc</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;xc&#39;</span><span class="p">,</span> <span class="s1">&#39;pbe&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
@@ -29376,8 +29602,71 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
+<h6 id="alff.util.script_ase.cli_gpaw_singlepoint.damping" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">damping</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;damping&#39;</span><span class="p">,</span> <span class="s1">&#39;d3zero&#39;</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_singlepoint.damping" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_singlepoint.realspace_cutoff" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">realspace_cutoff</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;realspace_cutoff&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_singlepoint.realspace_cutoff" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_singlepoint.params_tweaks" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">params_tweaks</span> <span class="o">=</span> <span class="n">dftd3_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;params_tweaks&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_singlepoint.params_tweaks" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="alff.util.script_ase.cli_gpaw_singlepoint.calc_d3" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="o">**</span><span class="n">dftd3_args</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">calc_d3</span> <span class="o">=</span> <span class="n">DFTD3</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">xc</span><span class="p">,</span> <span class="n">damping</span><span class="o">=</span><span class="n">damping</span><span class="p">,</span> <span class="n">realspace_cutoff</span><span class="o">=</span><span class="n">realspace_cutoff</span><span class="p">,</span> <span class="n">params_tweaks</span><span class="o">=</span><span class="n">params_tweaks</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
