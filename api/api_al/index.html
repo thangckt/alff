@@ -5295,18 +5295,18 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            convert_sevenn(checkpoint: str, outfile: str = 'deploy_sevenn', modal: str | None = None, use_flash: bool = False, parallel_type=False)
+            <b><code><a class="autorefs autorefs-internal" title="            convert_sevenn(checkpoint: str, outfile: str = 'deploy_sevenn', modal: str | None = None, use_flash: bool = False, parallel_type=False, **kwargs)
 
   
       staticmethod
    (alff.al.utilal.MLP2Lammps.convert_sevenn)" href="../api/#alff.al.utilal.MLP2Lammps.convert_sevenn">convert_sevenn</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Args:</p>
+              <p>Convert sevenn model to be used in LAMMPS.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            convert_sevenn_mliap(checkpoint: str, outfile: str = 'deploy_sevenn_mliap.pt', modal: str | None = None, use_cueq: bool = False, use_flash: bool = False)
+            <b><code><a class="autorefs autorefs-internal" title="            convert_sevenn_mliap(checkpoint: str, outfile: str = 'deploy_sevenn_mliap.pt', modal: str | None = None, use_cueq: bool = False, use_flash: bool = False, use_oeq: bool = False, **kwargs)
 
   
       staticmethod
@@ -5425,7 +5425,7 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
 
 
 <h5 id="alff.al.utilal.MLP2Lammps.convert_sevenn" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">convert_sevenn</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;deploy_sevenn&#39;</span><span class="p">,</span> <span class="n">modal</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">use_flash</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">parallel_type</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">convert_sevenn</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;deploy_sevenn&#39;</span><span class="p">,</span> <span class="n">modal</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">use_flash</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">parallel_type</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
@@ -5436,6 +5436,7 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
 
     <div class="doc doc-contents ">
 
+        <p>Convert sevenn model to be used in LAMMPS.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -5459,6 +5460,16 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
           </div>
         </li>
         <li class="doc-section-item field-body">
+            <b><code>modal</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Channel of multi-task model.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
             <b><code>parallel_type</code></b>
               (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>, default:
                   <code>False</code>
@@ -5476,6 +5487,13 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
           –
           <div class="doc-md-description">
             <p>Use flashTP.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>**kwargs</code></b>
+          –
+          <div class="doc-md-description">
+            <p>Additional arguments to avoid breaking the function signature when future additional arguments are added.</p>
           </div>
         </li>
     </ul>
@@ -5496,7 +5514,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 
 <h5 id="alff.al.utilal.MLP2Lammps.convert_sevenn_mliap" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">convert_sevenn_mliap</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;deploy_sevenn_mliap.pt&#39;</span><span class="p">,</span> <span class="n">modal</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">use_cueq</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">use_flash</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">convert_sevenn_mliap</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">outfile</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;deploy_sevenn_mliap.pt&#39;</span><span class="p">,</span> <span class="n">modal</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">use_cueq</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">use_flash</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">use_oeq</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
@@ -5558,6 +5576,23 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
           –
           <div class="doc-md-description">
             <p>Use flashTP.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>use_oeq</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Use oeq.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>**kwargs</code></b>
+          –
+          <div class="doc-md-description">
+            <p>Additional arguments to avoid breaking the function signature when future additional arguments are added.</p>
           </div>
         </li>
     </ul>
