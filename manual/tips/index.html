@@ -538,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alff_active_learning/" class="md-nav__link">
+      <a href="../alff_active_learning/" class="md-nav__link">
         
   
   
@@ -566,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alff_gendata/" class="md-nav__link">
+      <a href="../alff_gendata/" class="md-nav__link">
         
   
   
@@ -594,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alff_phonon_calc/" class="md-nav__link">
+      <a href="../alff_phonon_calc/" class="md-nav__link">
         
   
   
@@ -622,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alff_elastic_calc/" class="md-nav__link">
+      <a href="../alff_elastic_calc/" class="md-nav__link">
         
   
   
@@ -650,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alff_pes/" class="md-nav__link">
+      <a href="../alff_pes/" class="md-nav__link">
         
   
   
@@ -1328,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../alff_cli/" class="md-nav__link">
+      <a href="../../alff_cli.md" class="md-nav__link">
         
   
   
@@ -1767,6 +1767,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Active Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fake-md-candidates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fake MD candidates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2525,7 +2542,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="active-learning">Active Learning<a class="anchor-link" href="#active-learning">¶</a></h2>
+<h2 id="active-learning">Active Learning<a class="anchor-link" href="#active-learning">¶</a></h2><h3 id="fake-md-candidates">Fake MD candidates<a class="anchor-link" href="#fake-md-candidates">¶</a></h3><p>DFT stage collects configurations in dir <code>01_md/md_md_selected/*.extxyz</code>. These are the candidates selected by the active learning algorithm. You can totally "fake" these candidates by: adding some configurations, removing some configurations, or even replacing all candidates with your own configurations,... just by place your <code>.extxyz</code> files in the dir <code>01_md/md_md_selected/</code>. The active learning algorithm will just read the configurations in this dir and use them for the next DFT labeling stage. This is useful when you want have more custom configurations to be labeled by DFT.</p>
 </div>
 </div>
 </div>
