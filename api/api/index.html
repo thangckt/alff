@@ -26160,6 +26160,7 @@ The function does the following:
 
         <p>Sort the structure paths by its supercell size.
 This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
+<p>Note: <code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</p>
 
           
 
