@@ -1812,6 +1812,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#effective-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effective sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2577,6 +2588,26 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <li><p>You can also ignore completely the MD runs, and just place your own configurations in the dir <code>01_md/md_selected/</code> for DFT labeling. Then, modify the ALFF iterlog <code>_alff.iter</code> to skip the MD stage and directly go to DFT stage (for example ignoring MD stage at <code>iter 12</code>, modify corresponding lines to <code>12 1</code>). This is useful when you have some specific configurations that you want to be labeled by DFT, but you don't want to run the MD simulations.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0abfdd5f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="effective-sampling">Effective sampling<a class="anchor-link" href="#effective-sampling">¶</a></h3><p>Rules of thumb:</p>
+<ul>
+<li>Explicitly index <code>init_struct_paths</code> for each structure for easier control sampling (can get them from <code>01_md/init_paths.yml</code>), i.e., avoid using wildcards like <code>init_structs/*</code>.</li>
+<li>Exclude enough sampled structures from the sampling space to save computational resources (MD run).</li>
+<li>Add empty sampling spaces if want to ignore some iterations of sampling</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="w">  </span><span class="nt">sampling_spaces</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"> </span><span class="c1"># ignore some iterations</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+</pre></div>
 </div>
 </div>
 </div>
