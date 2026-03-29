@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0440fabd.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3dd7ac3a.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.204eaadb.min.css">
@@ -289,8 +289,6 @@
     
     
     
-      
-        
       
       
         <label class="md-header__button md-icon" for="__search">
@@ -1885,30 +1883,30 @@
 <h1 id="schema-for-elastic-calculation">Schema for Elastic Calculation<a class="headerlink" href="#schema-for-elastic-calculation" title="Permanent link">¤</a></h1>
 <p>The schema to configure the input file for elastic tensor calculation.</p>
 <h2 id="schema">Schema:<a class="headerlink" href="#schema" title="Permanent link">¤</a></h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">calculator</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">calc_args</span><span class="p">:</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">gpaw</span><span class="p">:</span><span class="w">        </span><span class="c1">###ANCHOR GPAW calculator. Accept all GPAW parameters: https://gpaw.readthedocs.io/documentation/basic.html</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span><span class="w"> </span><span class="c1">### See also [ASE schema](https://thangckt.github.io/alff_doc/schema/config_ase/)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">dftd3</span><span class="p">:</span><span class="w">       </span><span class="c1">###ANCHOR DFT-D3 calculator for Van der Waals correction</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">damping</span><span class="p">:</span><span class="w"> </span><span class="c1"># use DFT-D3 damping. Default is &quot;d3zero&quot; (zero-damping). Choices: &quot;d3bj&quot;,&quot;d3zero&quot;,&quot;d3bjm&quot;,&quot;d3zerom&quot;,&quot;d3op&quot;.</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">py_file</span><span class="p">:</span><span class="w">     </span><span class="c1"># python file that defines ASE&#39;s calculator. Python script must return the variable `calc`.</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nt">py_script</span><span class="p">:</span><span class="w">   </span><span class="c1"># list[str] of python-code to directly define ASE&#39;s calculator. Python script must return the variable `calc`. Example:</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">lammps</span><span class="p">:</span><span class="w">      </span><span class="c1">###ANCHOR LAMMPS parameters</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span></code></pre></div>
+<p>```yaml</p>
+<p>calculator:</p>
+<p>calc_args:
+  type: dict
+  required: True
+  schema:
+    gpaw:        ###ANCHOR GPAW calculator. Accept all GPAW parameters: <a href="https://gpaw.readthedocs.io/documentation/basic.html">https://gpaw.readthedocs.io/documentation/basic.html</a>
+      type: dict ### See also <a href="https://thangckt.github.io/alff_doc/schema/config_ase/">ASE schema</a></p>
+<div class="codehilite"><pre><span></span><code><span class="n">dftd3</span><span class="o">:</span><span class="w">       </span><span class="c1">###ANCHOR DFT-D3 calculator for Van der Waals correction</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="n">dict</span>
+<span class="w">  </span><span class="k">schema</span><span class="o">:</span>
+<span class="w">    </span><span class="n">damping</span><span class="o">:</span><span class="w"> </span><span class="c1"># use DFT-D3 damping. Default is &quot;d3zero&quot; (zero-damping). Choices: &quot;d3bj&quot;,&quot;d3zero&quot;,&quot;d3bjm&quot;,&quot;d3zerom&quot;,&quot;d3op&quot;.</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">string</span>
+
+<span class="n">py_file</span><span class="o">:</span><span class="w">     </span><span class="c1"># python file that defines ASE&#39;s calculator. Python script must return the variable `calc`.</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">string</span>
+<span class="n">py_script</span><span class="o">:</span><span class="w">   </span><span class="c1"># list[str] of python-code to directly define ASE&#39;s calculator. Python script must return the variable `calc`. Example:</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">list</span>
+
+<span class="n">lammps</span><span class="o">:</span><span class="w">      </span><span class="c1">###ANCHOR LAMMPS parameters</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="n">dict</span>
+</code></pre></div>
+
+<p>```</p>
 
 
 

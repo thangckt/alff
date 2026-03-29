@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0440fabd.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3dd7ac3a.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.204eaadb.min.css">
@@ -289,8 +289,6 @@
     
     
     
-      
-        
       
       
         <label class="md-header__button md-icon" for="__search">
@@ -1064,6 +1062,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Schema:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-for-ase-input-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema for ASE input file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1876,6 +1891,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Schema:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-for-ase-input-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema for ASE input file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1931,216 +1963,203 @@
 </li>
 </ol>
 <h2 id="schema">Schema:<a class="headerlink" href="#schema" title="Permanent link">¤</a></h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### Schema for ASE input file</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">structure</span><span class="p">:</span><span class="w">                  </span><span class="c1">###ANCHOR Define atomic structure</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">from_extxyz</span><span class="p">:</span><span class="w">            </span><span class="c1"># the path to the EXTXYZ file for input structure</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">pbc</span><span class="p">:</span><span class="w">                    </span><span class="c1"># set periodic bounday condition. This will overwrite the PBC in the EXTXYZ file. eg. [1, 1, 1]</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">list</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">boolean</span><span class="p p-Indicator">]</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nt">constraint</span><span class="p">:</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">fix_atoms</span><span class="p">:</span><span class="w">              </span><span class="c1">## define atoms to be fixed during optimization runs</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="nt">fix_idxs</span><span class="p">:</span><span class="w">           </span><span class="c1"># list of atom indices to be fixed</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="nt">fix_dim_z</span><span class="p">:</span><span class="w">          </span><span class="c1"># if True, only fix atom positions in z-direction. This is useful when sampling in z-dim only. Default is False (fix all directions)</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="nt">fix_symmetry</span><span class="p">:</span><span class="w">           </span><span class="c1"># if True, fix the symmetry of the structure during optimization. Default is None</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="nt">symprec</span><span class="p">:</span><span class="w">            </span><span class="c1"># tolerance for symmetry finding. Default is 1e-5</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nt">calc_args</span><span class="p">:</span><span class="w">                  </span><span class="c1">###SECTION Parameters of multiple calculators</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="nt">gpaw</span><span class="p">:</span><span class="w">                   </span><span class="c1">###ANCHOR GPAW calculator. Accept all GPAW parameters: https://gpaw.readthedocs.io/documentation/basic.html</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">      </span><span class="nt">allow_unknown</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w">               </span><span class="c1"># calculation mode. Default is &quot;fd&quot;.</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">          </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w">           </span><span class="c1"># name of the mode. Choices: &quot;fd&quot;, &quot;lcao&quot;, &quot;pw&quot;.</span>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">            </span><span class="nt">ecut</span><span class="p">:</span><span class="w">           </span><span class="c1"># energy cutoff in eV for plane wave mode. Default is 500 eV</span>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">        </span><span class="nt">xc</span><span class="p">:</span><span class="w">                 </span><span class="c1"># exchange-correlation functional</span>
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">        </span><span class="nt">kpts</span><span class="p">:</span><span class="w">               </span><span class="c1"># if not set `kpts`, then only Gamma-point is used</span>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">        </span><span class="nt">convergence</span><span class="p">:</span><span class="w">        </span><span class="c1"># convergence criteria</span>
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">        </span><span class="nt">occupations</span><span class="p">:</span><span class="w">        </span><span class="c1"># occupation method. Default is &quot;fermi-dirac&quot;</span>
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">        </span><span class="nt">txt</span><span class="p">:</span><span class="w">                </span><span class="c1"># output file name. Default is &quot;gpaw_out.txt&quot;</span>
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">        </span><span class="nt">symmetry</span><span class="p">:</span><span class="w">           </span><span class="c1"># use symmetry.</span>
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">        </span><span class="nt">parallel</span><span class="p">:</span><span class="w">           </span><span class="c1"># parallel parameters, see https://gpaw.readthedocs.io/documentation/parallel_runs/parallel_runs.html#parallelization-options</span>
-</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">    </span><span class="nt">dftd3</span><span class="p">:</span><span class="w">                  </span><span class="c1">###ANCHOR DFT-D3 calculator for Van der Waals correction</span>
-</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span><span class="w">            </span><span class="c1"># Primary parameters as below, also accept all parameters of `ase_dftd3`: https://ase-lib.org/ase/calculators/dftd3.html</span>
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">      </span><span class="nt">allow_unknown</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">        </span><span class="nt">xc</span><span class="p">:</span><span class="w">                 </span><span class="c1"># exchange-correlation functional. Default is &quot;pbe&quot;. Overwride by `calc_args.gpaw.xc` if it exists.</span>
-</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pbe&quot;</span>
-</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">        </span><span class="nt">damping</span><span class="p">:</span><span class="w">            </span><span class="c1"># Damping method. Valid options are &#39;zero&#39;, &#39;bj&#39;, &#39;zerom&#39;, and &#39;bjm&#39;.</span>
-</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">          </span><span class="nt">allowed</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;zero&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;bj&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;zerom&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;bjm&#39;</span><span class="p p-Indicator">]</span>
-</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">        </span><span class="nt">abc</span><span class="p">:</span><span class="w">                </span><span class="c1"># Enable three-body ATM correction. Default is False</span>
-</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
-</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
-</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">        </span><span class="nt">cutoff</span><span class="p">:</span><span class="w">             </span><span class="c1"># Cutoff radius for two-body dispersion calculations. Default is 50.2718 Angstrom</span>
-</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50.2718</span>
-</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">        </span><span class="nt">cnthr</span><span class="p">:</span><span class="w">              </span><span class="c1"># Cutoff radius for coordination number and three-body calculations. Default is 21.1671 Angstrom</span>
-</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">21.1671</span>
-</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>
-</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
-</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="w">    </span><span class="nt">exclude_result_dftd3</span><span class="p">:</span><span class="w">   </span><span class="c1"># if True, exclude DFTD3 energy/force/stress from the final results. Default is False</span>
-</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
-</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="w">      </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
-</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>
-</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a><span class="w">    </span><span class="nt">ase</span><span class="p">:</span><span class="w">                    </span><span class="c1">###ANCHOR Define ASE&#39;s calculator by two ways: using &#39;pyfile&#39; or &#39;pyscript&#39;.</span>
-</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a><span class="w">        </span><span class="nt">py_file</span><span class="p">:</span><span class="w">            </span><span class="c1"># python file that defines ASE&#39;s calculator. Python script must return the variable `calc_ase`.</span>
-</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="w">        </span><span class="nt">py_script</span><span class="p">:</span><span class="w">          </span><span class="c1"># list[str] of python-code to directly define ASE&#39;s calculator. Python script must return the variable `calc_ase`. Example:</span>
-</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span><span class="w">        </span><span class="c1"># py_script:</span>
-</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="w">                            </span><span class="c1"># - &quot;from sevenn.calculator import SevenNetCalculator&quot;</span>
-</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a><span class="w">                            </span><span class="c1"># - &quot;sevenn_args = {&#39;file_type: &#39;checkpoint&#39;}&quot;</span>
-</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="w">                            </span><span class="c1"># - &quot;calc_ase = SevenNetCalculator(&#39;sevenn_model.pth&#39;, **sevenn_args)&quot;</span>
-</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="w">                            </span><span class="c1">### !SECTION</span>
-</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>
-</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>
-</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="nt">optimize</span><span class="p">:</span><span class="w">                   </span><span class="c1">###ANCHOR Parameters to run optimization the structure</span>
-</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a><span class="w">    </span><span class="nt">fmax</span><span class="p">:</span><span class="w">                   </span><span class="c1"># force convergence criteria. Default is 0.05 eV/Ang</span>
-</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a><span class="w">    </span><span class="nt">mask</span><span class="p">:</span><span class="w">                   </span><span class="c1"># list of 6 (or 3) booleans: 1 for relax, 0 for fixed; indicating which of the six independent components of the strain are relaxed. If len(mask)==3, then mask = mask + [1,1,1]. Default is None.</span>
-</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
-</span><span id="__span-0-107"><a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a><span class="w">    </span><span class="nt">max_steps</span><span class="p">:</span><span class="w">              </span><span class="c1"># maximum number of steps for optimization. Default is 10000</span>
-</span><span id="__span-0-108"><a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
-</span><span id="__span-0-109"><a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>
-</span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>
-</span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a><span class="nt">md</span><span class="p">:</span><span class="w">                         </span><span class="c1">###ANCHOR Parameters to run AIMD/MD simulation</span>
-</span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a><span class="w">                            </span><span class="c1">## Supported: NVE, NVT, NPT</span>
-</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a><span class="w">                            </span><span class="c1">## NVT with thermostat: &#39;Langevin&#39;, &#39;nose_hoover&#39;, &#39;nose_hoover_chain&#39;</span>
-</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a><span class="w">                            </span><span class="c1">## NPT with: - &#39;parrinello_rahman&#39; barostat + &#39;nose_hoover&#39; thermostat</span>
-</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a><span class="w">                            </span><span class="c1"># - &#39;iso_nose_hoover_chain&#39; barostat and thermostat</span>
-</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
-</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
-</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a><span class="w">    </span><span class="nt">ensemble</span><span class="p">:</span><span class="w">               </span><span class="c1"># ensemble name. Choices: NVE, NVT, NPT. Default is NVE</span>
-</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a><span class="w">    </span><span class="nt">dt</span><span class="p">:</span><span class="w">                     </span><span class="c1"># timestep in fs. Default is 1.0 fs</span>
-</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a><span class="w">    </span><span class="nt">traj_freq</span><span class="p">:</span><span class="w">              </span><span class="c1"># dump frames every `traj_freq` steps. Default is 1.</span>
-</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
-</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a><span class="w">    </span><span class="nt">num_frames</span><span class="p">:</span><span class="w">             </span><span class="c1"># number of frames to be collected. Then total MD nsteps = (num_frames * traj_freq)</span>
-</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
-</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a><span class="w">    </span><span class="nt">equil_steps</span><span class="p">:</span><span class="w">            </span><span class="c1"># number of equilibration steps before running production. Default is 0.</span>
-</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
-</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>
-</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a><span class="w">                            </span><span class="l l-Scalar l-Scalar-Plain">### temperature control</span>
-</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a><span class="w">    </span><span class="nt">temp</span><span class="p">:</span><span class="w">                   </span><span class="c1"># temperature in K. Default is 300 K</span>
-</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a><span class="w">    </span><span class="nt">thermostat</span><span class="p">:</span><span class="w">             </span><span class="c1"># thermostat. Default is &#39;nose_hoover_chain&#39;. Choices: &#39;langevin&#39;, &#39;nose_hoover&#39;, &#39;nose_hoover_chain&#39;</span>
-</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a><span class="w">      </span><span class="nt">allowed</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;langevin&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;nose_hoover&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;nose_hoover_chain&#39;</span><span class="p p-Indicator">]</span>
-</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a><span class="w">    </span><span class="nt">tdamp</span><span class="p">:</span><span class="w">                  </span><span class="c1"># damping timesteps for nose_hoover thermostat. Default is 100.</span>
-</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
-</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a><span class="w">    </span><span class="nt">langevin_friction</span><span class="p">:</span><span class="w">      </span><span class="c1"># friction coefficient for Langevin thermostat. Default is 0.002 fs^-1</span>
-</span><span id="__span-0-138"><a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-139"><a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>
-</span><span id="__span-0-140"><a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a><span class="w">                            </span><span class="l l-Scalar l-Scalar-Plain">### pressure control</span>
-</span><span id="__span-0-141"><a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a><span class="w">    </span><span class="nt">press</span><span class="p">:</span><span class="w">                  </span><span class="c1"># external stress in GPa. Default is None if not set. Accept: float, 6-vector, or 3x3 matrix.</span>
-</span><span id="__span-0-142"><a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">float</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">list</span><span class="p p-Indicator">]</span>
-</span><span id="__span-0-143"><a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a><span class="w">    </span><span class="nt">barostat</span><span class="p">:</span><span class="w">               </span><span class="c1"># barostat. Default is &#39;parrinello_rahman&#39;. Choices: &#39;parrinello_rahman&#39;, &#39;iso_nose_hoover_chain&#39;</span>
-</span><span id="__span-0-144"><a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-</span><span id="__span-0-145"><a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a><span class="w">      </span><span class="nt">allowed</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;parrinello_rahman&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;iso_nose_hoover_chain&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;aniso_nose_hoover_chain&#39;</span><span class="p p-Indicator">]</span>
-</span><span id="__span-0-146"><a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a><span class="w">    </span><span class="nt">pfactor</span><span class="p">:</span><span class="w">                </span><span class="c1"># pressure factor for &#39;parrinello_rahman&#39; barostat. Default is 2e6 GPa.</span>
-</span><span id="__span-0-147"><a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
-</span><span id="__span-0-148"><a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a><span class="w">    </span><span class="nt">pdamp</span><span class="p">:</span><span class="w">                  </span><span class="c1"># damping timesteps for &#39;iso_nose_hoover_chain&#39; barostat. Default is 1000.</span>
-</span><span id="__span-0-149"><a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
-</span><span id="__span-0-150"><a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a><span class="w">    </span><span class="nt">mask</span><span class="p">:</span><span class="w">                   </span><span class="c1"># dimensions to relax computational box. Set to (1,1,1) to allow fully flexible box. Set to (1,1,0) to disallow elongations along the z-axis, etc. If not set, then only relax the periodic dimensions. Only available for &#39;parrinello_rahman&#39; barostat.</span>
-</span><span id="__span-0-151"><a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">list</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">boolean</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># None or 3-tuple</span>
-</span></code></pre></div>
+<p>```yaml</p>
+<h3 id="schema-for-ase-input-file">Schema for ASE input file<a class="headerlink" href="#schema-for-ase-input-file" title="Permanent link">¤</a></h3>
+<p>structure:                  ###ANCHOR Define atomic structure
+  type: dict
+  required: True
+  schema:
+    from_extxyz:            # the path to the EXTXYZ file for input structure
+      type: string
+      required: True
+    pbc:                    # set periodic bounday condition. This will overwrite the PBC in the EXTXYZ file. eg. [1, 1, 1]
+      type: [list, boolean]</p>
+<p>constraint:
+  type: dict
+  schema:
+    fix_atoms:              ## define atoms to be fixed during optimization runs
+      type: dict
+      schema:
+        fix_idxs:           # list of atom indices to be fixed
+          type: list
+        fix_dim_z:          # if True, only fix atom positions in z-direction. This is useful when sampling in z-dim only. Default is False (fix all directions)
+          type: boolean
+          default: False
+    fix_symmetry:           # if True, fix the symmetry of the structure during optimization. Default is None
+      type: dict
+      schema:
+        symprec:            # tolerance for symmetry finding. Default is 1e-5
+          type: float</p>
+<p>calc_args:                  ###SECTION Parameters of multiple calculators
+  type: dict
+  required: True
+  schema:
+    gpaw:                   ###ANCHOR GPAW calculator. Accept all GPAW parameters: <a href="https://gpaw.readthedocs.io/documentation/basic.html">https://gpaw.readthedocs.io/documentation/basic.html</a>
+      type: dict
+      allow_unknown: True
+      schema:
+        mode:               # calculation mode. Default is "fd".
+          type: dict
+          schema:
+            name:           # name of the mode. Choices: "fd", "lcao", "pw".
+              type: string
+            ecut:           # energy cutoff in eV for plane wave mode. Default is 500 eV
+              type: float
+        xc:                 # exchange-correlation functional
+          type: string
+        kpts:               # if not set <code>kpts</code>, then only Gamma-point is used
+          type: dict
+        convergence:        # convergence criteria
+          type: dict
+        occupations:        # occupation method. Default is "fermi-dirac"
+          type: dict
+        txt:                # output file name. Default is "gpaw_out.txt"
+          type: string
+        symmetry:           # use symmetry.
+          type: string
+        parallel:           # parallel parameters, see <a href="https://gpaw.readthedocs.io/documentation/parallel_runs/parallel_runs.html#parallelization-options">https://gpaw.readthedocs.io/documentation/parallel_runs/parallel_runs.html#parallelization-options</a>
+          type: dict</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dftd3</span><span class="o">:</span><span class="w">                  </span><span class="c1">###ANCHOR DFT-D3 calculator for Van der Waals correction</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="n">dict</span><span class="w">            </span><span class="c1"># Primary parameters as below, also accept all parameters of `ase_dftd3`: https://ase-lib.org/ase/calculators/dftd3.html</span>
+<span class="w">  </span><span class="n">allow_unknown</span><span class="o">:</span><span class="w"> </span><span class="no">True</span>
+<span class="w">  </span><span class="k">schema</span><span class="o">:</span>
+<span class="w">    </span><span class="n">xc</span><span class="o">:</span><span class="w">                 </span><span class="c1"># exchange-correlation functional. Default is &quot;pbe&quot;. Overwride by `calc_args.gpaw.xc` if it exists.</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">string</span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pbe&quot;</span>
+<span class="w">    </span><span class="n">damping</span><span class="o">:</span><span class="w">            </span><span class="c1"># Damping method. Valid options are &#39;zero&#39;, &#39;bj&#39;, &#39;zerom&#39;, and &#39;bjm&#39;.</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">string</span>
+<span class="w">      </span><span class="n">allowed</span><span class="o">:</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;zero&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bj&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zerom&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bjm&#39;</span><span class="err">]</span>
+<span class="w">    </span><span class="n">abc</span><span class="o">:</span><span class="w">                </span><span class="c1"># Enable three-body ATM correction. Default is False</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="no">False</span>
+<span class="w">    </span><span class="n">cutoff</span><span class="o">:</span><span class="w">             </span><span class="c1"># Cutoff radius for two-body dispersion calculations. Default is 50.2718 Angstrom</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="kt">float</span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="mf">50.2718</span>
+<span class="w">    </span><span class="n">cnthr</span><span class="o">:</span><span class="w">              </span><span class="c1"># Cutoff radius for coordination number and three-body calculations. Default is 21.1671 Angstrom</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="kt">float</span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="mf">21.1671</span>
+
+
+<span class="n">exclude_result_dftd3</span><span class="o">:</span><span class="w">   </span><span class="c1"># if True, exclude DFTD3 energy/force/stress from the final results. Default is False</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="no">False</span>
+
+<span class="n">ase</span><span class="o">:</span><span class="w">                    </span><span class="c1">###ANCHOR Define ASE&#39;s calculator by two ways: using &#39;pyfile&#39; or &#39;pyscript&#39;.</span>
+<span class="w">  </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="n">dict</span>
+<span class="w">  </span><span class="k">schema</span><span class="o">:</span>
+<span class="w">    </span><span class="n">py_file</span><span class="o">:</span><span class="w">            </span><span class="c1"># python file that defines ASE&#39;s calculator. Python script must return the variable `calc_ase`.</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">string</span>
+<span class="w">    </span><span class="n">py_script</span><span class="o">:</span><span class="w">          </span><span class="c1"># list[str] of python-code to directly define ASE&#39;s calculator. Python script must return the variable `calc_ase`. Example:</span>
+<span class="w">      </span><span class="k">type</span><span class="o">:</span><span class="w"> </span><span class="k">list</span><span class="w">        </span><span class="c1"># py_script:</span>
+<span class="w">                        </span><span class="c1"># - &quot;from sevenn.calculator import SevenNetCalculator&quot;</span>
+<span class="w">                        </span><span class="c1"># - &quot;sevenn_args = {&#39;file_type: &#39;checkpoint&#39;}&quot;</span>
+<span class="w">                        </span><span class="c1"># - &quot;calc_ase = SevenNetCalculator(&#39;sevenn_model.pth&#39;, **sevenn_args)&quot;</span>
+<span class="w">                        </span><span class="c1">### !SECTION</span>
+</code></pre></div>
+
+<p>optimize:                   ###ANCHOR Parameters to run optimization the structure
+  type: dict
+  schema:
+    fmax:                   # force convergence criteria. Default is 0.05 eV/Ang
+      type: float
+    mask:                   # list of 6 (or 3) booleans: 1 for relax, 0 for fixed; indicating which of the six independent components of the strain are relaxed. If len(mask)==3, then mask = mask + [1,1,1]. Default is None.
+      type: list
+    max_steps:              # maximum number of steps for optimization. Default is 10000
+      type: integer</p>
+<p>md:                         ###ANCHOR Parameters to run AIMD/MD simulation
+                            ## Supported: NVE, NVT, NPT
+                            ## NVT with thermostat: 'Langevin', 'nose_hoover', 'nose_hoover_chain'
+                            ## NPT with: - 'parrinello_rahman' barostat + 'nose_hoover' thermostat
+                            # - 'iso_nose_hoover_chain' barostat and thermostat
+  type: dict
+  schema:
+    ensemble:               # ensemble name. Choices: NVE, NVT, NPT. Default is NVE
+      type: string
+    dt:                     # timestep in fs. Default is 1.0 fs
+      type: float
+    traj_freq:              # dump frames every <code>traj_freq</code> steps. Default is 1.
+      type: integer
+    num_frames:             # number of frames to be collected. Then total MD nsteps = (num_frames * traj_freq)
+      type: integer
+    equil_steps:            # number of equilibration steps before running production. Default is 0.
+      type: integer</p>
+<div class="codehilite"><pre><span></span><code><span class="w">                        </span><span class="err">###</span><span class="w"> </span><span class="nx">temperature</span><span class="w"> </span><span class="nx">control</span>
+<span class="nx">temp</span><span class="p">:</span><span class="w">                   </span><span class="err">#</span><span class="w"> </span><span class="nx">temperature</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">K</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="nx">K</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">float</span>
+<span class="nx">thermostat</span><span class="p">:</span><span class="w">             </span><span class="err">#</span><span class="w"> </span><span class="nx">thermostat</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">nose_hoover_chain</span><span class="err">&#39;</span><span class="p">.</span><span class="w"> </span><span class="nx">Choices</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">langevin</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">nose_hoover</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">nose_hoover_chain</span><span class="err">&#39;</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">  </span><span class="nx">allowed</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">langevin</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">nose_hoover</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">nose_hoover_chain</span><span class="err">&#39;</span><span class="p">]</span>
+<span class="nx">tdamp</span><span class="p">:</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="nx">damping</span><span class="w"> </span><span class="nx">timesteps</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">nose_hoover</span><span class="w"> </span><span class="nx">thermostat</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">100</span><span class="p">.</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
+<span class="nx">langevin_friction</span><span class="p">:</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="nx">friction</span><span class="w"> </span><span class="nx">coefficient</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">Langevin</span><span class="w"> </span><span class="nx">thermostat</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="m m-Double">0.002</span><span class="w"> </span><span class="nx">fs</span><span class="o">^-</span><span class="mi">1</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">float</span>
+
+<span class="w">                        </span><span class="err">###</span><span class="w"> </span><span class="nx">pressure</span><span class="w"> </span><span class="nx">control</span>
+<span class="nx">press</span><span class="p">:</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="kd">external</span><span class="w"> </span><span class="nx">stress</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">GPa</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">None</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span><span class="w"> </span><span class="nx">Accept</span><span class="p">:</span><span class="w"> </span><span class="nx">float</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="o">-</span><span class="nx">vector</span><span class="p">,</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="mi">3</span><span class="nx">x3</span><span class="w"> </span><span class="nx">matrix</span><span class="p">.</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nx">float</span><span class="p">,</span><span class="w"> </span><span class="nx">list</span><span class="p">]</span>
+<span class="nx">barostat</span><span class="p">:</span><span class="w">               </span><span class="err">#</span><span class="w"> </span><span class="nx">barostat</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">parrinello_rahman</span><span class="err">&#39;</span><span class="p">.</span><span class="w"> </span><span class="nx">Choices</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">parrinello_rahman</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">iso_nose_hoover_chain</span><span class="err">&#39;</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">  </span><span class="nx">allowed</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">parrinello_rahman</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">iso_nose_hoover_chain</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">aniso_nose_hoover_chain</span><span class="err">&#39;</span><span class="p">]</span>
+<span class="nx">pfactor</span><span class="p">:</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">pressure</span><span class="w"> </span><span class="nx">factor</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">parrinello_rahman</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">barostat</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">2</span><span class="nx">e6</span><span class="w"> </span><span class="nx">GPa</span><span class="p">.</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">float</span>
+<span class="nx">pdamp</span><span class="p">:</span><span class="w">                  </span><span class="err">#</span><span class="w"> </span><span class="nx">damping</span><span class="w"> </span><span class="nx">timesteps</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">iso_nose_hoover_chain</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">barostat</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">1000</span><span class="p">.</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
+<span class="nx">mask</span><span class="p">:</span><span class="w">                   </span><span class="err">#</span><span class="w"> </span><span class="nx">dimensions</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">relax</span><span class="w"> </span><span class="nx">computational</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="w"> </span><span class="nx">Set</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">allow</span><span class="w"> </span><span class="nx">fully</span><span class="w"> </span><span class="nx">flexible</span><span class="w"> </span><span class="nx">box</span><span class="p">.</span><span class="w"> </span><span class="nx">Set</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">disallow</span><span class="w"> </span><span class="nx">elongations</span><span class="w"> </span><span class="nx">along</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">z</span><span class="o">-</span><span class="nx">axis</span><span class="p">,</span><span class="w"> </span><span class="nx">etc</span><span class="p">.</span><span class="w"> </span><span class="nx">If</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">set</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nx">only</span><span class="w"> </span><span class="nx">relax</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">periodic</span><span class="w"> </span><span class="nx">dimensions</span><span class="p">.</span><span class="w"> </span><span class="nx">Only</span><span class="w"> </span><span class="nx">available</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">parrinello_rahman</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">barostat</span><span class="p">.</span>
+<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nx">list</span><span class="p">,</span><span class="w"> </span><span class="nx">boolean</span><span class="p">]</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">None</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="mi">3</span><span class="o">-</span><span class="nx">tuple</span>
+</code></pre></div>
+
+<p>```</p>
 <h2 id="example-config-1">Example config 1:<a class="headerlink" href="#example-config-1" title="Permanent link">¤</a></h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">structure</span><span class="p">:</span><span class="w">                      </span><span class="c1"># atomic structure information</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">from_extxyz</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MoS2.extxyz</span><span class="w">      </span><span class="c1"># The EXTXYZ file for input structure</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">pbc</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">]</span><span class="w">                </span><span class="c1"># set this will overwrite the PBC in the EXTXYZ file. eg. [1, 1, 1]</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">calc_args</span><span class="p">:</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">gpaw</span><span class="p">:</span><span class="w">                         </span><span class="c1"># accept GPAW parameters</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">mode</span><span class="p">:</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;pw&#39;</span><span class="w">                </span><span class="c1"># use PlaneWave method energy cutoff in eV</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">ecut</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">xc</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PBE&quot;</span><span class="w">                   </span><span class="c1"># exchange-correlation functional</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">kpts</span><span class="p">:</span><span class="w">                       </span><span class="c1"># if not set `kpts`, then only Gamma-point is used</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="s">&quot;density&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="s">&quot;gamma&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False,</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="s">&#39;even&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">dftd3</span><span class="p">:</span><span class="w">                        </span><span class="c1"># DFT-D3 method for Van der Waals correction</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="nt">damping</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;d3zero&quot;</span><span class="w">           </span><span class="c1"># damping method for DFT-D3.</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nt">ase</span><span class="p">:</span><span class="w">                          </span><span class="c1"># define ASE&#39;s calculator by two ways: pyfile or pyscript. Script must define variable `calc`</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">py_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ase_calculator.py</span><span class="w">  </span><span class="c1"># python file that defines ASE&#39;s calculator</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="c1"># py_script:                # list[str], directly define ASE&#39;s calculator in form of python code.</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="c1">#   - &quot;from sevenn.calculator import SevenNetCalculator&quot;</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="c1">#   - &quot;sevenn_args = {&#39;file_type&#39;: &#39;checkpoint&#39;}&quot;</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="c1">#   - &quot;calc = SevenNetCalculator(&#39;sevenn_model.pth&#39;, **sevenn_args)&quot;</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="nt">optimize</span><span class="p">:</span><span class="w">                       </span><span class="c1"># run DFT to optimize the structure</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="nt">fmax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.05</span><span class="w">                    </span><span class="c1"># force convergence criteria. Default is 0.05 eV/Ang</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span><span class="nt">mask</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">]</span><span class="w">           </span><span class="c1"># 1x6 array, 1 for relax, 0 for fixed. Default is; pbc + [1,1,1]</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="nt">max_steps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span><span class="w">              </span><span class="c1"># maximum number of steps for optimization. Default is 10000</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="nt">md</span><span class="p">:</span><span class="w">                             </span><span class="c1"># run AIMD/MD simulation</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">  </span><span class="c1">### Supported: NVE, NVT, NPT</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">  </span><span class="c1">### NVT with thermostat: Langevin, nose_hoover, nose_hoover_chain</span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">  </span><span class="c1">### NPT with:</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">      </span><span class="c1"># - parrinello_rahman barostat + nose_hoover thermostat</span>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">      </span><span class="c1"># - iso_nose_hoover_chain barostat and thermostat</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">  </span><span class="nt">ensemble</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;NPT&#39;</span><span class="w">               </span><span class="c1"># ensemble type. Choices: NVE, NVT, NPT. Default is NVE</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">  </span><span class="nt">dt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w">                       </span><span class="c1"># time step in fs. Default is 1.0 fs</span>
-</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">  </span><span class="nt">num_frames</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w">                 </span><span class="c1"># number of frames to be collected. Then total MD nsteps = collect_frames * traj_freq</span>
-</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">  </span><span class="nt">traj_freq</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">                  </span><span class="c1"># dump the frames every `traj_freq` steps</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">  </span><span class="nt">equil_steps</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">                </span><span class="c1"># number of equilibration steps before production run. Default is 0 steps</span>
-</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
-</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">  </span><span class="c1">### Thermostat</span>
-</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">  </span><span class="nt">temp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span><span class="w">                     </span><span class="c1"># temperature in K. Default is 300 K</span>
-</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">  </span><span class="nt">thermostat</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Langevin&#39;</span><span class="w">        </span><span class="c1"># thermostat type. Default is nose_hoover_chain. Choices: Langevin, nose_hoover, nose_hoover_chain</span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">  </span><span class="nt">tdamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w">                    </span><span class="c1"># damping timesteps for nose_hoover thermostat. Default is 50.</span>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">  </span><span class="c1"># tchain: 3                   # number of nose_hoover chain for nose_hoover_chain thermostat. Default is 3.</span>
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">  </span><span class="c1"># langevin_friction: 0.002    # friction coefficient for Langevin thermostat. Default is 0.002 fs^-1</span>
-</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">  </span><span class="c1">### Barostat</span>
-</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">  </span><span class="nt">press</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">                      </span><span class="c1"># external pressure in GPa. Default is None if not set. Accept float, 6-vector, or 3x3 matrix.</span>
-</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">  </span><span class="nt">barostat</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;parrinello_rahman&#39;</span><span class="w"> </span><span class="c1"># barostat type. Default is parrinello_rahman. Choices: parrinello_rahman, iso_nose_hoover_chain</span>
-</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">  </span><span class="c1"># pfactor: 2000000            # pressure for parrinello_rahman barostat. Default is 2e6 GPa.</span>
-</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">  </span><span class="nt">pdamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span><span class="w">                   </span><span class="c1"># damping timesteps for parrinello_rahman barostat. Default is 1000.</span>
-</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">  </span><span class="nt">mask</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">1</span><span class="p p-Indicator">]</span><span class="w">           </span><span class="c1"># 1x6 array, 1 for relax, 0 for fixed. Default is; pbc + [1,1,1]</span>
-</span></code></pre></div>
+<p>```yaml
+structure:                      # atomic structure information
+  from_extxyz: MoS2.extxyz      # The EXTXYZ file for input structure
+  pbc: [1, 1, 1]                # set this will overwrite the PBC in the EXTXYZ file. eg. [1, 1, 1]</p>
+<p>calc_args:
+  gpaw:                         # accept GPAW parameters
+    mode:
+      name: 'pw'                # use PlaneWave method energy cutoff in eV
+      ecut: 500
+    xc: "PBE"                   # exchange-correlation functional
+    kpts:                       # if not set <code>kpts</code>, then only Gamma-point is used
+      "density": 10,
+      "gamma": False,
+      'even': True</p>
+<p>dftd3:                        # DFT-D3 method for Van der Waals correction
+    damping: "d3zero"           # damping method for DFT-D3.</p>
+<p>ase:                          # define ASE's calculator by two ways: pyfile or pyscript. Script must define variable <code>calc</code>
+    py_file: ase_calculator.py  # python file that defines ASE's calculator
+    # py_script:                # list[str], directly define ASE's calculator in form of python code.
+    #   - "from sevenn.calculator import SevenNetCalculator"
+    #   - "sevenn_args = {'file_type': 'checkpoint'}"
+    #   - "calc = SevenNetCalculator('sevenn_model.pth', **sevenn_args)"</p>
+<p>optimize:                       # run DFT to optimize the structure
+  fmax: 0.05                    # force convergence criteria. Default is 0.05 eV/Ang
+  mask: [1,1,1,1,1,1]           # 1x6 array, 1 for relax, 0 for fixed. Default is; pbc + [1,1,1]
+  max_steps: 10000              # maximum number of steps for optimization. Default is 10000</p>
+<p>md:                             # run AIMD/MD simulation
+  ### Supported: NVE, NVT, NPT
+  ### NVT with thermostat: Langevin, nose_hoover, nose_hoover_chain
+  ### NPT with:
+      # - parrinello_rahman barostat + nose_hoover thermostat
+      # - iso_nose_hoover_chain barostat and thermostat</p>
+<p>ensemble: 'NPT'               # ensemble type. Choices: NVE, NVT, NPT. Default is NVE
+  dt: 1.0                       # time step in fs. Default is 1.0 fs
+  num_frames: 5                 # number of frames to be collected. Then total MD nsteps = collect_frames * traj_freq
+  traj_freq: 3                  # dump the frames every <code>traj_freq</code> steps
+  equil_steps: 0                # number of equilibration steps before production run. Default is 0 steps</p>
+<p>### Thermostat
+  temp: 300                     # temperature in K. Default is 300 K
+  thermostat: 'Langevin'        # thermostat type. Default is nose_hoover_chain. Choices: Langevin, nose_hoover, nose_hoover_chain
+  tdamp: 100                    # damping timesteps for nose_hoover thermostat. Default is 50.
+  # tchain: 3                   # number of nose_hoover chain for nose_hoover_chain thermostat. Default is 3.
+  # langevin_friction: 0.002    # friction coefficient for Langevin thermostat. Default is 0.002 fs^-1</p>
+<p>### Barostat
+  press: 0                      # external pressure in GPa. Default is None if not set. Accept float, 6-vector, or 3x3 matrix.
+  barostat: 'parrinello_rahman' # barostat type. Default is parrinello_rahman. Choices: parrinello_rahman, iso_nose_hoover_chain
+  # pfactor: 2000000            # pressure for parrinello_rahman barostat. Default is 2e6 GPa.
+  pdamp: 1000                   # damping timesteps for parrinello_rahman barostat. Default is 1000.
+  mask: [1,1,1,1,1,1]           # 1x6 array, 1 for relax, 0 for fixed. Default is; pbc + [1,1,1]
+```</p>
 
 
 
