@@ -4379,6 +4379,8 @@ Needs to override <code>self.stage_list</code> in base class, because the stages
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 
@@ -9356,6 +9358,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 
@@ -12602,6 +12606,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 
@@ -15121,6 +15127,8 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 
@@ -21140,6 +21148,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 
@@ -25454,6 +25464,8 @@ Note: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.<
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 

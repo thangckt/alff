@@ -4264,6 +4264,8 @@
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
+<p>Note:
+- Force collect memory before run workflow, to avoid persistent memory usage in previous stages methods (e.g. <code>prepare()</code>).</p>
 
           
 
