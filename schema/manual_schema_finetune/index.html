@@ -923,23 +923,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Schema:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-for-fine-tuning-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schema for fine-tuning configuration file
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -950,23 +933,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example config 1:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-configuration-file-for-fine-tuning-with-alff" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example configuration file for fine-tuning with ALFF
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1908,23 +1874,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Schema:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-for-fine-tuning-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schema for fine-tuning configuration file
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1935,23 +1884,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example config 1:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-configuration-file-for-fine-tuning-with-alff" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example configuration file for fine-tuning with ALFF
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1973,201 +1905,206 @@
 <h1 id="schema-for-fine-tuning">Schema for Fine-tuning<a class="headerlink" href="#schema-for-fine-tuning" title="Permanent link">¤</a></h1>
 <p>The schema to configure the input file for fine-turning.</p>
 <h2 id="schema">Schema:<a class="headerlink" href="#schema" title="Permanent link">¤</a></h2>
-<p>```yaml</p>
-<h3 id="schema-for-fine-tuning-configuration-file">Schema for fine-tuning configuration file<a class="headerlink" href="#schema-for-fine-tuning-configuration-file" title="Permanent link">¤</a></h3>
-<p>train:                       ###ANCHOR Training ML model
-  type: dict
-  required: True
-  schema:
-    init_data_paths:         # List of paths to initial data.
-      type: list
-      required: True</p>
-<div class="codehilite"><pre><span></span><code><span class="nx">preprocess_data</span><span class="p">:</span><span class="w">         </span><span class="err">#</span><span class="w"> </span><span class="nx">Arguments</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">processing</span><span class="w"> </span><span class="nx">data</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">  </span><span class="nx">schema</span><span class="p">:</span>
-<span class="w">    </span><span class="nx">trainset_ratio</span><span class="p">:</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="nx">Ratio</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">training</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="m m-Double">0.9</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">float</span>
-<span class="w">    </span><span class="nx">validset_ratio</span><span class="p">:</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="nx">Ratio</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">validation</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="m m-Double">0.1</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">float</span>
-<span class="w">    </span><span class="nx">num_cores</span><span class="p">:</span><span class="w">           </span><span class="err">#</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">cores</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">building</span><span class="w"> </span><span class="nx">graph</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
-<span class="w">    </span><span class="nx">ase_kwargs</span><span class="p">:</span><span class="w">          </span><span class="err">#</span><span class="w"> </span><span class="nx">Custom</span><span class="w"> </span><span class="nx">keywords</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">access</span><span class="w"> </span><span class="nx">Energy</span><span class="o">/</span><span class="nx">Force</span><span class="o">/</span><span class="nx">Stress</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">ASE</span><span class="w"> </span><span class="nx">extxyz</span><span class="w"> </span><span class="nx">files</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">empty</span><span class="w"> </span><span class="nx">dict</span><span class="p">,</span><span class="w"> </span><span class="nx">meaning</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">ASE</span><span class="w"> </span><span class="nx">keywords</span><span class="p">.</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">      </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
-<span class="w">      </span><span class="nx">schema</span><span class="p">:</span>
-<span class="w">        </span><span class="nx">energy_key</span><span class="p">:</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="nx">keyword</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">energy</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">ASE</span><span class="w"> </span><span class="nx">extxyz</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">energy</span><span class="err">&#39;</span>
-<span class="w">          </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
-<span class="w">        </span><span class="nx">force_key</span><span class="p">:</span><span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="nx">keyword</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">force</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">ASE</span><span class="w"> </span><span class="nx">extxyz</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">forces</span><span class="err">&#39;</span>
-<span class="w">          </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
-<span class="w">        </span><span class="nx">stress_key</span><span class="p">:</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="nx">keyword</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">stress</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">ASE</span><span class="w"> </span><span class="nx">extxyz</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">stress</span><span class="err">&#39;</span>
-<span class="w">          </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
-
-<span class="nx">init_checkpoints</span><span class="p">:</span><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nx">list</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">checkpoint</span><span class="w"> </span><span class="nx">files</span><span class="p">,</span><span class="w"> </span><span class="nx">each</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">each</span><span class="w"> </span><span class="nx">model</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">list</span>
-
-<span class="nx">num_grad_updates</span><span class="p">:</span><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nx">Maximum</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">updates</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">guess</span><span class="w"> </span><span class="nx">num_epochs</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">None</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
-
-<span class="nx">distributed</span><span class="p">:</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">  </span><span class="nx">schema</span><span class="p">:</span>
-<span class="w">    </span><span class="nx">distributed_backend</span><span class="p">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">choices</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">mpi</span><span class="err">&#39;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">nccl</span><span class="err">&#39;</span><span class="w">  </span><span class="err">&#39;</span><span class="nx">gloo</span><span class="err">&#39;</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
-<span class="w">    </span><span class="nx">cluster_type</span><span class="p">:</span><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nx">choices</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">slurm</span><span class="err">&#39;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">sge</span><span class="err">&#39;</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
-<span class="w">    </span><span class="nx">gpu_per_node</span><span class="p">:</span><span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nx">only</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">SGE</span><span class="w"> </span><span class="nx">batch</span><span class="w"> </span><span class="k">type</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
-
-<span class="nx">num_models</span><span class="p">:</span><span class="w">              </span><span class="err">#</span><span class="w"> </span><span class="nx">Number</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">models</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">train</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
-
-<span class="nx">mlp_model</span><span class="p">:</span><span class="w">               </span><span class="err">#</span><span class="w"> </span><span class="nx">ML</span><span class="w"> </span><span class="nx">model</span><span class="w"> </span><span class="k">type</span><span class="p">.</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">sevenn_mliap</span><span class="err">&#39;</span><span class="p">.</span><span class="w"> </span><span class="nx">Choices</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">sevenn</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">sevenn_mliap</span><span class="err">&#39;</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="kt">string</span>
-<span class="w">  </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">sevenn_mliap</span><span class="err">&#39;</span>
-<span class="w">  </span><span class="nx">allowed</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">&#39;</span><span class="nx">sevenn_mliap</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">sevenn</span><span class="err">&#39;</span><span class="p">]</span>
-
-<span class="nx">sevenn_args</span><span class="p">:</span><span class="w">             </span><span class="err">###</span><span class="w"> </span><span class="nx">Args</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">training</span><span class="w"> </span><span class="nx">Sevenn</span><span class="p">.</span><span class="w"> </span><span class="nx">See</span><span class="p">:</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//github.com/MDIL-SNU/SevenNet/blob/main/example_inputs/training/input_full.yml</span>
-<span class="w">  </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">  </span><span class="nx">schema</span><span class="p">:</span>
-<span class="w">    </span><span class="nx">model</span><span class="p">:</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">    </span><span class="nx">train</span><span class="p">:</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">    </span><span class="nx">data</span><span class="p">:</span><span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="nx">Only</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">parameters</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">schema</span>
-<span class="w">      </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">dict</span>
-<span class="w">      </span><span class="nx">schema</span><span class="p">:</span>
-<span class="w">        </span><span class="nx">batch_size</span><span class="p">:</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="nx">Per</span><span class="w"> </span><span class="nx">GPU</span><span class="w"> </span><span class="nx">batch</span><span class="w"> </span><span class="nx">size</span><span class="p">.</span><span class="w"> </span><span class="nx">E</span><span class="p">.</span><span class="nx">g</span><span class="p">.,</span><span class="w"> </span><span class="mi">300</span>
-<span class="w">          </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">integer</span>
-<span class="w">        </span><span class="nx">shift</span><span class="p">:</span><span class="w">           </span><span class="err">#</span><span class="w"> </span><span class="nx">One</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">per_atom_energy_mean</span><span class="o">*</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">elemwise_reference_energies</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">float</span>
-<span class="w">          </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">float</span><span class="p">]</span>
-<span class="w">        </span><span class="nx">scale</span><span class="p">:</span><span class="w">           </span><span class="err">#</span><span class="w"> </span><span class="nx">One</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">force_rms</span><span class="o">*</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">per_atom_energy_std</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">elemwise_force_rms</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">float</span>
-<span class="w">          </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">float</span><span class="p">]</span>
-</code></pre></div>
-
-<p>```</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">### Schema for fine-tuning configuration file</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">train</span><span class="p">:</span><span class="w">                       </span><span class="c1">###ANCHOR Training ML model</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">init_data_paths</span><span class="p">:</span><span class="w">         </span><span class="c1"># List of paths to initial data.</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">preprocess_data</span><span class="p">:</span><span class="w">         </span><span class="c1"># Arguments for processing data</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">trainset_ratio</span><span class="p">:</span><span class="w">      </span><span class="c1"># Ratio of training set. Default is 0.9</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">validset_ratio</span><span class="p">:</span><span class="w">      </span><span class="c1"># Ratio of validation set. Default is 0.1</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="nt">num_cores</span><span class="p">:</span><span class="w">           </span><span class="c1"># number of cores for building graph data. Default is 1</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="nt">ase_kwargs</span><span class="p">:</span><span class="w">          </span><span class="c1"># Custom keywords to access Energy/Force/Stress from ASE extxyz files. Default is empty dict, meaning use default ASE keywords.</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">          </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">          </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="nt">energy_key</span><span class="p">:</span><span class="w">      </span><span class="c1"># keyword for energy in ASE extxyz file. Default is &#39;energy&#39;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="nt">force_key</span><span class="p">:</span><span class="w">       </span><span class="c1"># keyword for force in ASE extxyz file. Default is &#39;forces&#39;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="nt">stress_key</span><span class="p">:</span><span class="w">      </span><span class="c1"># keyword for stress in ASE extxyz file. Default is &#39;stress&#39;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="nt">init_checkpoints</span><span class="p">:</span><span class="w">        </span><span class="c1"># list of checkpoint files, each for each model</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nt">num_grad_updates</span><span class="p">:</span><span class="w">        </span><span class="c1"># Maximum number of updates to guess num_epochs. Default is None</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="nt">distributed</span><span class="p">:</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">        </span><span class="nt">distributed_backend</span><span class="p">:</span><span class="w"> </span><span class="c1"># choices: &#39;mpi&#39; or &#39;nccl&#39;  &#39;gloo&#39;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">        </span><span class="nt">cluster_type</span><span class="p">:</span><span class="w">        </span><span class="c1"># choices: &#39;slurm&#39; or &#39;sge&#39;</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">        </span><span class="nt">gpu_per_node</span><span class="p">:</span><span class="w">        </span><span class="c1"># only need in SGE batch type. Default is 1</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="nt">num_models</span><span class="p">:</span><span class="w">              </span><span class="c1"># Number of models to train. Default is 1</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="nt">mlp_model</span><span class="p">:</span><span class="w">               </span><span class="c1"># ML model type. Default is &#39;sevenn_mliap&#39;. Choices: &#39;sevenn&#39;, &#39;sevenn_mliap&#39;</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">      </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;sevenn_mliap&#39;</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">      </span><span class="nt">allowed</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;sevenn_mliap&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;sevenn&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="nt">sevenn_args</span><span class="p">:</span><span class="w">             </span><span class="c1">### Args for training Sevenn. See: https://github.com/MDIL-SNU/SevenNet/blob/main/example_inputs/training/input_full.yml</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">      </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">        </span><span class="nt">model</span><span class="p">:</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">        </span><span class="nt">train</span><span class="p">:</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">        </span><span class="nt">data</span><span class="p">:</span><span class="w">                </span><span class="c1"># Only need parameters in this schema</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">          </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dict</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">          </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">            </span><span class="nt">batch_size</span><span class="p">:</span><span class="w">      </span><span class="c1"># Per GPU batch size. E.g., 300</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">            </span><span class="nt">shift</span><span class="p">:</span><span class="w">           </span><span class="c1"># One of &#39;per_atom_energy_mean*&#39;, &#39;elemwise_reference_energies&#39;, float</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">string</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">float</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">            </span><span class="nt">scale</span><span class="p">:</span><span class="w">           </span><span class="c1"># One of &#39;force_rms*&#39;, &#39;per_atom_energy_std&#39;, &#39;elemwise_force_rms&#39;, float</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">              </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">string</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">float</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
 <h2 id="example-config-1">Example config 1:<a class="headerlink" href="#example-config-1" title="Permanent link">¤</a></h2>
-<p>```yaml</p>
-<h3 id="example-configuration-file-for-fine-tuning-with-alff">Example configuration file for fine-tuning with ALFF<a class="headerlink" href="#example-configuration-file-for-fine-tuning-with-alff" title="Permanent link">¤</a></h3>
-<p>train:
-  init_data_paths:
-    - ../1_gendata/bulk_<em>/</em>/02_gendata/data_label.extxyz
-    - ../1_gendata/monolayer_<em>/</em>/02_gendata/data_label.extxyz
-    - ../1_gendata/1_iteration_data/*.extxyz</p>
-<p>preprocess_data:
-    trainset_ratio: 0.9
-    validset_ratio: 0.1
-    num_cores: 1                             # number of cores for building graph data</p>
-<p># init_checkpoints:                        # list of checkpoint files, each for each model
-  #   - _init_checkpoint/checkpoint_best.pth</p>
-<p>num_grad_updates: 100000                   # Maximum number of updates to guess num_epochs. Default is None</p>
-<p>distributed:
-    distributed_backend: 'nccl'              # choices: 'mpi' or 'nccl'  'gloo'
-    cluster_type: 'slurm'                    # choices: 'slurm' or 'sge'
-    # gpu_per_node: 1                        # only need in sge</p>
-<p>num_models: 4</p>
-<p>mlp_model: sevenn                          # 'sevenn_mliap', 'sevenn',</p>
-<p>sevenn_args:                               # Updated: Dec 17, 2024. See: <a href="https://github.com/MDIL-SNU/SevenNet/blob/main/example_inputs/training/input_full.yaml">https://github.com/MDIL-SNU/SevenNet/blob/main/example_inputs/training/input_full.yaml</a>
-    model:
-      chemical_species: ['Mo', 'W', 'S', 'Se', 'Te'] # Elements model should know. [ 'Univ' | 'Auto' | manual_user_input ]
-      cutoff: 5.0                            # Cutoff radius in Angstroms. If two atoms are within the cutoff, they are connected.
-      channel: 32                            # The multiplicity(channel) of node features.
-      lmax: 2                                # Maximum order of irreducible representations (rotation order).
-      num_convolution_layer: 4               # The number of message passing layers.</p>
-<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="c1"># irreps_manual:                       # Manually set irreps of the model in each layer (e.g., 128 channels + 5 layers)</span>
-<span class="w">    </span><span class="c1">#- &quot;128x0e&quot;</span>
-<span class="w">    </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
-<span class="w">    </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
-<span class="w">    </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
-<span class="w">    </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
-<span class="w">    </span><span class="c1">#- &quot;128x0e&quot;</span>
-
-<span class="w">  </span><span class="n">weight_nn_hidden_neurons</span><span class="o">:</span><span class="w"> </span><span class="err">[</span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="err">]</span><span class="w">     </span><span class="c1"># Hidden neurons in convolution weight neural network</span>
-<span class="w">  </span><span class="n">radial_basis</span><span class="o">:</span><span class="w">                          </span><span class="c1"># Function and its parameters to encode radial distance</span>
-<span class="w">    </span><span class="n">radial_basis_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bessel&#39;</span><span class="w">          </span><span class="c1"># Only &#39;bessel&#39; is currently supported</span>
-<span class="w">    </span><span class="n">bessel_basis_num</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
-<span class="w">  </span><span class="n">cutoff_function</span><span class="o">:</span><span class="w">                       </span><span class="c1"># Envelop function, multiplied to radial_basis functions to init edge featrues</span>
-<span class="w">    </span><span class="n">cutoff_function_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;poly_cut&#39;</span><span class="w">     </span><span class="c1"># {&#39;poly_cut&#39; and &#39;poly_cut_p_value&#39;} or {&#39;XPLOR&#39; and &#39;cutoff_on&#39;}</span>
-<span class="w">    </span><span class="n">poly_cut_p_value</span><span class="o">:</span><span class="w"> </span><span class="mi">6</span>
-
-<span class="w">  </span><span class="n">act_gate</span><span class="o">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;e&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;silu&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;o&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tanh&#39;</span><span class="err">}</span><span class="w">   </span><span class="c1"># Equivalent to &#39;nonlinearity_gates&#39; in nequip</span>
-<span class="w">  </span><span class="n">act_scalar</span><span class="o">:</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;e&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;silu&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;o&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tanh&#39;</span><span class="err">}</span><span class="w"> </span><span class="c1"># Equivalent to &#39;nonlinearity_scalars&#39; in nequip</span>
-
-<span class="w">  </span><span class="n">is_parity</span><span class="o">:</span><span class="w"> </span><span class="no">False</span><span class="w">                       </span><span class="c1"># Pairy True (E(3) group) or False (to SE(3) group)</span>
-
-<span class="w">  </span><span class="n">self_connection_type</span><span class="o">:</span><span class="w"> </span><span class="k">linear</span><span class="w">           </span><span class="c1"># Default is &#39;nequip&#39;. &#39;linear&#39; is used for SevenNet-0.</span>
-<span class="w">  </span><span class="n">interaction_type</span><span class="o">:</span><span class="w"> </span><span class="n">nequip</span>
-
-<span class="w">  </span><span class="n">conv_denominator</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;avg_num_neigh&quot;</span><span class="w">      </span><span class="c1"># Valid options are &quot;avg_num_neigh*&quot;, &quot;sqrt_avg_num_neigh&quot;, or float</span>
-<span class="w">  </span><span class="n">train_denominator</span><span class="o">:</span><span class="w"> </span><span class="no">False</span><span class="w">               </span><span class="c1"># Enable training for denominator in convolution layer</span>
-<span class="w">  </span><span class="n">train_shift_scale</span><span class="o">:</span><span class="w"> </span><span class="no">False</span><span class="w">               </span><span class="c1"># Enable training for shift &amp; scale in output layer</span>
-
-<span class="n">train</span><span class="o">:</span>
-<span class="w">  </span><span class="n">random_seed</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">  </span><span class="n">train_shuffle</span><span class="o">:</span><span class="w"> </span><span class="no">True</span>
-<span class="w">  </span><span class="n">is_train_stress</span><span class="o">:</span><span class="w"> </span><span class="no">True</span><span class="w">                  </span><span class="c1"># Includes stress in the loss function</span>
-<span class="w">  </span><span class="n">epoch</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">                               </span><span class="c1"># Ends training after this number of epochs</span>
-<span class="w">  </span><span class="n">per_epoch</span><span class="o">:</span><span class="w">  </span><span class="mi">20</span><span class="w">                         </span><span class="c1"># Generate checkpoints every this epoch</span>
-
-<span class="w">  </span><span class="c1"># loss: &#39;Huber&#39;                        # Default is &#39;mse&#39; (mean squared error)</span>
-<span class="w">  </span><span class="c1"># loss_param:</span>
-<span class="w">  </span><span class="c1">#     delta: 0.01</span>
-
-<span class="w">  </span><span class="c1"># Each optimizer and scheduler have different available parameters.</span>
-<span class="w">  </span><span class="c1"># You can refer to sevenn/train/optim.py for supporting optimizer &amp; schedulers</span>
-<span class="w">  </span><span class="n">optimizer</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;adam&#39;</span><span class="w">                      </span><span class="c1"># Options available are &#39;sgd&#39;, &#39;adagrad&#39;, &#39;adam&#39;, &#39;adamw&#39;, &#39;radam&#39;</span>
-<span class="w">  </span><span class="n">optim_param</span><span class="o">:</span>
-<span class="w">    </span><span class="n">lr</span><span class="o">:</span><span class="w"> </span><span class="mf">5.0e-4</span>
-
-<span class="w">  </span><span class="n">scheduler</span><span class="o">:</span><span class="w"> </span><span class="n">linearlr</span>
-<span class="w">  </span><span class="n">scheduler_param</span><span class="o">:</span>
-<span class="w">    </span><span class="n">start_factor</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0</span>
-<span class="w">    </span><span class="n">total_iters</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="w">                       </span><span class="c1"># {..epoch}</span>
-<span class="w">    </span><span class="n">end_factor</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0e-7</span>
-
-<span class="w">  </span><span class="c1"># scheduler: &#39;reducelronplateau&#39;       # One of &#39;steplr&#39;, &#39;multisteplr&#39;, &#39;exponentiallr&#39;, &#39;cosineannealinglr&#39;, &#39;reducelronplateau&#39;, &#39;linearlr&#39;</span>
-<span class="w">  </span><span class="c1"># scheduler_param:</span>
-<span class="w">  </span><span class="c1">#     factor: 0.75</span>
-<span class="w">  </span><span class="c1">#     patience: 2</span>
-<span class="w">  </span><span class="c1">#     threshold: 5.0e-5                # only changes large than this value will be considered as a change</span>
-<span class="w">  </span><span class="c1">#     min_lr: 1.0e-12                  # minimum learning rate</span>
-
-<span class="w">  </span><span class="c1"># scheduler: exponentiallr</span>
-<span class="w">  </span><span class="c1"># scheduler_param:</span>
-<span class="w">  </span><span class="c1">#     gamma: 0.95                      # large gamma means slower decay</span>
-
-<span class="w">  </span><span class="n">force_loss_weight</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0</span><span class="w">                 </span><span class="c1"># Coefficient for force loss</span>
-<span class="w">  </span><span class="n">stress_loss_weight</span><span class="o">:</span><span class="w"> </span><span class="mf">1.0e-4</span><span class="w">             </span><span class="c1"># Coefficient for stress loss (to kbar unit), kbar = 0.1 GPa</span>
-
-<span class="w">  </span><span class="c1"># [&#39;target y&#39;, &#39;metric&#39;]</span>
-<span class="w">  </span><span class="c1"># Target y: TotalEnergy, Energy, Force, Stress, Stress_GPa, TotalLoss</span>
-<span class="w">  </span><span class="c1"># Metric  : RMSE, MAE, or Loss</span>
-<span class="w">  </span><span class="n">error_record</span><span class="o">:</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;Energy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RMSE&#39;</span><span class="err">]</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;Force&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RMSE&#39;</span><span class="err">]</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;Stress&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;RMSE&#39;</span><span class="err">]</span>
-<span class="w">    </span><span class="c1"># - [&#39;Stress_GPa&#39;, &#39;RMSE&#39;]</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;Energy&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Loss&#39;</span><span class="err">]</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;Force&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Loss&#39;</span><span class="err">]</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;Stress&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Loss&#39;</span><span class="err">]</span>
-<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="err">[</span><span class="s1">&#39;TotalLoss&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;None&#39;</span><span class="err">]</span>
-<span class="w">  </span><span class="n">best_metric</span><span class="o">:</span><span class="w"> </span><span class="n">TotalLoss</span>
-
-
-<span class="w">  </span><span class="c1">### THANG: do not use this, just set `init_checkpoints` above</span>
-<span class="w">  </span><span class="c1"># Continue training model from given checkpoint, or pre-trained model checkpoint for fine-tuning</span>
-<span class="w">  </span><span class="c1">#continue:</span>
-<span class="w">    </span><span class="c1">#checkpoint: &#39;checkpoint_best.pth&#39;   # Checkpoint of pre-trained model or a model want to continue training.</span>
-<span class="w">    </span><span class="c1">#reset_optimizer: False              # Set True for fine-tuning</span>
-<span class="w">    </span><span class="c1">#reset_scheduler: False              # Set True for fine-tuning</span>
-
-<span class="k">data</span><span class="o">:</span>
-<span class="w">  </span><span class="n">batch_size</span><span class="o">:</span><span class="w"> </span><span class="mi">280</span><span class="w">                        </span><span class="c1"># Per GPU batch size.</span>
-
-<span class="w">  </span><span class="n">shift</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;per_atom_energy_mean&#39;</span><span class="w">          </span><span class="c1"># One of &#39;per_atom_energy_mean*&#39;, &#39;elemwise_reference_energies&#39;, float</span>
-<span class="w">  </span><span class="n">scale</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;force_rms&#39;</span><span class="w">                     </span><span class="c1"># One of &#39;force_rms*&#39;, &#39;per_atom_energy_std&#39;, &#39;elemwise_force_rms&#39;, float</span>
-</code></pre></div>
-
-<p>```</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">### Example configuration file for fine-tuning with ALFF</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">train</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">init_data_paths</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../1_gendata/bulk_*/*/02_gendata/data_label.extxyz</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../1_gendata/monolayer_*/*/02_gendata/data_label.extxyz</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">../1_gendata/1_iteration_data/*.extxyz</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">preprocess_data</span><span class="p">:</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">trainset_ratio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.9</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">validset_ratio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.1</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">num_cores</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">                             </span><span class="c1"># number of cores for building graph data</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="c1"># init_checkpoints:                        # list of checkpoint files, each for each model</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="c1">#   - _init_checkpoint/checkpoint_best.pth</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nt">num_grad_updates</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000</span><span class="w">                   </span><span class="c1"># Maximum number of updates to guess num_epochs. Default is None</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nt">distributed</span><span class="p">:</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">distributed_backend</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;nccl&#39;</span><span class="w">              </span><span class="c1"># choices: &#39;mpi&#39; or &#39;nccl&#39;  &#39;gloo&#39;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="nt">cluster_type</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;slurm&#39;</span><span class="w">                    </span><span class="c1"># choices: &#39;slurm&#39; or &#39;sge&#39;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="c1"># gpu_per_node: 1                        # only need in sge</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nt">num_models</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span><span class="nt">mlp_model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sevenn</span><span class="w">                          </span><span class="c1"># &#39;sevenn_mliap&#39;, &#39;sevenn&#39;,</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">  </span><span class="nt">sevenn_args</span><span class="p">:</span><span class="w">                               </span><span class="c1"># Updated: Dec 17, 2024. See: https://github.com/MDIL-SNU/SevenNet/blob/main/example_inputs/training/input_full.yaml</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="nt">model</span><span class="p">:</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">      </span><span class="nt">chemical_species</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Mo&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;W&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;S&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;Se&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;Te&#39;</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Elements model should know. [ &#39;Univ&#39; | &#39;Auto&#39; | manual_user_input ]</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">      </span><span class="nt">cutoff</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0</span><span class="w">                            </span><span class="c1"># Cutoff radius in Angstroms. If two atoms are within the cutoff, they are connected.</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">      </span><span class="nt">channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span><span class="w">                            </span><span class="c1"># The multiplicity(channel) of node features.</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">      </span><span class="nt">lmax</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w">                                </span><span class="c1"># Maximum order of irreducible representations (rotation order).</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">      </span><span class="nt">num_convolution_layer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w">               </span><span class="c1"># The number of message passing layers.</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">      </span><span class="c1"># irreps_manual:                       # Manually set irreps of the model in each layer (e.g., 128 channels + 5 layers)</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">        </span><span class="c1">#- &quot;128x0e&quot;</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">        </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">        </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">        </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">        </span><span class="c1">#- &quot;128x0e+64x1e+32x2e&quot;</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="c1">#- &quot;128x0e&quot;</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">      </span><span class="nt">weight_nn_hidden_neurons</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">64</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">64</span><span class="p p-Indicator">]</span><span class="w">     </span><span class="c1"># Hidden neurons in convolution weight neural network</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">      </span><span class="nt">radial_basis</span><span class="p">:</span><span class="w">                          </span><span class="c1"># Function and its parameters to encode radial distance</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">        </span><span class="nt">radial_basis_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;bessel&#39;</span><span class="w">          </span><span class="c1"># Only &#39;bessel&#39; is currently supported</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">        </span><span class="nt">bessel_basis_num</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">      </span><span class="nt">cutoff_function</span><span class="p">:</span><span class="w">                       </span><span class="c1"># Envelop function, multiplied to radial_basis functions to init edge featrues</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">        </span><span class="nt">cutoff_function_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;poly_cut&#39;</span><span class="w">     </span><span class="c1"># {&#39;poly_cut&#39; and &#39;poly_cut_p_value&#39;} or {&#39;XPLOR&#39; and &#39;cutoff_on&#39;}</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">        </span><span class="nt">poly_cut_p_value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">      </span><span class="nt">act_gate</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="s">&#39;e&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;silu&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;tanh&#39;</span><span class="p p-Indicator">}</span><span class="w">   </span><span class="c1"># Equivalent to &#39;nonlinearity_gates&#39; in nequip</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">      </span><span class="nt">act_scalar</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="s">&#39;e&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;silu&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;tanh&#39;</span><span class="p p-Indicator">}</span><span class="w"> </span><span class="c1"># Equivalent to &#39;nonlinearity_scalars&#39; in nequip</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">      </span><span class="nt">is_parity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w">                       </span><span class="c1"># Pairy True (E(3) group) or False (to SE(3) group)</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">      </span><span class="nt">self_connection_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linear</span><span class="w">           </span><span class="c1"># Default is &#39;nequip&#39;. &#39;linear&#39; is used for SevenNet-0.</span>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">      </span><span class="nt">interaction_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nequip</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">      </span><span class="nt">conv_denominator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;avg_num_neigh&quot;</span><span class="w">      </span><span class="c1"># Valid options are &quot;avg_num_neigh*&quot;, &quot;sqrt_avg_num_neigh&quot;, or float</span>
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">      </span><span class="nt">train_denominator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w">               </span><span class="c1"># Enable training for denominator in convolution layer</span>
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">      </span><span class="nt">train_shift_scale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w">               </span><span class="c1"># Enable training for shift &amp; scale in output layer</span>
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">    </span><span class="nt">train</span><span class="p">:</span>
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">      </span><span class="nt">random_seed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">      </span><span class="nt">train_shuffle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">      </span><span class="nt">is_train_stress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w">                  </span><span class="c1"># Includes stress in the loss function</span>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">      </span><span class="nt">epoch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">                               </span><span class="c1"># Ends training after this number of epochs</span>
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">      </span><span class="nt">per_epoch</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w">                         </span><span class="c1"># Generate checkpoints every this epoch</span>
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">      </span><span class="c1"># loss: &#39;Huber&#39;                        # Default is &#39;mse&#39; (mean squared error)</span>
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">      </span><span class="c1"># loss_param:</span>
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="w">      </span><span class="c1">#     delta: 0.01</span>
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="w">      </span><span class="c1"># Each optimizer and scheduler have different available parameters.</span>
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="w">      </span><span class="c1"># You can refer to sevenn/train/optim.py for supporting optimizer &amp; schedulers</span>
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a><span class="w">      </span><span class="nt">optimizer</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;adam&#39;</span><span class="w">                      </span><span class="c1"># Options available are &#39;sgd&#39;, &#39;adagrad&#39;, &#39;adam&#39;, &#39;adamw&#39;, &#39;radam&#39;</span>
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="w">      </span><span class="nt">optim_param</span><span class="p">:</span>
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="w">        </span><span class="nt">lr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.0e-4</span>
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="w">      </span><span class="nt">scheduler</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linearlr</span>
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="w">      </span><span class="nt">scheduler_param</span><span class="p">:</span>
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="w">        </span><span class="nt">start_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="w">        </span><span class="nt">total_iters</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">                       </span><span class="c1"># {..epoch}</span>
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="w">        </span><span class="nt">end_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0e-7</span>
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="w">      </span><span class="c1"># scheduler: &#39;reducelronplateau&#39;       # One of &#39;steplr&#39;, &#39;multisteplr&#39;, &#39;exponentiallr&#39;, &#39;cosineannealinglr&#39;, &#39;reducelronplateau&#39;, &#39;linearlr&#39;</span>
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a><span class="w">      </span><span class="c1"># scheduler_param:</span>
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a><span class="w">      </span><span class="c1">#     factor: 0.75</span>
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="w">      </span><span class="c1">#     patience: 2</span>
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a><span class="w">      </span><span class="c1">#     threshold: 5.0e-5                # only changes large than this value will be considered as a change</span>
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="w">      </span><span class="c1">#     min_lr: 1.0e-12                  # minimum learning rate</span>
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a><span class="w">      </span><span class="c1"># scheduler: exponentiallr</span>
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a><span class="w">      </span><span class="c1"># scheduler_param:</span>
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="w">      </span><span class="c1">#     gamma: 0.95                      # large gamma means slower decay</span>
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a><span class="w">      </span><span class="nt">force_loss_weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w">                 </span><span class="c1"># Coefficient for force loss</span>
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a><span class="w">      </span><span class="nt">stress_loss_weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0e-4</span><span class="w">             </span><span class="c1"># Coefficient for stress loss (to kbar unit), kbar = 0.1 GPa</span>
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a><span class="w">      </span><span class="c1"># [&#39;target y&#39;, &#39;metric&#39;]</span>
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a><span class="w">      </span><span class="c1"># Target y: TotalEnergy, Energy, Force, Stress, Stress_GPa, TotalLoss</span>
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a><span class="w">      </span><span class="c1"># Metric  : RMSE, MAE, or Loss</span>
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a><span class="w">      </span><span class="nt">error_record</span><span class="p">:</span>
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Energy&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;RMSE&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Force&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;RMSE&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Stress&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;RMSE&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a><span class="w">        </span><span class="c1"># - [&#39;Stress_GPa&#39;, &#39;RMSE&#39;]</span>
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Energy&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;Loss&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Force&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;Loss&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;Stress&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;Loss&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;TotalLoss&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;None&#39;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a><span class="w">      </span><span class="nt">best_metric</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TotalLoss</span>
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a>
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a>
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a><span class="w">      </span><span class="c1">### THANG: do not use this, just set `init_checkpoints` above</span>
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a><span class="w">      </span><span class="c1"># Continue training model from given checkpoint, or pre-trained model checkpoint for fine-tuning</span>
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a><span class="w">      </span><span class="c1">#continue:</span>
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a><span class="w">        </span><span class="c1">#checkpoint: &#39;checkpoint_best.pth&#39;   # Checkpoint of pre-trained model or a model want to continue training.</span>
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a><span class="w">        </span><span class="c1">#reset_optimizer: False              # Set True for fine-tuning</span>
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a><span class="w">        </span><span class="c1">#reset_scheduler: False              # Set True for fine-tuning</span>
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a>
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a><span class="w">    </span><span class="nt">data</span><span class="p">:</span>
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a><span class="w">      </span><span class="nt">batch_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">280</span><span class="w">                        </span><span class="c1"># Per GPU batch size.</span>
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a><span class="w">      </span><span class="nt">shift</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;per_atom_energy_mean&#39;</span><span class="w">          </span><span class="c1"># One of &#39;per_atom_energy_mean*&#39;, &#39;elemwise_reference_energies&#39;, float</span>
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a><span class="w">      </span><span class="nt">scale</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;force_rms&#39;</span><span class="w">                     </span><span class="c1"># One of &#39;force_rms*&#39;, &#39;per_atom_energy_std&#39;, &#39;elemwise_force_rms&#39;, float</span>
+</span></code></pre></div>
 
 
 

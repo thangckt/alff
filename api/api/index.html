@@ -8912,17 +8912,17 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 <details class="example" open>
   <summary>Example</summary>
-  <p><code>python
-class WorkflowExample(Workflow):
-    def __init__(self, params_file: str, machines_file: str):
-        super().__init__(params_file, machines_file, SCHEMA_EXAMPLE)
-        self.stage_map = {
-            "stage_name1": stage_function1,
-            "stage_name2": stage_function2,
-            "stage_name3": stage_function3,
-        }
-        self.wf_name = "Name of the workflow"
-        return</code></p>
+  <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">WorkflowExample</span><span class="p">(</span><span class="n">Workflow</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">machines_file</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">params_file</span><span class="p">,</span> <span class="n">machines_file</span><span class="p">,</span> <span class="n">SCHEMA_EXAMPLE</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">stage_map</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            <span class="s2">&quot;stage_name1&quot;</span><span class="p">:</span> <span class="n">stage_function1</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            <span class="s2">&quot;stage_name2&quot;</span><span class="p">:</span> <span class="n">stage_function2</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            <span class="s2">&quot;stage_name3&quot;</span><span class="p">:</span> <span class="n">stage_function3</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">wf_name</span> <span class="o">=</span> <span class="s2">&quot;Name of the workflow&quot;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">return</span>
+</span></code></pre></div>
 </details>
 
 <details class="note" open>
@@ -9411,8 +9411,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 <li>All <code>@abtractmethod</code> must be reimplemented in subclasses.</li>
 <li>Do not change the <code>.run()</code> method unless you know what you are doing.</li>
 <li><code>task_filter</code> to filter task directories (filter already labelled structures).
-<code>python
-self.task_filter = {"has_files": ["file1.txt", "file2.txt"], "no_files": ["file3.txt"]}</code></li>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="bp">self</span><span class="o">.</span><span class="n">task_filter</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;has_files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;file1.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;file2.txt&quot;</span><span class="p">],</span> <span class="s2">&quot;no_files&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;file3.txt&quot;</span><span class="p">]}</span>
+</span></code></pre></div></li>
 </ul>
 </details>
           
