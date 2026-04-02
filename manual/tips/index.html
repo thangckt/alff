@@ -2704,9 +2704,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="active-learning">Active Learning<a class="anchor-link" href="#active-learning">¶</a></h2><h3 id="fake-md-candidates">Fake MD candidates<a class="anchor-link" href="#fake-md-candidates">¶</a></h3><p>DFT stage collects configurations in dir <code>01_md/md_md_selected/*.extxyz</code>. These are the candidates selected by the active learning algorithm.</p>
+<h2 id="active-learning">Active Learning<a class="anchor-link" href="#active-learning">¶</a></h2><h3 id="fake-md-candidates">Fake MD candidates<a class="anchor-link" href="#fake-md-candidates">¶</a></h3><p>DFT stage collects configurations in dir <code>01_md/md_selected/*.extxyz</code>. These are the candidates selected by the active learning algorithm.</p>
 <ol>
-<li>You can totally "fake" these candidates by: adding some configurations, removing some configurations, or even replacing all candidates with your own configurations,... just by place your <code>.extxyz</code> files in the dir <code>01_md/md_md_selected/</code>. The active learning algorithm will just read the configurations in this <code>dir</code> and use them for the next DFT labeling stage. This is useful when you want have more custom configurations to be labeled by DFT.</li>
+<li>You can totally "fake" these candidates by: adding some configurations, removing some configurations, or even replacing all candidates with your own configurations,... just by place your <code>.extxyz</code> files in the dir <code>01_md/md_selected/</code>. The active learning algorithm will just read the configurations in this <code>dir</code> and use them for the next DFT labeling stage. This is useful when you want have more custom configurations to be labeled by DFT.</li>
 </ol>
 <blockquote>
 <p>Note to avoid adding duplicated custom configurations. Should manually collect already labeled configurations in current ALFF iter, then delete all DFT tasks, and add new custom configurations, then rebuild DFT tasks. Otherwise, the duplicated configurations will be labeled by DFT again, which is a waste of computational resources.</p>
