@@ -25,7 +25,7 @@
     
     
       
-        <title>Tips - alff</title>
+        <title>Tips and tricks - alff</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tips" class="md-skip">
+        <a href="#tips-and-tricks" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tips
+              Tips and tricks
             
           </span>
         </div>
@@ -1383,7 +1383,7 @@
   <span class="md-ellipsis">
     
   
-    Tips
+    Tips and tricks
   
 
     
@@ -1401,7 +1401,7 @@
   <span class="md-ellipsis">
     
   
-    Tips
+    Tips and tricks
   
 
     
@@ -2693,7 +2693,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="tips">Tips<a class="anchor-link" href="#tips">¶</a></h1>
+<h1 id="tips-and-tricks">Tips and tricks<a class="anchor-link" href="#tips-and-tricks">¶</a></h1>
 </div>
 </div>
 </div>
@@ -2708,7 +2708,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <ol>
 <li>You can totally "fake" these candidates by: adding some configurations, removing some configurations, or even replacing all candidates with your own configurations,... just by place your <code>.extxyz</code> files in the dir <code>01_md/md_selected/</code>. The active learning algorithm will just read the configurations in this <code>dir</code> and use them for the next DFT labeling stage. This is useful when you want have more custom configurations to be labeled by DFT.</li>
 </ol>
-<blockquote>
 <p>Note: avoid adding duplicated custom configurations, do as follow:</p>
 <ul>
 <li>Run below cell to collect <code>extxyz</code> files in DFT label directories. Then, add the collected <code>extxyz</code> file back to dataset for training.</li>
@@ -2720,7 +2719,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </li>
 <li>Then, modify <code>_alff.iter</code> to be <code>n 1</code> step,  and relaunch <code>alff</code> to DFT label the new candidate structures.</li>
 </ul>
-</blockquote>
 <ol start="2">
 <li>You can also ignore completely the MD runs, and just place your own configurations in the dir <code>01_md/md_selected/</code> for DFT labeling. Then, modify the ALFF iterlog <code>_alff.iter</code> to skip the MD stage and directly go to DFT stage (for example ignoring MD stage at <code>iter 12</code>, modify corresponding lines to <code>12 1</code>). This is useful when you have some specific configurations that you want to be labeled by DFT, but you don't want to run the MD simulations.</li>
 </ol>
