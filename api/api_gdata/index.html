@@ -5915,7 +5915,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            are_structs_identical(input_struct1: Atoms, input_struct2: Atoms, tol=1e-06) -> bool (alff.gdata.util_dataset.are_structs_identical)" href="../api/#alff.gdata.util_dataset.are_structs_identical">are_structs_identical</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            are_structs_identical(input_struct1: Atoms, input_struct2: Atoms, tol=0.0001) -> bool (alff.gdata.util_dataset.are_structs_identical)" href="../api/#alff.gdata.util_dataset.are_structs_identical">are_structs_identical</a></code></b>
             –
             <div class="doc-md-description">
               <p>Checks if two Atoms objects are identical by first sorting them and then comparing their attributes.</p>
@@ -6342,7 +6342,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h4 id="alff.gdata.util_dataset.are_structs_identical" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">are_structs_identical</span><span class="p">(</span><span class="n">input_struct1</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">input_struct2</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">are_structs_identical</span><span class="p">(</span><span class="n">input_struct1</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">input_struct2</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span></code>
 
 <a href="#alff.gdata.util_dataset.are_structs_identical" class="headerlink" title="Permanent link">¤</a></h4>
 
@@ -6373,7 +6373,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <li class="doc-section-item field-body">
             <b><code>tol</code></b>
               (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>, default:
-                  <code>1e-06</code>
+                  <code>0.0001</code>
 )
           –
           <div class="doc-md-description">
