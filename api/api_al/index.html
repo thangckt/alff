@@ -7177,7 +7177,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 )
           –
           <div class="doc-md-description">
-            <p>Block size of configurations to compute 'committee error' at once, just to avoid flooding memory. Defaults to 1000.</p>
+            <p>Block size of configurations to compute 'committee error' at once, adjust this value to avoid flooding GPU memory. Defaults to 1000.</p>
           </div>
         </li>
     </ul>
@@ -7797,7 +7797,10 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
 <details class="note" open>
   <summary>Note</summary>
-  <p>The output file is controlled by the class attribute <code>self.committee_error_file</code>.</p>
+  <ul>
+<li>The output file is controlled by the class attribute <code>self.committee_error_file</code>.</li>
+<li>This method now can handle list of structures with variable numbers of atoms. This allows processing of mixed-size structures in a single block.</li>
+</ul>
 </details>
           
 
@@ -7901,13 +7904,6 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
         </li>
     </ul>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <ul>
-<li><code>blockwise</code> functions requires all configurations in block have the same number of atoms. So if the input extxyz file contains configurations with different number of atoms, must use block_size=1 when initializing <code>ModelCommittee</code> class.</li>
-</ul>
-</details>
           
 
     </div>
