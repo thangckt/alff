@@ -12266,7 +12266,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             <b><code><a class="autorefs autorefs-internal" title="            compute_stress_single_structure(work_dir, pdict, mdict) (alff.elastic.elastic.compute_stress_single_structure)" href="#alff.elastic.elastic.compute_stress_single_structure">compute_stress_single_structure</a></code></b>
             –
             <div class="doc-md-description">
-              <p>The function does the following:</p>
+              <p>Compute stress and strain tensors for a single structure by DFT/MD.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -12716,10 +12716,10 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
     <div class="doc doc-contents ">
 
-        <p>The function does the following:
+        <p>Compute stress and strain tensors for a single structure by DFT/MD.
 - generate supercells with small deformation and compute corresponding strain tensor
 - run DFT/MD minimize calculation to compute stress tensor for each suppercell.
-- collect stress and strain tensor for each supercell</p>
+- collect stress and strain tensor for each supercell.</p>
 
           
 
@@ -12807,7 +12807,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="              ElasticConstant(cij_mat: np.array = None, cij_dict: dict = None, bravais_lattice: str = 'Cubic') (alff.elastic.lib_elastic.ElasticConstant)" href="#alff.elastic.lib_elastic.ElasticConstant">ElasticConstant</a></code></b>
+          <b><code><a class="autorefs autorefs-internal" title="              ElasticConstant(cij_mat: np.array = None, cij_dict: dict | None = None, bravais_lattice: str = 'Cubic') (alff.elastic.lib_elastic.ElasticConstant)" href="#alff.elastic.lib_elastic.ElasticConstant">ElasticConstant</a></code></b>
           –
           <div class="doc-md-description">
             <p>Class to manage elastic constants and compute elastic properties.</p>
@@ -12824,14 +12824,14 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             <b><code><a class="autorefs autorefs-internal" title="            func_MEOS(v, v0, b0, b0p) (alff.elastic.lib_elastic.func_MEOS)" href="#alff.elastic.lib_elastic.func_MEOS">func_MEOS</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Murnaghan_equation_of_state</a></p>
+              <p>Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Murnaghan_equation_of_state</a>.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="            func_BMEOS(v, v0, b0, b0p) (alff.elastic.lib_elastic.func_BMEOS)" href="#alff.elastic.lib_elastic.func_BMEOS">func_BMEOS</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Birch-Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state</a></p>
+              <p>Birch-Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state</a>.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -12866,7 +12866,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             <b><code><a class="autorefs autorefs-internal" title="            get_cij_list(bravais_lattice: str = 'Cubic') -> list[str] (alff.elastic.lib_elastic.get_cij_list)" href="#alff.elastic.lib_elastic.get_cij_list">get_cij_list</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Return the order of elastic constants for the structure</p>
+              <p>Return the order of elastic constants for the structure.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -12918,9 +12918,9 @@ Steps to compute the elastic tensor:
     - Initialize the class with the reference structure.
     - Generate deformed structures with 'elementary deformations'
     - Compute stress for each deformed structure by DFT/MD.
-    - Input the deformed structures with stress tensors to the method <code>fit_elastic_tensor</code></p>
+    - Input the deformed structures with stress tensors to the method <code>fit_elastic_tensor</code>.</p>
 
-        <p>symprec (float): symmetry precision to check the symmetry of the crystal</p>
+        <p>symprec (float): symmetry precision to check the symmetry of the crystal.</p>
 
           
 
@@ -13430,7 +13430,7 @@ This is a convenience function to convert output of get_stress function into ext
     <div class="doc doc-contents ">
 
         <p>Calculate Birch-Murnaghan Equation of State for the crystal.</p>
-<div class="arithmatex">\[ P(V) = \frac{B_0}{B'_0}\left[\left({\frac{V}{V_0}}\right)^{-B'_0} - 1\right] \]</div>
+<div class="arithmatex">\[ P(V) = \\frac{B_0}{B'_0}\\left[\\left({\\frac{V}{V_0}}\\right)^{-B'_0} - 1\\right] \]</div>
 <p>It's coefficients are estimated using n single-point structures ganerated from the crystal (cryst)
 by the scan_volumes function between two relative volumes. The BM EOS is fitted to the computed points by
 least squares method.</p>
@@ -13611,7 +13611,7 @@ ase.units.<unit name>::</p>
 
 
 <h5 id="alff.elastic.lib_elastic.ElasticConstant" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">ElasticConstant</span><span class="p">(</span><span class="n">cij_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cij_dict</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bravais_lattice</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Cubic&#39;</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>              <code class="highlight language-python"><span class="n">ElasticConstant</span><span class="p">(</span><span class="n">cij_mat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cij_dict</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bravais_lattice</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Cubic&#39;</span><span class="p">)</span></code>
 
 <a href="#alff.elastic.lib_elastic.ElasticConstant" class="headerlink" title="Permanent link">¤</a></h5>
 
@@ -13623,7 +13623,7 @@ ase.units.<unit name>::</p>
         <p>Class to manage elastic constants and compute elastic properties.</p>
 
         <p>bravais_lattice (str): Bravais lattice name of the crystal.
-**kwargs: dictionary of elastic constants <code>Cij</code>. Where C11, C12, ... C66 : float,</p>
+**kwargs: dictionary of elastic constants <code>Cij</code>. Where C11, C12, ... C66 : float,.</p>
 
           
 
@@ -13643,14 +13643,14 @@ ase.units.<unit name>::</p>
             <b><code><a class="autorefs autorefs-internal" title="            Cij() -> np.ndarray (alff.elastic.lib_elastic.ElasticConstant.Cij)" href="#alff.elastic.lib_elastic.ElasticConstant.Cij">Cij</a></code></b>
             –
             <div class="doc-md-description">
-              <p>The elastic stiffness constants in Voigt 6x6 format</p>
+              <p>The elastic stiffness constants in Voigt 6x6 format.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="            Sij() -> np.ndarray (alff.elastic.lib_elastic.ElasticConstant.Sij)" href="#alff.elastic.lib_elastic.ElasticConstant.Sij">Sij</a></code></b>
             –
             <div class="doc-md-description">
-              <p>The compliance constants in Voigt 6x6 format</p>
+              <p>The compliance constants in Voigt 6x6 format.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -13733,7 +13733,7 @@ ase.units.<unit name>::</p>
 
     <div class="doc doc-contents ">
 
-        <p>The elastic stiffness constants in Voigt 6x6 format</p>
+        <p>The elastic stiffness constants in Voigt 6x6 format.</p>
 
           
 
@@ -13752,7 +13752,7 @@ ase.units.<unit name>::</p>
 
     <div class="doc doc-contents ">
 
-        <p>The compliance constants in Voigt 6x6 format</p>
+        <p>The compliance constants in Voigt 6x6 format.</p>
 
           
 
@@ -13854,7 +13854,7 @@ ase.units.<unit name>::</p>
 
     <div class="doc doc-contents ">
 
-        <p>Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Murnaghan_equation_of_state</a></p>
+        <p>Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Murnaghan_equation_of_state</a>.</p>
 
           
 
@@ -13873,7 +13873,7 @@ ase.units.<unit name>::</p>
 
     <div class="doc doc-contents ">
 
-        <p>Birch-Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state</a></p>
+        <p>Birch-Murnaghan equation of state: <a href="https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state">https://en.wikipedia.org/wiki/Birch-Murnaghan_equation_of_state</a>.</p>
 
           
 
@@ -13894,7 +13894,7 @@ ase.units.<unit name>::</p>
 
         <p>Identify the lattice type and the Bravais lattice of the crystal.
 The lattice type numbers are (numbering starts from 1):
-Triclinic (1), Monoclinic (2), Orthorhombic (3), Tetragonal (4), Trigonal (5), Hexagonal (6), Cubic (7)</p>
+Triclinic (1), Monoclinic (2), Orthorhombic (3), Tetragonal (4), Trigonal (5), Hexagonal (6), Cubic (7).</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -14145,7 +14145,7 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
 
     <div class="doc doc-contents ">
 
-        <p>Return the order of elastic constants for the structure</p>
+        <p>Return the order of elastic constants for the structure.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -14371,7 +14371,7 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
             <b><code><a class="autorefs autorefs-internal" title="            postelast_lammps_singlepoint(work_dir, pdict) (alff.elastic.libelastic_lammps.postelast_lammps_singlepoint)" href="#alff.elastic.libelastic_lammps.postelast_lammps_singlepoint">postelast_lammps_singlepoint</a></code></b>
             –
             <div class="doc-md-description">
-              <p>This function does:</p>
+              <p>Post-process LAMMPS singlepoint calculation for elastic constant calculation.</p>
             </div>
           </li>
     </ul>
@@ -14423,9 +14423,9 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 
     <div class="doc doc-contents ">
 
-        <p>This function does:
+        <p>Post-process LAMMPS singlepoint calculation for elastic constant calculation.
 - Clean up unlabelled extxyz files
-- Collect forces from the output files</p>
+- Collect forces from the output files.</p>
 
           
 
