@@ -25617,6 +25617,15 @@ The function does the following:
 - assign forces back to phonopy object
 - save the phonopy object to a file for latter post-processing</p>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li>Apply acoustic sum rule correction to enforce physical constraints. This eliminates spurious negative frequencies at small q-vectors
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">phonon</span><span class="o">.</span><span class="n">symmetrize_force_constants</span><span class="p">()</span>
+</span></code></pre></div></li>
+</ul>
+</details>
           
 
     </div>
