@@ -10141,7 +10141,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            DIR_SAMPLE = '00_sample'
+          <b><code><a class="autorefs autorefs-internal" title="            DIR_SAMPLE = '01_sample'
 
   
       class-attribute
@@ -10798,7 +10798,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.base.KEY.DIR_SAMPLE" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_SAMPLE</span> <span class="o">=</span> <span class="s1">&#39;00_sample&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_SAMPLE</span> <span class="o">=</span> <span class="s1">&#39;01_sample&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -14812,7 +14812,7 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            perturb_structure(struct_files: list[str], num_configs: int, perturb_disp: float) -> list[str] (alff.gdata.gendata.perturb_structure)" href="#alff.gdata.gendata.perturb_structure">perturb_structure</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            perturb_structure(struct_files: list[str], num_configs: int, displacement: float) -> list[str] (alff.gdata.gendata.perturb_structure)" href="#alff.gdata.gendata.perturb_structure">perturb_structure</a></code></b>
             –
             <div class="doc-md-description">
               <p>Perturb the structures.</p>
@@ -15450,7 +15450,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.gdata.gendata.perturb_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">perturb_structure</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">num_configs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">perturb_disp</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">perturb_structure</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">num_configs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">displacement</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.gdata.gendata.perturb_structure" class="headerlink" title="Permanent link">¤</a></h5>
 
@@ -15479,7 +15479,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-            <b><code>perturb_disp</code></b>
+            <b><code>displacement</code></b>
               (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>)
           –
           <div class="doc-md-description">
