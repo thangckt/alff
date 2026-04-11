@@ -1777,10 +1777,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.cli.alff_gen" class="md-nav__link">
+  <a href="#alff.cli.alff_gendata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;alff_gen
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;alff_gendata
       
     </span>
   </a>
@@ -2789,10 +2789,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#alff.cli.alff_gen" class="md-nav__link">
+  <a href="#alff.cli.alff_gendata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;alff_gen
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;alff_gendata
       
     </span>
   </a>
@@ -10141,12 +10141,12 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            DIR_TRAIN = '00_train'
+          <b><code><a class="autorefs autorefs-internal" title="            DIR_SAMPLE = '00_sample'
 
   
       class-attribute
       instance-attribute
-   (alff.base.KEY.DIR_TRAIN)" href="#alff.base.KEY.DIR_TRAIN">DIR_TRAIN</a></code></b>
+   (alff.base.KEY.DIR_SAMPLE)" href="#alff.base.KEY.DIR_SAMPLE">DIR_SAMPLE</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -10797,15 +10797,15 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 
-<h5 id="alff.base.KEY.DIR_TRAIN" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_TRAIN</span> <span class="o">=</span> <span class="s1">&#39;00_train&#39;</span></code>
+<h5 id="alff.base.KEY.DIR_SAMPLE" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_SAMPLE</span> <span class="o">=</span> <span class="s1">&#39;00_sample&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-<a href="#alff.base.KEY.DIR_TRAIN" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.base.KEY.DIR_SAMPLE" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -11904,7 +11904,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            alff_gen() (alff.cli.alff_gen)" href="#alff.cli.alff_gen">alff_gen</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            alff_gendata() (alff.cli.alff_gendata)" href="#alff.cli.alff_gendata">alff_gendata</a></code></b>
             –
             <div class="doc-md-description">
               <p>CLI for data generation.</p>
@@ -12003,10 +12003,10 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 <div class="doc doc-object doc-function">
 
 
-<h4 id="alff.cli.alff_gen" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">alff_gen</span><span class="p">()</span></code>
+<h4 id="alff.cli.alff_gendata" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">alff_gendata</span><span class="p">()</span></code>
 
-<a href="#alff.cli.alff_gen" class="headerlink" title="Permanent link">¤</a></h4>
+<a href="#alff.cli.alff_gendata" class="headerlink" title="Permanent link">¤</a></h4>
 
 
     <div class="doc doc-contents ">
@@ -14745,7 +14745,21 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
             <b><code><a class="autorefs autorefs-internal" title="            sampling_space(pdict, mdict) (alff.gdata.gendata.sampling_space)" href="#alff.gdata.gendata.sampling_space">sampling_space</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Explore the sampling space.</p>
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            sample_aimd(pdict, mdict) (alff.gdata.gendata.sample_aimd)" href="#alff.gdata.gendata.sample_aimd">sample_aimd</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Data generation with AIMD simulations.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            singlepoint_sampling(pdict, mdict) (alff.gdata.gendata.singlepoint_sampling)" href="#alff.gdata.gendata.singlepoint_sampling">singlepoint_sampling</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Data generation with single-point calculations.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -14798,7 +14812,7 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            perturb_structure(struct_files: list, perturb_num: int, perturb_disp: float) (alff.gdata.gendata.perturb_structure)" href="#alff.gdata.gendata.perturb_structure">perturb_structure</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            perturb_structure(struct_files: list[str], num_configs: int, perturb_disp: float) -> list[str] (alff.gdata.gendata.perturb_structure)" href="#alff.gdata.gendata.perturb_structure">perturb_structure</a></code></b>
             –
             <div class="doc-md-description">
               <p>Perturb the structures.</p>
@@ -15218,12 +15232,49 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
     <div class="doc doc-contents ">
 
-        <p>Explore the sampling space.</p>
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.gdata.gendata.sample_aimd" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sample_aimd</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+
+<a href="#alff.gdata.gendata.sample_aimd" class="headerlink" title="Permanent link">¤</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Data generation with AIMD simulations.</p>
 <p>Sampling space includes:
 - Range of strains (in x, y, z directions) + range of temperatures
 - Range of temperatures + range of stresses</p>
 <p>Notes
     - Structure paths are save into 2 lists: original and sampling structure paths</p>
+
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.gdata.gendata.singlepoint_sampling" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">singlepoint_sampling</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+
+<a href="#alff.gdata.gendata.singlepoint_sampling" class="headerlink" title="Permanent link">¤</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Data generation with single-point calculations.</p>
+<p>Sampling space by random displacements (perturbation) of the structures.</p>
 
           
 
@@ -15399,7 +15450,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.gdata.gendata.perturb_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">perturb_structure</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">perturb_num</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">perturb_disp</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">perturb_structure</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">num_configs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">perturb_disp</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.gdata.gendata.perturb_structure" class="headerlink" title="Permanent link">¤</a></h5>
 
@@ -15407,6 +15458,47 @@ for more complex workflow (e.g. with iteration like active learning), need to re
     <div class="doc doc-contents ">
 
         <p>Perturb the structures.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>struct_files</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of structure file paths.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>num_configs</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Number of random configurations to generate for each input structure.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>perturb_disp</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Maximum displacement in Angstrom for the random perturbation.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>new_struct_files</code></b> (              <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+)          –
+          <div class="doc-md-description">
+            <p>List of structure file paths for the perturbed structures.</p>
+          </div>
+        </li>
+    </ul>
 
           
 

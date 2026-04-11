@@ -1723,6 +1723,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.gdata.gendata.sample_aimd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sample_aimd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.gdata.gendata.singlepoint_sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;singlepoint_sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.gdata.gendata.run_dft" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2407,6 +2429,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.gdata.gendata.sample_aimd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sample_aimd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alff.gdata.gendata.singlepoint_sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;singlepoint_sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.gdata.gendata.run_dft" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2989,7 +3033,21 @@
             <b><code><a class="autorefs autorefs-internal" title="            sampling_space(pdict, mdict) (alff.gdata.gendata.sampling_space)" href="../api/#alff.gdata.gendata.sampling_space">sampling_space</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Explore the sampling space.</p>
+              
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            sample_aimd(pdict, mdict) (alff.gdata.gendata.sample_aimd)" href="../api/#alff.gdata.gendata.sample_aimd">sample_aimd</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Data generation with AIMD simulations.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            singlepoint_sampling(pdict, mdict) (alff.gdata.gendata.singlepoint_sampling)" href="../api/#alff.gdata.gendata.singlepoint_sampling">singlepoint_sampling</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Data generation with single-point calculations.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -3042,7 +3100,7 @@
             </div>
           </li>
           <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            perturb_structure(struct_files: list, perturb_num: int, perturb_disp: float) (alff.gdata.gendata.perturb_structure)" href="../api/#alff.gdata.gendata.perturb_structure">perturb_structure</a></code></b>
+            <b><code><a class="autorefs autorefs-internal" title="            perturb_structure(struct_files: list[str], num_configs: int, perturb_disp: float) -> list[str] (alff.gdata.gendata.perturb_structure)" href="../api/#alff.gdata.gendata.perturb_structure">perturb_structure</a></code></b>
             –
             <div class="doc-md-description">
               <p>Perturb the structures.</p>
@@ -3462,12 +3520,49 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
     <div class="doc doc-contents ">
 
-        <p>Explore the sampling space.</p>
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="alff.gdata.gendata.sample_aimd" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sample_aimd</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+
+<a href="#alff.gdata.gendata.sample_aimd" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Data generation with AIMD simulations.</p>
 <p>Sampling space includes:
 - Range of strains (in x, y, z directions) + range of temperatures
 - Range of temperatures + range of stresses</p>
 <p>Notes
     - Structure paths are save into 2 lists: original and sampling structure paths</p>
+
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="alff.gdata.gendata.singlepoint_sampling" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">singlepoint_sampling</span><span class="p">(</span><span class="n">pdict</span><span class="p">,</span> <span class="n">mdict</span><span class="p">)</span></code>
+
+<a href="#alff.gdata.gendata.singlepoint_sampling" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Data generation with single-point calculations.</p>
+<p>Sampling space by random displacements (perturbation) of the structures.</p>
 
           
 
@@ -3643,7 +3738,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h4 id="alff.gdata.gendata.perturb_structure" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">perturb_structure</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">perturb_num</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">perturb_disp</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">perturb_structure</span><span class="p">(</span><span class="n">struct_files</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">num_configs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">perturb_disp</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 <a href="#alff.gdata.gendata.perturb_structure" class="headerlink" title="Permanent link">¤</a></h4>
 
@@ -3651,6 +3746,47 @@ for more complex workflow (e.g. with iteration like active learning), need to re
     <div class="doc doc-contents ">
 
         <p>Perturb the structures.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>struct_files</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of structure file paths.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>num_configs</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Number of random configurations to generate for each input structure.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>perturb_disp</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Maximum displacement in Angstrom for the random perturbation.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>new_struct_files</code></b> (              <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+)          –
+          <div class="doc-md-description">
+            <p>List of structure file paths for the perturbed structures.</p>
+          </div>
+        </li>
+    </ul>
 
           
 
