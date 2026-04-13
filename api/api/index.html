@@ -25822,7 +25822,7 @@ The function does the following:
             <b><code><a class="autorefs autorefs-internal" title="            get_primitive_spglib(struct: Atoms, no_idealize: bool = True, symprec=1e-05, angle_tolerance=-1.0) -> Atoms (alff.phonon.utilpho.get_primitive_spglib)" href="#alff.phonon.utilpho.get_primitive_spglib">get_primitive_spglib</a></code></b>
             –
             <div class="doc-md-description">
-              <p>Find the primitive cell using spglib.standardize_cell.</p>
+              <p>Find the primitive cell using [spglib.cell.standardize_cell].</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -25830,6 +25830,13 @@ The function does the following:
             –
             <div class="doc-md-description">
               <p>Find the primitive cell using phonopy's get_primitive() function. This is more robust than <code>spglib</code>.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            get_primitive(struct: Atoms, symprec=1e-05, method='phonopy', ignore_dims: list | None = None, **kwargs) -> Atoms (alff.phonon.utilpho.get_primitive)" href="#alff.phonon.utilpho.get_primitive">get_primitive</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Find the primitive cell using either <code>spglib</code> or <code>phonopy</code>.</p>
             </div>
           </li>
           <li class="doc-section-item field-body">
@@ -25922,7 +25929,7 @@ The function does the following:
 
     <div class="doc doc-contents ">
 
-        <p>Find the primitive cell using spglib.standardize_cell.</p>
+        <p>Find the primitive cell using [spglib.cell.standardize_cell].</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -26021,6 +26028,82 @@ The function does the following:
         </li>
     </ul>
 
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.phonon.utilpho.get_primitive" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">get_primitive</span><span class="p">(</span><span class="n">struct</span><span class="p">:</span> <span class="n">Atoms</span><span class="p">,</span> <span class="n">symprec</span><span class="o">=</span><span class="mf">1e-05</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;phonopy&#39;</span><span class="p">,</span> <span class="n">ignore_dims</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.phonon.utilpho.get_primitive" class="headerlink" title="Permanent link">¤</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Find the primitive cell using either <code>spglib</code> or <code>phonopy</code>.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>struct</code></b>
+              (<code><span title="ase.Atoms">Atoms</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>ASE's structure object.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>symprec</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>, default:
+                  <code>1e-05</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Symmetry tolerance. Default is 1e-5.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>method</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>, default:
+                  <code>&#39;phonopy&#39;</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Method to find primitive cell. Options are "spglib" and "phonopy". Default is "phonopy".</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>ignore_dims</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>List of dimensions to ignore when finding primitive cell. This is useful when we want to find the primitive cell for bilayer_bulk of 2D materials.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>**kwargs</code></b>
+          –
+          <div class="doc-md-description">
+            <p>Additional keyword arguments for the specific method.</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li><code>spglib</code> treats the structure as 3D periodic when finding the primitive cell.</li>
+</ul>
+</details>
           
 
     </div>
