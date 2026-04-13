@@ -6412,6 +6412,7 @@ The function does the following:
   <summary>Note</summary>
   <ul>
 <li>Phonon calculations rely on a structure that is tightly converged. It is recommended to run a pre-relaxation with <code>opt_params: {"fmax": 1e-3}</code> or tighter before running phonon calculations.</li>
+<li>May need apply symmetry constraints during structure optimization to preserve the symmetry of the structure. Otherwise, the optimized structure may have lower symmetry than the original structure, which can lead to issues in phonon calculations (e.g., negative frequencies). See <a href="https://ase-lib.org/ase/constraints.html#the-fixsymmetry-class">apply symmetry constraints in ASE</a>.</li>
 <li>[Notice about displacement distance: "A too small displacement distance can lead to numerical noise, while a too large displacement distance can lead to anharmonic effects. A typical value is 0.01-0.05 Angstrom.", But, <a href="https://www.diracs-student.blog/2023/11/unoffical-way-to-use-phonopy-with-ase.html">some notes</a> say 0.05-0.08 Angstroms are need to converge!</li>
 </ul>
 </details>
@@ -6427,6 +6428,8 @@ The function does the following:
 <li>[6] pymatgen: <a href="https://github.com/materialsproject/pymatgen/blob/master/src/pymatgen/io/phonopy.py">https://github.com/materialsproject/pymatgen/blob/master/src/pymatgen/io/phonopy.py</a></li>
 <li>[7] vibes: <a href="https://gitlab.com/vibes-developers/vibes/-/tree/master/vibes/phonopy">https://gitlab.com/vibes-developers/vibes/-/tree/master/vibes/phonopy</a></li>
 <li>[8] <a href="https://www.diracs-student.blog/2023/11/unoffical-way-to-use-phonopy-with-ase.html">https://www.diracs-student.blog/2023/11/unoffical-way-to-use-phonopy-with-ase.html</a></li>
+<li>[9] ASE symmetry constraints: <a href="https://ase-lib.org/ase/constraints.html#the-fixsymmetry-class">https://ase-lib.org/ase/constraints.html#the-fixsymmetry-class</a></li>
+<li>[10] Structural optimization with symmetry: <a href="https://docs.matlantis.com/atomistic-simulation-tutorial/en/2_2_opt_symmetry.html">https://docs.matlantis.com/atomistic-simulation-tutorial/en/2_2_opt_symmetry.html</a></li>
 </ul>
 </details>
           
