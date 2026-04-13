@@ -3221,7 +3221,7 @@
 
     <div class="doc doc-contents first">
 
-        <p>ALFF: Automated Frameworks for Active-Learning Graph-Based Machine Learning Force Fields and Materials Property Calculations.</p>
+        <p>ALFF: Automated Frameworks for Active-Learning Graph-Based Machine Learning Force Fields and Material Properties Calculation.</p>
 <p><img src="https://thangckt.github.io/alff_doc/1images/kde_color_128x128.png" style="float: left; margin-right: 20px" width="120"/></p>
 <p>Developed and maintained by <a href="https://thangckt.github.io/">C.Thang Nguyen</a>.</p>
 
@@ -29199,6 +29199,28 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            dyn = LBFGS(FrechetCellFilter(atoms, mask=mask))
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_optimize.dyn)" href="#alff.util.script_ase.cli_gpaw_optimize.dyn">dyn</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+          <b><code><a class="autorefs autorefs-internal" title="            atoms_filter = FrechetCellFilter(atoms, mask=mask)
+
+  
+      module-attribute
+   (alff.util.script_ase.cli_gpaw_optimize.atoms_filter)" href="#alff.util.script_ase.cli_gpaw_optimize.atoms_filter">atoms_filter</a></code></b>
+          –
+          <div class="doc-md-description">
+            
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="            fmax = opt_args.get('fmax', 0.05)
 
   
@@ -29221,11 +29243,11 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            atoms_filter = FrechetCellFilter(atoms, mask=mask)
+          <b><code><a class="autorefs autorefs-internal" title="            opt_kwargs = opt_args.get('opt_kwargs', {})
 
   
       module-attribute
-   (alff.util.script_ase.cli_gpaw_optimize.atoms_filter)" href="#alff.util.script_ase.cli_gpaw_optimize.atoms_filter">atoms_filter</a></code></b>
+   (alff.util.script_ase.cli_gpaw_optimize.opt_kwargs)" href="#alff.util.script_ase.cli_gpaw_optimize.opt_kwargs">opt_kwargs</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -29237,17 +29259,6 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
   
       module-attribute
    (alff.util.script_ase.cli_gpaw_optimize.optimizer)" href="#alff.util.script_ase.cli_gpaw_optimize.optimizer">optimizer</a></code></b>
-          –
-          <div class="doc-md-description">
-            
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            dyn = LBFGS(atoms_filter)
-
-  
-      module-attribute
-   (alff.util.script_ase.cli_gpaw_optimize.dyn)" href="#alff.util.script_ase.cli_gpaw_optimize.dyn">dyn</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -29723,6 +29734,48 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
+<h6 id="alff.util.script_ase.cli_gpaw_optimize.dyn" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dyn</span> <span class="o">=</span> <span class="n">LBFGS</span><span class="p">(</span><span class="n">FrechetCellFilter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">))</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_optimize.dyn" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h6 id="alff.util.script_ase.cli_gpaw_optimize.atoms_filter" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_filter</span> <span class="o">=</span> <span class="n">FrechetCellFilter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#alff.util.script_ase.cli_gpaw_optimize.atoms_filter" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+          
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
 <h6 id="alff.util.script_ase.cli_gpaw_optimize.fmax" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">fmax</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fmax&#39;</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span></code>
 
@@ -29765,14 +29818,14 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
 
 
-<h6 id="alff.util.script_ase.cli_gpaw_optimize.atoms_filter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">atoms_filter</span> <span class="o">=</span> <span class="n">FrechetCellFilter</span><span class="p">(</span><span class="n">atoms</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span></code>
+<h6 id="alff.util.script_ase.cli_gpaw_optimize.opt_kwargs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">opt_kwargs</span> <span class="o">=</span> <span class="n">opt_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;opt_kwargs&#39;</span><span class="p">,</span> <span class="p">{})</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-<a href="#alff.util.script_ase.cli_gpaw_optimize.atoms_filter" class="headerlink" title="Permanent link">¤</a></h6>
+<a href="#alff.util.script_ase.cli_gpaw_optimize.opt_kwargs" class="headerlink" title="Permanent link">¤</a></h6>
 
 
     <div class="doc doc-contents ">
@@ -29794,27 +29847,6 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
   </span>
 
 <a href="#alff.util.script_ase.cli_gpaw_optimize.optimizer" class="headerlink" title="Permanent link">¤</a></h6>
-
-
-    <div class="doc doc-contents ">
-
-          
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h6 id="alff.util.script_ase.cli_gpaw_optimize.dyn" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">dyn</span> <span class="o">=</span> <span class="n">LBFGS</span><span class="p">(</span><span class="n">atoms_filter</span><span class="p">)</span></code>
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-<a href="#alff.util.script_ase.cli_gpaw_optimize.dyn" class="headerlink" title="Permanent link">¤</a></h6>
 
 
     <div class="doc doc-contents ">
