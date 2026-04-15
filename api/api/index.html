@@ -4594,7 +4594,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            task_filter = {'has_files': ['conf.extxyz'], 'no_files': ['committee_error.txt']}
+          <b><code><a class="autorefs autorefs-internal" title="            task_filter = {'has_files': [K.FILE_FRAME_UNLABEL], 'no_files': ['committee_error.txt']}
 
   
       instance-attribute
@@ -4747,7 +4747,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h6 id="alff.al.libal_md_ase.OperAlmdAseSevennet.task_filter" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">task_filter</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;has_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;conf.extxyz&#39;</span><span class="p">],</span> <span class="s1">&#39;no_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;committee_error.txt&#39;</span><span class="p">]}</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">task_filter</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;has_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">K</span><span class="o">.</span><span class="n">FILE_FRAME_UNLABEL</span><span class="p">],</span> <span class="s1">&#39;no_files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;committee_error.txt&#39;</span><span class="p">]}</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -10141,12 +10141,12 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            DIR_SAMPLE = '01_sample'
+          <b><code><a class="autorefs autorefs-internal" title="            DIR_TRAIN = '01_train'
 
   
       class-attribute
       instance-attribute
-   (alff.base.KEY.DIR_SAMPLE)" href="#alff.base.KEY.DIR_SAMPLE">DIR_SAMPLE</a></code></b>
+   (alff.base.KEY.DIR_TRAIN)" href="#alff.base.KEY.DIR_TRAIN">DIR_TRAIN</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -10501,12 +10501,12 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            DIR_STRAIN = '01_strain'
+          <b><code><a class="autorefs autorefs-internal" title="            DIR_SAMPLE = '01_sample'
 
   
       class-attribute
       instance-attribute
-   (alff.base.KEY.DIR_STRAIN)" href="#alff.base.KEY.DIR_STRAIN">DIR_STRAIN</a></code></b>
+   (alff.base.KEY.DIR_SAMPLE)" href="#alff.base.KEY.DIR_SAMPLE">DIR_SAMPLE</a></code></b>
           –
           <div class="doc-md-description">
             
@@ -10525,7 +10525,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            FILE_FRAME_UNLABEL = 'conf.extxyz'
+          <b><code><a class="autorefs autorefs-internal" title="            FILE_FRAME_UNLABEL = 'frame.extxyz'
 
   
       class-attribute
@@ -10537,7 +10537,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            FILE_FRAME_LABEL = 'conf_label.extxyz'
+          <b><code><a class="autorefs autorefs-internal" title="            FILE_FRAME_LABEL = 'frame_label.extxyz'
 
   
       class-attribute
@@ -10797,15 +10797,15 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 
-<h5 id="alff.base.KEY.DIR_SAMPLE" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_SAMPLE</span> <span class="o">=</span> <span class="s1">&#39;01_sample&#39;</span></code>
+<h5 id="alff.base.KEY.DIR_TRAIN" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_TRAIN</span> <span class="o">=</span> <span class="s1">&#39;01_train&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-<a href="#alff.base.KEY.DIR_SAMPLE" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.base.KEY.DIR_TRAIN" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -11457,15 +11457,15 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 
-<h5 id="alff.base.KEY.DIR_STRAIN" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_STRAIN</span> <span class="o">=</span> <span class="s1">&#39;01_strain&#39;</span></code>
+<h5 id="alff.base.KEY.DIR_SAMPLE" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">DIR_SAMPLE</span> <span class="o">=</span> <span class="s1">&#39;01_sample&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
   </span>
 
-<a href="#alff.base.KEY.DIR_STRAIN" class="headerlink" title="Permanent link">¤</a></h5>
+<a href="#alff.base.KEY.DIR_SAMPLE" class="headerlink" title="Permanent link">¤</a></h5>
 
 
     <div class="doc doc-contents ">
@@ -11502,7 +11502,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.base.KEY.FILE_FRAME_UNLABEL" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_FRAME_UNLABEL</span> <span class="o">=</span> <span class="s1">&#39;conf.extxyz&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_FRAME_UNLABEL</span> <span class="o">=</span> <span class="s1">&#39;frame.extxyz&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
@@ -11524,7 +11524,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 
 <h5 id="alff.base.KEY.FILE_FRAME_LABEL" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_FRAME_LABEL</span> <span class="o">=</span> <span class="s1">&#39;conf_label.extxyz&#39;</span></code>
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <code class="highlight language-python"><span class="n">FILE_FRAME_LABEL</span> <span class="o">=</span> <span class="s1">&#39;frame_label.extxyz&#39;</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
