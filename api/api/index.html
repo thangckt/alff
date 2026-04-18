@@ -20,7 +20,13 @@
         
       
       
-      <link rel="icon" href="../../_assets/image/one-note-128-o.png">
+      
+        
+        
+        
+          <link rel="icon" href="../../_assets/image/one-note-128-o.png">
+        
+      
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
     
     
@@ -29,15 +35,16 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6dc7b5bc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9008998b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.204eaadb.min.css">
       
-      
-
+    
+    
 
     
+
     
       
     
@@ -3610,7 +3617,8 @@
 
 
         <p>Workflow for active learning.
-Note: Need to redefine <code>.run()</code> method, since the Active Learning workflow is different from the base class.</p>
+Notes:
+    Need to redefine <code>.run()</code> method, since the Active Learning workflow is different from the base class.</p>
 
           
 
@@ -4407,7 +4415,7 @@ Needs to override <code>self.stage_list</code> in base class, because the stages
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -5009,8 +5017,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -5681,8 +5689,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -6576,8 +6584,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -6617,8 +6625,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 - Save all common_files in DIR_FWDATA for convenience in transferring files</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>DIR_COLLECTDATA: is <code>tmp</code> directory containing collected extxyz data</li>
 <li>DIR_FWDATA: directory containing <code>common_files</code> to forward to remote machines</li>
@@ -7026,8 +7034,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 This class to 'return' conventional names for D3 parameters for different packages used for MD.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>The default cutoff values are <code>95 Bohr (50.2718 Angstrom)</code> for two-body dispersion calculations and <code>40 Bohr (21.1671 Angstrom)</code> for coordination number and three-body calculations, as in <a href="https://ase-lib.org/ase/calculators/dftd3.html">ASE-DFTD3</a> package. Other packages may use different default values.</li>
 <li>Some dftd3 parameters for DFT calculations support triple-body interactions, but most <a href="https://docs.lammps.org/pair_dispersion_d3.html">MD packages</a> only support pairwise interactions. So the triple-body cutoff parameter is not included in this class.</li>
@@ -7333,9 +7341,13 @@ This class to 'return' conventional names for D3 parameters for different packag
 
     <div class="doc doc-contents ">
 
-        <p>Convert Angstrom to Bohr.
-Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Angstrom.</p>
+        <p>Convert Angstrom to Bohr.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Angstrom.</p>
+</details>
           
 
     </div>
@@ -7638,8 +7650,8 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <p>Single mode: will generate file as "outfile.pt"
 Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile/deployed_parallel_1.pt", ...</p>
 </details>
@@ -7979,8 +7991,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Consider using <code>@staticmethod</code> for some functions to avoid recursive messing.</li>
 </ul>
@@ -8591,8 +8603,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>The output file is controlled by the class attribute <code>self.committee_error_file</code>.</li>
 <li>This method now can handle list of structures with variable numbers of atoms. This allows processing of mixed-size structures in a single block.</li>
@@ -8630,8 +8642,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>If need to select candidates based on only <code>energy</code>, just set <code>f_std_hi</code> and <code>s_std_hi</code> to a very large values. By this way, the criterion for those terms will always meet.</li>
 <li>Similarly, if need to select candidates based on only <code>energy</code> and <code>force</code>, set <code>s_std_hi</code> to a very large value. E.g., <code>s_std_hi=1e6</code> for selecting candidates based on energy and force.</li>
@@ -8667,8 +8679,12 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
           </div>
         </li>
     </ul>
-        <p>Note: See parameters in functions <code>committee_error</code> and <code>committee_judge</code>.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>See parameters in functions <code>committee_error</code> and <code>committee_judge</code>.</p>
+</details>
           
 
     </div>
@@ -8951,8 +8967,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 </span></code></pre></div>
 </details>
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li><code>multi_mdicts</code> in this class is a dictionary containing multiple remote machines, and will be used <code>RemoteOperation</code> class.</li>
 <li>All <code>@abtractmethod</code> must be reimplemented in subclasses.</li>
@@ -9382,7 +9398,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -9429,8 +9445,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 </code></pre></div>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Before using this class, must prepare a file <code>work_dir/task_dirs.yml</code></li>
 <li>All paths (<code>work_dir</code>, <code>task_dirs</code>,...) are in POSIX format, and relative to <code>run_dir</code> (not <code>work_dir</code>).</li>
@@ -10039,8 +10055,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -12630,7 +12646,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -13374,10 +13390,17 @@ This is a convenience function to convert output of get_stress function into ext
     </ul>
 
 
-<details class="return" open>
-  <summary>Return</summary>
-  <p>float: external hydrostatic pressure in ASE units.</p>
-</details>
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>float</code></b> (              <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+)          –
+          <div class="doc-md-description">
+            <p>external hydrostatic pressure in ASE units.</p>
+          </div>
+        </li>
+    </ul>
+
           
 
     </div>
@@ -14061,10 +14084,17 @@ The axis is specified as follows:</p>
     </ul>
 
 
-<details class="return" open>
-  <summary>Return</summary>
-  <p>ase.Atoms: deformed structure</p>
-</details>
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="ase.Atoms">Atoms</span></code>
+          –
+          <div class="doc-md-description">
+            <p>ase.Atoms: deformed structure</p>
+          </div>
+        </li>
+    </ul>
+
           
 
     </div>
@@ -14163,10 +14193,17 @@ The number of Cij constants depends on the symmetry of the crystal. This strain 
     </ul>
 
 
-<details class="return" open>
-  <summary>Return</summary>
-  <p>list: list of strings <code>C_ij</code> the order of elastic constants</p>
-</details>
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>list</code></b> (              <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+)          –
+          <div class="doc-md-description">
+            <p>list of strings <code>C_ij</code> the order of elastic constants</p>
+          </div>
+        </li>
+    </ul>
+
           
 
     </div>
@@ -15165,7 +15202,7 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -16144,8 +16181,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -16646,8 +16683,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -17155,8 +17192,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -17656,8 +17693,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -19145,8 +19182,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -19646,8 +19683,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -20304,8 +20341,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -20819,8 +20856,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -21264,7 +21301,7 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -22497,8 +22534,8 @@ is needed update the cell correctly.</li>
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -22998,8 +23035,8 @@ is needed update the cell correctly.</li>
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -23516,8 +23553,8 @@ is needed update the cell correctly.</li>
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -24103,8 +24140,8 @@ is needed update the cell correctly.</li>
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -24618,8 +24655,8 @@ is needed update the cell correctly.</li>
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -24654,9 +24691,13 @@ is needed update the cell correctly.</li>
 
 
 
-        <p>Class to run LAMMPS singlepoint calculation, used for phonon calculation.
-Note: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.</p>
+        <p>Class to run LAMMPS singlepoint calculation, used for phonon calculation.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>The method <code>.postprocess()</code> returns <code>set_of_forces</code>, a 3D array.</p>
+</details>
           
 
 
@@ -25134,8 +25175,8 @@ Note: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.<
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -25592,7 +25633,7 @@ Note: the .postprocess() method returns <code>set_of_forces</code>, a 3D array.<
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -26395,8 +26436,12 @@ The function does the following:
 
         <p>Sort the structure paths by its supercell size.
 This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
-<p>Note: <code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p><code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</p>
+</details>
           
 
     </div>
@@ -27647,9 +27692,13 @@ This helps to chunk the tasks with similar supercell size together (similar supe
 
     <div class="doc doc-contents ">
 
-        <p>Function to print the potential, kinetic and total energy.
-Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</p>
+        <p>Function to print the potential, kinetic and total energy.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</p>
+</details>
           
 
     </div>
@@ -28909,9 +28958,13 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
 
     <div class="doc doc-contents ">
 
-        <p>Function to print the potential, kinetic and total energy.
-Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</p>
+        <p>Function to print the potential, kinetic and total energy.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</p>
+</details>
           
 
     </div>
@@ -31037,7 +31090,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
     </ul>
 
 
-<details class="note" open>
+<details class="notes" open>
   <summary>For control pressure</summary>
   <ul>
 <li>Only control pressure in the periodic directions.</li>
@@ -31251,7 +31304,7 @@ Note: Stress printed in this file in GPa, but save in EXTXYZ in eV/Angstrom^3.</
     </ul>
 
 
-<details class="note" open>
+<details class="notes" open>
   <summary>For control pressure</summary>
   <ul>
 <li>Only control pressure in the periodic directions.</li>
@@ -31870,7 +31923,7 @@ That form requirement is to be validated using <a href="https://thangckt.github.
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.annotate", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "content.action.edit", "navigation.footer", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.cf77aabc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d67e244a.min.js"></script>
       
         <script src="../../1thang_js/page_logVisitor.js"></script>
       

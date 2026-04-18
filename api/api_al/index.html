@@ -20,7 +20,13 @@
         
       
       
-      <link rel="icon" href="../../_assets/image/one-note-128-o.png">
+      
+        
+        
+        
+          <link rel="icon" href="../../_assets/image/one-note-128-o.png">
+        
+      
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
     
     
@@ -29,15 +35,16 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6dc7b5bc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9008998b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.204eaadb.min.css">
       
-      
-
+    
+    
 
     
+
     
       
     
@@ -2814,7 +2821,8 @@
 
 
         <p>Workflow for active learning.
-Note: Need to redefine <code>.run()</code> method, since the Active Learning workflow is different from the base class.</p>
+Notes:
+    Need to redefine <code>.run()</code> method, since the Active Learning workflow is different from the base class.</p>
 
           
 
@@ -3611,7 +3619,7 @@ Needs to override <code>self.stage_list</code> in base class, because the stages
 
         <p>The main function to run the workflow. This default implementation works for simple workflow,
 for more complex workflow (e.g. with iteration like active learning), need to reimplement this <code>.run()</code> function.</p>
-<p>Note:
+<p>Notes:
 - Force garbage collection before running the workflow to release unreachable objects (may reduce retained memory from previous stages such as <code>prepare()</code>)..</p>
 
           
@@ -4213,8 +4221,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -4885,8 +4893,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -5780,8 +5788,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         <p>Function to submit jobs to remote machines.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Orginal <code>taks_dirs</code> is relative to <code>run_dir</code>, and should not be changed. But the sumbmission function needs <code>taks_dirs</code> relative path to <code>work_dir</code>, so we make temporary change here.</li>
 </ul>
@@ -5821,8 +5829,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 - Save all common_files in DIR_FWDATA for convenience in transferring files</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>DIR_COLLECTDATA: is <code>tmp</code> directory containing collected extxyz data</li>
 <li>DIR_FWDATA: directory containing <code>common_files</code> to forward to remote machines</li>
@@ -6230,8 +6238,8 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 This class to 'return' conventional names for D3 parameters for different packages used for MD.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>The default cutoff values are <code>95 Bohr (50.2718 Angstrom)</code> for two-body dispersion calculations and <code>40 Bohr (21.1671 Angstrom)</code> for coordination number and three-body calculations, as in <a href="https://ase-lib.org/ase/calculators/dftd3.html">ASE-DFTD3</a> package. Other packages may use different default values.</li>
 <li>Some dftd3 parameters for DFT calculations support triple-body interactions, but most <a href="https://docs.lammps.org/pair_dispersion_d3.html">MD packages</a> only support pairwise interactions. So the triple-body cutoff parameter is not included in this class.</li>
@@ -6537,9 +6545,13 @@ This class to 'return' conventional names for D3 parameters for different packag
 
     <div class="doc doc-contents ">
 
-        <p>Convert Angstrom to Bohr.
-Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Angstrom.</p>
+        <p>Convert Angstrom to Bohr.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Angstrom.</p>
+</details>
           
 
     </div>
@@ -6842,8 +6854,8 @@ Note: in <code>simple-dftd3</code>, <code>60*Bohr</code> converts 60 Bohr to Ang
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <p>Single mode: will generate file as "outfile.pt"
 Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile/deployed_parallel_1.pt", ...</p>
 </details>
@@ -7183,8 +7195,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>Consider using <code>@staticmethod</code> for some functions to avoid recursive messing.</li>
 </ul>
@@ -7795,8 +7807,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>The output file is controlled by the class attribute <code>self.committee_error_file</code>.</li>
 <li>This method now can handle list of structures with variable numbers of atoms. This allows processing of mixed-size structures in a single block.</li>
@@ -7834,8 +7846,8 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
     </ul>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="notes" open>
+  <summary>Notes</summary>
   <ul>
 <li>If need to select candidates based on only <code>energy</code>, just set <code>f_std_hi</code> and <code>s_std_hi</code> to a very large values. By this way, the criterion for those terms will always meet.</li>
 <li>Similarly, if need to select candidates based on only <code>energy</code> and <code>force</code>, set <code>s_std_hi</code> to a very large value. E.g., <code>s_std_hi=1e6</code> for selecting candidates based on energy and force.</li>
@@ -7871,8 +7883,12 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
           </div>
         </li>
     </ul>
-        <p>Note: See parameters in functions <code>committee_error</code> and <code>committee_judge</code>.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>See parameters in functions <code>committee_error</code> and <code>committee_judge</code>.</p>
+</details>
           
 
     </div>
@@ -8102,7 +8118,7 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.annotate", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "search.suggest", "content.action.edit", "navigation.footer", "toc.follow", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.header"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.cf77aabc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d67e244a.min.js"></script>
       
         <script src="../../1thang_js/page_logVisitor.js"></script>
       
