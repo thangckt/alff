@@ -1,6 +1,6 @@
 # alff
 
-ALFF: Automated Frameworks for Active-Learning Machine Learning Interatomic Potentials and Material Properties Calculation.
+[ALFF](https://thangckt.github.io/alff/): Automated Frameworks for Active-Learning Machine Learning Interatomic Potentials and Material Properties Calculation.
 
 ![](https://thangckt.github.io/alff/_assets/image/logo_alff.svg)
 
