@@ -2433,6 +2433,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.base.sort_task_dirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_dirs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.base.init_alff_logger" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2448,17 +2459,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_logger
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.base.sort_task_dirs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_dirs
       
     </span>
   </a>
@@ -3673,6 +3673,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#alff.base.sort_task_dirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_dirs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#alff.base.init_alff_logger" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3688,17 +3699,6 @@
     <span class="md-ellipsis">
       
         <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_logger
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alff.base.sort_task_dirs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_dirs
       
     </span>
   </a>
@@ -3783,6 +3783,13 @@
 <p><span class="doc-section-title">Functions:</span></p>
     <ul>
           <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            sort_task_dirs(task_dirs: list[str]) -> list[str] (alff.base.sort_task_dirs)" href="../api/#alff.base.sort_task_dirs">sort_task_dirs</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Sort the structure paths by its supercell size.</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="            init_alff_logger() -> ColorLogger (alff.base.init_alff_logger)" href="../api/#alff.base.init_alff_logger">init_alff_logger</a></code></b>
             –
             <div class="doc-md-description">
@@ -3794,13 +3801,6 @@
             –
             <div class="doc-md-description">
               
-            </div>
-          </li>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            sort_task_dirs(task_dirs: list[str]) -> list[str] (alff.base.sort_task_dirs)" href="../api/#alff.base.sort_task_dirs">sort_task_dirs</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Sort the structure paths by its supercell size.</p>
             </div>
           </li>
     </ul>
@@ -6766,6 +6766,34 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 <div class="doc doc-object doc-function">
 
 
+<h3 id="alff.base.sort_task_dirs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_task_dirs</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+<a href="#alff.base.sort_task_dirs" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Sort the structure paths by its supercell size.</p>
+<p>This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li><code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</li>
+<li><code>task_dirs</code> must be relative with <code>run_dir</code>, not <code>work_dir</code>.</li>
+</ul>
+</details>
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h3 id="alff.base.init_alff_logger" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">init_alff_logger</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">ColorLogger</span></code>
 
@@ -6793,34 +6821,6 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
     <div class="doc doc-contents ">
 
-          
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="alff.base.sort_task_dirs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_task_dirs</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
-
-<a href="#alff.base.sort_task_dirs" class="headerlink" title="Permanent link">¤</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Sort the structure paths by its supercell size.</p>
-<p>This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
-
-
-<details class="notes" open>
-  <summary>Notes</summary>
-  <ul>
-<li><code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</li>
-<li><code>task_dirs</code> must be relative with <code>run_dir</code>, not <code>work_dir</code>.</li>
-</ul>
-</details>
           
 
     </div>

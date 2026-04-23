@@ -1434,6 +1434,34 @@
     <ul class="md-nav__list" data-md-component="toc">
       
         <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom ignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#active-learning" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1918,6 +1946,34 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom ignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#active-learning" class="md-nav__link">
@@ -2701,6 +2757,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="tips-and-tricks">Tips and tricks<a class="anchor-link" href="#tips-and-tricks">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1770308c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="general">General<a class="anchor-link" href="#general">¶</a></h2><h3 id="custom-ignore-task_dirs">Custom ignore <code>task_dirs</code><a class="anchor-link" href="#custom-ignore-task_dirs">¶</a></h3><p>If for some reason you want to ignore some <code>task_dirs</code> (e.g., they are still running from previous run and need to be ignored on new run, some tasks are out_of_memory, etc.) from submission to remote machines, you can create a file named <code>ignore_task_dirs.yml</code> in the <code>work_dir</code> with the following content:</p>
+<pre><code class="language-yml">yml
+- path/to/ignore/task_dir1
+- path/to/ignore/task_dir2
+</code></pre>
 </div>
 </div>
 </div>
