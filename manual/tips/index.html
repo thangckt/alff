@@ -2767,7 +2767,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="general">General<a class="anchor-link" href="#general">¶</a></h2><h3 id="custom-ignore-task_dirs">Custom ignore <code>task_dirs</code><a class="anchor-link" href="#custom-ignore-task_dirs">¶</a></h3><p>If for some reason you want to ignore some <code>task_dirs</code> (e.g., they are still running from previous run and need to be ignored on new run, some tasks are out_of_memory, etc.) from submission to remote machines, you can create a file named <code>ignore_task_dirs.yml</code> in the <code>work_dir</code> with the following content:</p>
+<h2 id="general">General<a class="anchor-link" href="#general">¶</a></h2><h3 id="custom-ignore-task_dirs">Custom ignore <code>task_dirs</code><a class="anchor-link" href="#custom-ignore-task_dirs">¶</a></h3><p>If for some reasons you want to ignore some <code>task_dirs</code> (e.g., they are remaining jobs from previous launch of <code>alff</code> and need to be ignored on a new launch, some tasks are out_of_memory of your computing resources, etc.) from submission to remote machines, you can create (manually) a file named <code>ignore_task_dirs.yml</code> in the <code>work_dir</code> with the following content:</p>
 <pre><code class="language-yml">yml
 - path/to/ignore/task_dir1
 - path/to/ignore/task_dir2
