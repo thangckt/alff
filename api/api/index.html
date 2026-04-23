@@ -1744,6 +1744,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.base.sort_task_dirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_dirs
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2120,17 +2131,6 @@
   
     <nav class="md-nav" aria-label=" util">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.ase_tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;ase_tool
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#alff.util.script_ase" class="md-nav__link">
@@ -2756,6 +2756,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alff.base.sort_task_dirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;sort_task_dirs
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3132,17 +3143,6 @@
   
     <nav class="md-nav" aria-label=" util">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#alff.util.ase_tool" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;ase_tool
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#alff.util.script_ase" class="md-nav__link">
@@ -3616,10 +3616,13 @@
 
 
 
-        <p>Workflow for active learning.
-Notes:
-    Need to redefine <code>.run()</code> method, since the Active Learning workflow is different from the base class.</p>
+        <p>Workflow for active learning.</p>
 
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>Need to redefine <code>.run()</code> method, since the Active Learning workflow is different from the base class.</p>
+</details>
           
 
 
@@ -8873,6 +8876,13 @@ Parallel mode: will generate files as "outfile/deployed_parallel_0.pt", "outfile
               
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            sort_task_dirs(task_dirs: list[str]) -> list[str] (alff.base.sort_task_dirs)" href="#alff.base.sort_task_dirs">sort_task_dirs</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Sort the structure paths by its supercell size.</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -11869,6 +11879,34 @@ for more complex workflow (e.g. with iteration like active learning), need to re
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+<h4 id="alff.base.sort_task_dirs" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_task_dirs</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+<a href="#alff.base.sort_task_dirs" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Sort the structure paths by its supercell size.</p>
+<p>This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li><code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</li>
+<li><code>task_dirs</code> must be relative with <code>run_dir</code>, not <code>work_dir</code>.</li>
+</ul>
+</details>
+          
+
+    </div>
+
+</div>
+
 
 
   </div>
@@ -14855,6 +14893,13 @@ Return strain in vector form of Voigt notation, component order: u_{xx}, u_{yy},
               <p>Perturb the structures.</p>
             </div>
           </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            build_struct(argdict: dict[str, Any]) -> Atoms (alff.gdata.gendata.build_struct)" href="#alff.gdata.gendata.build_struct">build_struct</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Build atomic configuration, using library <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#"><code>ase.build</code></a>.</p>
+            </div>
+          </li>
     </ul>
 
 
@@ -15537,6 +15582,62 @@ for more complex workflow (e.g. with iteration like active learning), need to re
         </li>
     </ul>
 
+          
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h5 id="alff.gdata.gendata.build_struct" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_struct</span><span class="p">(</span><span class="n">argdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
+
+<a href="#alff.gdata.gendata.build_struct" class="headerlink" title="Permanent link">¤</a></h5>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Build atomic configuration, using library <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#"><code>ase.build</code></a>.</p>
+<p>Supported structure types:
+- <code>bulk</code>: sc, fcc, bcc, tetragonal, bct, hcp, rhombohedral, orthorhombic, mcl, diamond, zincblende, rocksalt, cesiumchloride, fluorite or wurtzite.
+- <code>molecule</code>: molecule
+- <code>mx2</code>: MX2
+- <code>graphene</code>: graphene</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>argdict</code></b>
+              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></code>)
+          –
+          <div class="doc-md-description">
+            <p>Parameters dictionary</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+<b><code>struct</code></b> (              <code><span title="ase.atoms.Atoms">Atoms</span></code>
+)          –
+          <div class="doc-md-description">
+            <p>ASE Atoms object</p>
+          </div>
+        </li>
+    </ul>
+
+
+<details class="note" open>
+  <summary>Note</summary>
+  <ul>
+<li><code>build.graphene()</code> does not set the cell c vector along z axis, so we need to modify it manually.</li>
+</ul>
+</details>
           
 
     </div>
@@ -26257,13 +26358,6 @@ The function does the following:
 <p><span class="doc-section-title">Modules:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><a class="autorefs autorefs-internal" title="            ase_tool (alff.util.ase_tool)" href="#alff.util.ase_tool">ase_tool</a></code></b>
-          –
-          <div class="doc-md-description">
-            <p>Utility functions for ASE-related tasks.</p>
-          </div>
-        </li>
-        <li class="doc-section-item field-body">
           <b><code><a class="autorefs autorefs-internal" title="            script_ase (alff.util.script_ase)" href="#alff.util.script_ase">script_ase</a></code></b>
           –
           <div class="doc-md-description">
@@ -26307,154 +26401,6 @@ The function does the following:
 
 
 
-
-<div class="doc doc-object doc-module">
-
-
-
-<h4 id="alff.util.ase_tool" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <code>ase_tool</code>
-
-
-<a href="#alff.util.ase_tool" class="headerlink" title="Permanent link">¤</a></h4>
-
-    <div class="doc doc-contents ">
-
-        <p>Utility functions for ASE-related tasks.</p>
-
-          
-
-
-
-
-
-
-
-
-
-
-
-<p><span class="doc-section-title">Functions:</span></p>
-    <ul>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            build_struct(argdict: dict[str, Any]) -> Atoms (alff.util.ase_tool.build_struct)" href="#alff.util.ase_tool.build_struct">build_struct</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Build atomic configuration, using library <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#"><code>ase.build</code></a>.</p>
-            </div>
-          </li>
-          <li class="doc-section-item field-body">
-            <b><code><a class="autorefs autorefs-internal" title="            sort_task_dirs(task_dirs: list[str], work_dir: str) -> list[str] (alff.util.ase_tool.sort_task_dirs)" href="#alff.util.ase_tool.sort_task_dirs">sort_task_dirs</a></code></b>
-            –
-            <div class="doc-md-description">
-              <p>Sort the structure paths by its supercell size.</p>
-            </div>
-          </li>
-    </ul>
-
-
-
-
-
-<div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.util.ase_tool.build_struct" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">build_struct</span><span class="p">(</span><span class="n">argdict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Atoms</span></code>
-
-<a href="#alff.util.ase_tool.build_struct" class="headerlink" title="Permanent link">¤</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Build atomic configuration, using library <a href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html#"><code>ase.build</code></a>.</p>
-<p>Supported structure types:
-- <code>bulk</code>: sc, fcc, bcc, tetragonal, bct, hcp, rhombohedral, orthorhombic, mcl, diamond, zincblende, rocksalt, cesiumchloride, fluorite or wurtzite.
-- <code>molecule</code>: molecule
-- <code>mx2</code>: MX2
-- <code>graphene</code>: graphene</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-            <b><code>argdict</code></b>
-              (<code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></code>)
-          –
-          <div class="doc-md-description">
-            <p>Parameters dictionary</p>
-          </div>
-        </li>
-    </ul>
-
-
-<p><span class="doc-section-title">Returns:</span></p>
-    <ul>
-        <li class="doc-section-item field-body">
-<b><code>struct</code></b> (              <code><span title="ase.atoms.Atoms">Atoms</span></code>
-)          –
-          <div class="doc-md-description">
-            <p>ASE Atoms object</p>
-          </div>
-        </li>
-    </ul>
-
-
-<details class="note" open>
-  <summary>Note</summary>
-  <ul>
-<li><code>build.graphene()</code> does not set the cell c vector along z axis, so we need to modify it manually.</li>
-</ul>
-</details>
-          
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h5 id="alff.util.ase_tool.sort_task_dirs" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>            <code class="highlight language-python"><span class="n">sort_task_dirs</span><span class="p">(</span><span class="n">task_dirs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">work_dir</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
-
-<a href="#alff.util.ase_tool.sort_task_dirs" class="headerlink" title="Permanent link">¤</a></h5>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Sort the structure paths by its supercell size.
-This helps to chunk the tasks with similar supercell size together (similar supercell size means similar k-point number), which then lead to running DFT calculations in similar time, avoiding the situation that some tasks are finished while others are still running.</p>
-
-
-<details class="notes" open>
-  <summary>Notes</summary>
-  <p><code>np.lexsort()</code> is used to sort by multiple keys (np.arrays) in order.</p>
-</details>
-          
-
-    </div>
-
-</div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
 
 <div class="doc doc-object doc-module">
 
